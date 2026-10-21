@@ -4,4 +4,5 @@
   C.unlockAll = false; // the demo follows the calendar: today's case plus the past ones (for keys), like the released game
   C.privacyUrl = "privacy-policy.html"; // lives next to the game
   // feedback and statistics: the same sheetUrl as the app (empty = form hidden, nothing sent)
+  C.shareUrl = "https://frameoneproduction-hash.github.io/case-of-the-day/"; // "Share" ends with the demo link
 })();

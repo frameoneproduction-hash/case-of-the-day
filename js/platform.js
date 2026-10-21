@@ -9,7 +9,7 @@
     // The club is ONE Play subscription with two base plans, so a player can never pay for both. Shop keys → [product key, base plan].
     plans: { club: ["club", "monthly"], clubYear: ["club", "yearly"] },
     // Last line of the shared result: the web demo now, the Google Play page (with UTM) after release. Empty = no link line.
-    shareUrl: "",
+    shareUrl: "https://frameoneproduction-hash.github.io/case-of-the-day/", // the web demo until the Play release
     privacyUrl: "privacy-policy.html",
     // Google Sheet receiver (Apps Script web app, delo-dnya-app/tools/apps-script/) for feedback and game statistics.
     // Empty = nothing is sent and the feedback form is hidden. sheetKey must match SHEET_KEY in the script's properties.

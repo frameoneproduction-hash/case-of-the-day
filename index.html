@@ -1,0 +1,317 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#101b18">
+<title>Case of the Day</title>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;overscroll-behavior:none}img{max-width:100%}</style>
+<meta name="description" content="A cozy 1920s mystery: one new case every day. Search the scene, catch the lie, name the culprit. Free in your browser.">
+<meta property="og:title" content="Case of the Day">
+<meta property="og:description" content="A cozy 1920s mystery: one new case every day. Search the scene, catch the lie, name the culprit. Free in your browser.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="icon.png">
+</head><body>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="css/app.css">
+
+<div class="app" id="app">
+
+  <!-- HOME -->
+  <section id="s-home" hidden>
+    <div class="title-top">
+      <span class="chip" id="home-streak-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3c1 4 5 5 5 10a5 5 0 0 1-10 0c0-3 2-4 2-7 1 1 2 2 3 4 0-3 0-5 0-7Z"/></svg><span id="home-streak"></span></span>
+      <button class="lang-btn" data-open-lang><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg><span class="lang-code">RU</span></button>
+    </div>
+    <div class="hero" aria-hidden="true">
+      <svg viewBox="0 0 360 190">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1424"/><stop offset="1" stop-color="#14261f"/></linearGradient>
+          <radialGradient id="moonglow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#f3ecd2" stop-opacity=".35"/><stop offset="1" stop-color="#f3ecd2" stop-opacity="0"/></radialGradient>
+          <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset=".55" stop-color="#101b18" stop-opacity="0"/><stop offset="1" stop-color="#101b18"/></linearGradient>
+          <clipPath id="heroclip"><rect width="360" height="190"/></clipPath>
+        </defs>
+        <rect width="360" height="190" fill="url(#sky)"/>
+        <circle cx="282" cy="46" r="40" fill="url(#moonglow)"/><circle cx="282" cy="46" r="17" fill="#efe6c8"/>
+        <circle cx="276" cy="42" r="3" fill="#d9cfaf"/><circle cx="288" cy="52" r="2" fill="#d9cfaf"/>
+        <g fill="#cfd7e6" opacity=".7"><circle cx="40" cy="30" r="1"/><circle cx="96" cy="18" r="1.2"/><circle cx="150" cy="40" r=".8"/><circle cx="210" cy="16" r="1"/><circle cx="330" cy="90" r=".8"/><circle cx="20" cy="80" r=".8"/></g>
+        <path d="M0 150q60-22 120-10t120-6 120 8v48H0Z" fill="#0f1f19"/>
+        <path d="M18 150c-6-30 4-52 14-58 10 6 20 28 14 58Z" fill="#0b1712"/><path d="M318 152c-5-26 4-44 12-50 9 6 17 24 12 50Z" fill="#0b1712"/>
+        <g fill="#0a1310"><rect x="88" y="92" width="184" height="66"/><path d="M80 94 180 54 280 94Z"/><rect x="70" y="78" width="34" height="80"/><path d="M66 80 87 56 108 80Z"/><rect x="256" y="78" width="34" height="80"/><path d="M252 80 273 56 294 80Z"/><rect x="120" y="58" width="10" height="24"/><rect x="232" y="58" width="10" height="24"/><rect x="164" y="118" width="32" height="40"/></g>
+        <path d="M164 158v-26q16-18 32 0v26" fill="#1a120a"/>
+        <g fill="#f2c96a"><rect x="80" y="96" width="12" height="16" opacity=".9"/><rect x="114" y="104" width="12" height="16" opacity=".25"/><rect x="138" y="104" width="12" height="16" class="lit"/><rect x="210" y="104" width="12" height="16" opacity=".25"/><rect x="234" y="104" width="12" height="16" opacity=".9"/><rect x="266" y="96" width="12" height="16" opacity=".25"/><rect x="114" y="132" width="12" height="16" opacity=".25"/><rect x="234" y="132" width="12" height="16" opacity=".6"/><circle cx="180" cy="80" r="7" opacity=".85"/></g>
+        <rect x="138" y="104" width="12" height="16" fill="#9c3434" opacity=".35"/><path d="M180 73v14M173 80h14" stroke="#0a1310" stroke-width="1.5"/>
+        <g transform="translate(36 160)"><path d="M0 12h46l-4-8h-10l-6-6h-14l-6 6H0Z" fill="#161616"/><circle cx="10" cy="13" r="4" fill="#050505"/><circle cx="36" cy="13" r="4" fill="#050505"/><path d="M46 8l40-6v16Z" fill="#f2e3a6" opacity=".18"/></g>
+        <g clip-path="url(#heroclip)" stroke="#9fb4c8" stroke-opacity=".35" stroke-width="1"><g class="rain"><path d="M10 -10l-6 36M40 20l-6 36M70 -4l-6 36M100 30l-6 36M130 4l-6 36M160 40l-6 36M190 0l-6 36M220 26l-6 36M250 -8l-6 36M280 34l-6 36M310 8l-6 36M340 30l-6 36"/><path d="M25 80l-6 36M55 110l-6 36M85 70l-6 36M115 120l-6 36M145 86l-6 36M175 130l-6 36M205 76l-6 36M235 116l-6 36M265 90l-6 36M295 130l-6 36M325 84l-6 36M355 120l-6 36"/></g></g>
+        <rect width="360" height="190" fill="url(#fade)"/>
+      </svg>
+    </div>
+    <div class="brand-wrap">
+      <div class="brand" data-i18n-html="brand"></div>
+      <p class="tagline" data-i18n="tagline"></p>
+    </div>
+    <div class="rank-card" id="home-rank"></div>
+    <button class="offer-banner" id="home-offer" data-act="shop" hidden></button>
+    <div class="gift-line" id="home-gift" hidden></div>
+    <article class="case-card" id="home-case"></article>
+    <div class="home-stats">
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M9.5 10h4a1.5 1.5 0 0 1 0 3h-3a1.5 1.5 0 0 0 0 3h4"/></svg><span id="home-coins">0</span></span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></svg><span id="home-hints">3</span></span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="4"/><path d="M11 11l9 9M16 16l2-2M18 18l2-2"/></svg><span id="home-keys">3</span></span>
+    </div>
+    <button class="btn wide" id="btn-daily"></button>
+    <div class="home-nav">
+      <button class="icon-btn" id="btn-archive"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="5" rx="1"/><path d="M5 9v10h14V9M10 13h4"/></svg><span data-i18n="archive"></span></button>
+      <button class="icon-btn" id="btn-agency"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-6h6v6"/></svg><span data-i18n="agency"></span></button>
+      <button class="icon-btn" id="btn-shop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8h16l-1.5 12h-13Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span data-i18n="shop"></span></button>
+      <button class="icon-btn" id="btn-settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg><span data-i18n="settings"></span></button>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section id="s-intro" hidden>
+    <div class="eyebrow" id="intro-eyebrow"></div>
+    <h2 style="font-size:30px" id="intro-title"></h2>
+    <div class="narr" id="intro-text"></div>
+    <div class="cast" id="intro-cast"></div>
+    <div class="voice static" id="intro-voice"></div>
+    <div id="intro-disguise"></div>
+    <button class="btn wide" id="btn-enter" data-i18n="enter"></button>
+    <button class="btn ghost wide" data-go="home" data-i18n="home"></button>
+  </section>
+
+  <!-- SEARCH -->
+  <section id="s-search" hidden style="padding-top:0">
+    <header class="topbar">
+      <button class="back" data-go="home" aria-label="Home">‹</button>
+      <h1 id="search-title"></h1>
+      <div class="chips">
+        <span class="timer" id="search-timer">1:15</span>
+        <button class="chip btnlike" id="search-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></svg><span id="search-hints">3</span></button>
+      </div>
+    </header>
+    <div class="search-count" id="search-count"></div>
+    <div class="scene-wrap" id="search-scene"></div>
+    <p style="color:var(--muted);font-size:14px;margin:12px 0 0" data-i18n="searchHelp"></p>
+  </section>
+
+  <!-- MINI-GAME -->
+  <section id="s-mini" hidden>
+    <div class="mini-head">
+      <div><div class="eyebrow" id="mini-eyebrow"></div><h2 style="font-size:26px;margin-top:4px" id="mini-title"></h2></div>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></svg><span id="mini-hints">3</span></span>
+    </div>
+    <p style="margin:0;color:var(--muted)" id="mini-help"></p>
+    <div class="mini-box" id="mini-box"></div>
+    <div class="finding mini-result" id="mini-result" hidden></div>
+    <button class="btn ghost wide" id="mini-hint" data-i18n="miniHint"></button>
+    <button class="btn wide" id="mini-next" data-i18n="next" hidden></button>
+  </section>
+
+  <!-- FINDINGS -->
+  <section id="s-findings" hidden>
+    <div class="eyebrow" data-i18n="searchDone"></div>
+    <h2 style="font-size:28px" data-i18n="findingsTitle"></h2>
+    <div style="display:grid;gap:10px" id="findings-list"></div>
+    <button class="btn wide" id="btn-to-hub" data-i18n="toHub"></button>
+  </section>
+
+  <!-- HUB -->
+  <section id="s-hub" hidden style="padding-top:0">
+    <header class="topbar">
+      <button class="back" data-go="home" aria-label="Home">‹</button>
+      <h1 id="hub-title"></h1>
+      <div class="chips">
+        <button class="chip btnlike" id="hub-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></svg><span id="hub-hints">3</span></button>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M9.5 10h4a1.5 1.5 0 0 1 0 3h-3a1.5 1.5 0 0 0 0 3h4"/></svg><span id="hub-coins">0</span></span>
+      </div>
+    </header>
+    <div class="stage">
+      <div id="tab-scene" hidden>
+        <div class="hintline"><span data-i18n="sceneHelp"></span></div>
+        <div class="token-line" id="token-line"></div>
+        <div class="scene-wrap" id="hub-scene" style="margin-top:12px"></div>
+      </div>
+      <div id="tab-suspects">
+        <div class="hintline"><span data-i18n="suspectsHelp"></span></div>
+        <div class="suspects" id="suspects" style="margin-top:12px"></div>
+      </div>
+      <div id="tab-notes" hidden>
+        <div class="hintline"><span data-i18n="notesHelp"></span></div>
+        <div class="notebook" id="notebook" style="margin-top:12px"></div>
+      </div>
+    </div>
+    <nav class="tabbar">
+      <div class="tabbar-in" role="tablist">
+        <button class="tab" role="tab" data-tab="scene"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></svg><span class="lbl" data-i18n="tabScene"></span></button>
+        <button class="tab" role="tab" data-tab="suspects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-4 3.4-6 6.5-6s5.7 2 6.5 6"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14c2.3 0 4 1.5 4.5 4.5"/></svg><span class="lbl" data-i18n="tabSus"></span><span class="badge" id="badge-sus" hidden></span></button>
+        <button class="tab" role="tab" data-tab="notes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 3h12a2 2 0 0 1 2 2v16H7a2 2 0 0 1-2-2Z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="lbl" data-i18n="tabNotes"></span></button>
+        <button class="btn accuse-btn" id="btn-accuse" data-i18n="accuse"></button>
+      </div>
+    </nav>
+  </section>
+
+  <!-- ACCUSE -->
+  <section id="s-accuse" hidden>
+    <div>
+      <div class="eyebrow" data-i18n="accEyebrow"></div>
+      <h2 style="font-size:28px;margin-top:6px" data-i18n="accTitle"></h2>
+    </div>
+    <div class="attempts" id="attempts"></div>
+    <div class="pick-grid" id="pick-sus"></div>
+    <div id="ev-wrap" hidden>
+      <div class="prove-head"><h3 style="font-size:19px" data-i18n="prove"></h3><span id="prove-count">0 / 2</span></div>
+      <div class="ev-list" id="pick-ev"></div>
+    </div>
+    <div class="verdict" id="verdict" hidden></div>
+    <button class="btn ghost wide" id="btn-ask-logic" data-act="ask-logic" data-i18n="askLogic" hidden></button>
+    <button class="btn wide" id="btn-confirm" disabled data-i18n="confirm"></button>
+    <button class="btn ghost wide" data-go="hub" data-i18n="back"></button>
+  </section>
+
+  <!-- RESULT -->
+  <section id="s-result" hidden>
+    <div class="result-hero"><div id="r-portrait"></div><div class="stamp" id="r-stamp"></div></div>
+    <div class="stars" id="r-stars"></div>
+    <div class="reward-row">
+      <div class="reward"><b id="r-coins">0</b><span data-i18n="rCoins"></span></div>
+      <div class="reward"><b id="r-time">0:00</b><span data-i18n="rTime"></span></div>
+      <div class="reward"><b id="r-lies">0/0</b><span>💥</span></div>
+    </div>
+    <div class="solution" id="r-solution"></div>
+    <button class="btn wide" id="btn-double" data-act="double" hidden></button>
+    <div class="share-box">
+      <div class="eyebrow" data-i18n="brag"></div>
+      <pre id="r-share"></pre>
+      <button class="btn" id="btn-share" data-i18n="shareBtn"></button>
+    </div>
+    <button class="agency-progress" id="r-agency" data-go="agency"></button>
+    <div class="countdown"><span data-i18n="nextIn"></span> <b id="r-next">--:--:--</b></div>
+    <div class="notif-ask" id="r-notif" hidden></div>
+    <form class="feedback" id="fb">
+      <h3 data-i18n="fbTitle"></h3>
+      <div class="rate" id="fb-rate" role="group" data-i18n-aria="rateAria">
+        <button type="button" data-r="1">1</button><button type="button" data-r="2">2</button><button type="button" data-r="3">3</button><button type="button" data-r="4">4</button><button type="button" data-r="5">5</button>
+      </div>
+      <label for="fb-text" data-i18n="fbLabel"></label>
+      <textarea id="fb-text" maxlength="2000" data-i18n-ph="fbPh"></textarea>
+      <button class="btn" type="submit" id="fb-send" data-i18n="fbSend"></button>
+      <div class="fb-status" id="fb-status" role="status"></div>
+    </form>
+    <button class="btn ghost wide" data-go="home" data-i18n="home"></button>
+  </section>
+
+  <!-- AGENCY -->
+  <section id="s-agency" hidden style="padding-top:0">
+    <header class="topbar">
+      <button class="back" data-go="home" aria-label="Home">‹</button>
+      <h1 data-i18n="agencyT"></h1>
+      <div class="chips"><span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M9.5 10h4a1.5 1.5 0 0 1 0 3h-3a1.5 1.5 0 0 0 0 3h4"/></svg><span id="agency-coins">0</span></span></div>
+    </header>
+    <div id="agency-room"></div>
+    <div><div class="eyebrow" data-i18n="agencyStory"></div><p style="margin:6px 0 0;color:var(--muted);font-size:15px" id="agency-intro"></p></div>
+    <div class="rooms" id="agency-rooms"></div>
+    <div id="agency-disguise"></div>
+    <div><div class="eyebrow" style="margin-bottom:10px" data-i18n="trophies"></div><div class="trophies" id="agency-trophies"></div></div>
+  </section>
+</div>
+
+<div class="voice-layer" id="voice-layer" aria-live="polite"></div>
+<div id="overlay-root"></div>
+
+<script src="js/ui-text.js"></script>
+<script src="js/meta-text.js"></script>
+<script src="js/minigames.js"></script>
+<script src="js/portraits.js"></script>
+<script src="js/scenes.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/platform.js"></script>
+<!-- Cases in the game. A new case is added here only after qa-tester ✅ (studio/design/case-pipeline.md); a file in cases/ alone does not reach players. -->
+<script src="cases/case001.js"></script>
+
+<script src="cases/case002.js"></script>
+
+<script src="cases/case003.js"></script>
+
+<script src="cases/case004.js"></script>
+
+<script src="cases/case005.js"></script>
+
+<script src="cases/case006.js"></script>
+
+<script src="cases/case007.js"></script>
+
+<script src="cases/case008.js"></script>
+
+<script src="cases/case009.js"></script>
+
+<script src="cases/case010.js"></script>
+
+<script src="cases/case011.js"></script>
+
+<script src="cases/case012.js"></script>
+
+<script src="cases/case013.js"></script>
+
+<script src="cases/case014.js"></script>
+
+<script src="cases/case015.js"></script>
+
+<script src="cases/case016.js"></script>
+
+<script src="cases/case017.js"></script>
+
+<script src="cases/case018.js"></script>
+
+<script src="cases/case019.js"></script>
+
+<script src="cases/case020.js"></script>
+
+<script src="cases/case021.js"></script>
+
+<script src="cases/case022.js"></script>
+
+<script src="cases/case023.js"></script>
+
+<script src="cases/case024.js"></script>
+
+<script src="cases/case025.js"></script>
+
+<script src="cases/case026.js"></script>
+
+<script src="cases/case027.js"></script>
+
+<script src="cases/case028.js"></script>
+
+<script src="cases/case029.js"></script>
+
+<script src="cases/case030.js"></script>
+
+<script src="cases/case031.js"></script>
+
+<script src="cases/case032.js"></script>
+
+<script src="cases/case033.js"></script>
+
+<script src="cases/case034.js"></script>
+
+<script src="cases/case035.js"></script>
+
+<script src="cases/case036.js"></script>
+
+<script src="cases/case037.js"></script>
+
+<script src="cases/case038.js"></script>
+
+<script src="cases/case039.js"></script>
+
+<script src="cases/case040.js"></script>
+
+<script src="cases/case041.js"></script>
+
+<script src="cases/case042.js"></script>
+
+<script src="cases/case043.js"></script>
+
+<script src="js/demo-config.js"></script>
+<script src="js/game.js"></script>
+
+</body></html>

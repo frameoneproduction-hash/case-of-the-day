@@ -3,6 +3,7 @@
   const C = window.DELO_PLATFORM.CONFIG;
   C.unlockAll = false; // the demo follows the calendar: today's case plus the past ones (for keys), like the released game
   C.privacyUrl = "privacy-policy.html"; // lives next to the game
+  C.launchDate = "2026-10-14"; // the demo keeps its own calendar (published with it); the app's launchDate is the closed-test start
   // feedback and statistics: the same sheetUrl as the app (empty = form hidden, nothing sent)
   C.shareUrl = "https://frameoneproduction-hash.github.io/case-of-the-day/"; // "Share" ends with the demo link
 })();

@@ -1,9 +1,9 @@
 // Platform layer: real services inside the Android app (Capacitor), harmless stand-ins in a browser.
 (function () {
   const CONFIG = {
-    // Replace before release. Until then Google's official TEST ad unit is used.
+    // Real AdMob rewarded unit "rewarded_main". Debug builds switch to Google's test unit in js/qa-debug.js (debug only).
     admobRewardedAndroid: "",
-    admobTesting: true,
+    admobTesting: false,
     products: { starter: "starter_pack", kit: "detective_kit", hints10: "hints_10", keys5: "keys_5", coins1000: "coins_1000", club: "detective_club" },
     subscriptions: ["club"],
     // The club is ONE Play subscription with two base plans, so a player can never pay for both. Shop keys → [product key, base plan].
@@ -18,7 +18,7 @@
     statsTest: false, // mark every event test:1 (developer builds), reports drop them
     statsDebug: false, // log events to the console
     unlockAll: true, // closed test: every case in the archive is open
-    launchDate: "2026-10-14",
+    launchDate: "2026-10-22", // PLACEHOLDER = build day; set to the closed-test start date before AAB #1 (decision: design/offers-and-products.md, part 8)
     notifyHour: 9,
     version: "0.5.0",
   };

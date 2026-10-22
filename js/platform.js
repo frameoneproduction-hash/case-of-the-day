@@ -18,7 +18,7 @@
     statsTest: false, // mark every event test:1 (developer builds), reports drop them
     statsDebug: false, // log events to the console
     unlockAll: true, // closed test: every case in the archive is open
-    launchDate: "2026-10-22", // PLACEHOLDER = build day; set to the closed-test start date before AAB #1 (decision: design/offers-and-products.md, part 8)
+    launchDate: "2026-10-23", // closed-test start (AAB #1 uploaded 23.10); for the public release: the release day (design/offers-and-products.md, part 8)
     notifyHour: 9,
     version: "0.5.0",
   };

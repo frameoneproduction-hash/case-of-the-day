@@ -13,12 +13,12 @@
     privacyUrl: "privacy-policy.html",
     // Google Sheet receiver (Apps Script web app, delo-dnya-app/tools/apps-script/) for feedback and game statistics.
     // Empty = nothing is sent and the feedback form is hidden. sheetKey must match SHEET_KEY in the script's properties.
-    sheetUrl: "",
-    sheetKey: "",
+    sheetUrl: "https://script.google.com/macros/s/AKfycbyrjtePLSV-fphVeuGT4bQqvvJAwjtKCh8PJpITzVO0JQA459U7p1wtRPFYxcSs3GE/exec",
+    sheetKey: "5jat6GPVszb0YfUpeIBWnQH3",
     statsTest: false, // mark every event test:1 (developer builds), reports drop them
     statsDebug: false, // log events to the console
     unlockAll: true, // closed test: every case in the archive is open
-    launchDate: "2026-10-23", // closed-test start (AAB #1 uploaded 23.10); for the public release: the release day (design/offers-and-products.md, part 8)
+    launchDate: "2026-10-23", // debug/web value. The release AAB gets "build day + 1" from scripts/build-aab.ps1 (closed-test start, design/offers-and-products.md part 8)
     notifyHour: 9,
     version: "0.5.0",
   };

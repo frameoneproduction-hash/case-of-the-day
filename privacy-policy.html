@@ -53,7 +53,7 @@
 <!-- ============================ ENGLISH ============================ -->
 <section class="lang" id="en" lang="en">
 <h1>Case of the Day — Privacy Policy</h1>
-<p class="meta">Effective date: 18 October 2026</p>
+<p class="meta">Effective date: 25 October 2026</p>
 
 <p>This policy explains what information the mobile game “Case of the Day” (the “Game”) handles, why, and what choices you have. We have tried to keep it short and plain. The Game has no accounts, no login and no chat.</p>
 
@@ -65,7 +65,8 @@
   <li><strong>Game progress</strong> (solved cases, coins, office furniture, daily streak, settings). Stored only locally on your device. We do not receive it. It is deleted when you uninstall the Game or clear its data.</li>
   <li><strong>Advertising data</strong> (Google AdMob): advertising ID, device and app information (model, OS version, language, app version), IP address and the approximate location derived from it, ad interaction data (e.g. that a rewarded video was watched), and diagnostic data.</li>
   <li><strong>Purchase data</strong> (Google Play Billing): when you buy a hint pack or subscription, payment is processed entirely by Google Play. We never see your card or payment details; we only receive a confirmation that the purchase is valid, so the Game can deliver the item.</li>
-  <li><strong>Feedback</strong> (optional): if you choose to send the in-game feedback form, we receive your rating, the text you type, the app version and the language of the Game. Please do not include personal details in the text. Nothing is sent unless you press “Send”.</li>
+  <li><strong>Feedback</strong> (optional): if you choose to send the in-game feedback form, we receive your rating, the text you type, the app version, the language of the Game and a random installation ID. Please do not include personal details in the text. Nothing is sent unless you press “Send”. Feedback is saved in a Google Sheet on the developer's Google Drive (via Google Apps Script).</li>
+  <li><strong>Game statistics</strong> (only if you tap “Yes, help” in the Game; you can switch it off at any time in Settings): game events such as “case opened” or “case solved”, a random installation ID (not your advertising ID), the day number since installation, the app version, language and platform. The data we store does not include your name, email, advertising ID or IP address. We use no analytics SDK: events are sent to a Google Sheet on the developer's Google Drive (via Google Apps Script). Until you agree, nothing is sent.</li>
   <li><strong>Notifications</strong>: the daily “new case is ready” reminder is a local notification scheduled on your device. No data is sent to us for it. You can turn it off in the Game or in your phone settings.</li>
   <li><strong>Web version</strong> (if you play in a browser at our GitHub Pages address): the game itself runs entirely in your browser and keeps your progress in the browser's local storage on your device. We use no cookies, no advertising and no analytics there. Like any website, GitHub (the hosting provider) may process technical data such as your IP address in its server logs, under its own <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">privacy statement</a>.</li>
 </ul>
@@ -75,6 +76,7 @@
   <li><strong>Running the Game and delivering purchases</strong> — performance of a contract (Art. 6(1)(b) GDPR).</li>
   <li><strong>Personalised ads</strong> — your consent (Art. 6(1)(a)). If you do not consent, you may still see non-personalised ads, which use limited data for things like frequency capping, fraud prevention and measurement, based on our legitimate interest in funding a free game (Art. 6(1)(f)).</li>
   <li><strong>Feedback</strong> — to read and answer your feedback and improve the Game; legitimate interest (Art. 6(1)(f)), triggered by your own action of sending it.</li>
+  <li><strong>Game statistics</strong> — your consent (Art. 6(1)(a)), asked once after your first case; you can withdraw it at any time in Settings.</li>
   <li><strong>Legal obligations</strong> such as tax and accounting records of sales (Art. 6(1)(c)).</li>
 </ul>
 <p>We do not sell your personal data, and we do not use it for automated decisions that have legal or similarly significant effects on you.</p>
@@ -89,12 +91,12 @@
   <li><strong>Google Play / Google Play Billing</strong> — distribution and payments.</li>
 </ul>
 <p>Google Privacy Policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
-<p>Feedback is stored on a server operated for us by a hosting provider acting as our processor. Some providers, including Google, may transfer data outside the EEA; such transfers are protected by safeguards such as the EU Standard Contractual Clauses or the EU–US Data Privacy Framework.</p>
+<p>Feedback and game statistics are stored in a Google Sheet on the developer's Google Drive and received with Google Apps Script. Google acts as our processor for this. Some providers, including Google, may transfer data outside the EEA; such transfers are protected by safeguards such as the EU Standard Contractual Clauses or the EU–US Data Privacy Framework.</p>
 
 <h2>6. How long we keep data</h2>
 <ul>
   <li>Game progress: on your device until you delete it or uninstall the Game.</li>
-  <li>Feedback: up to 24 months, then deleted, unless you ask us to delete it earlier.</li>
+  <li>Feedback and game statistics: up to 14 months in the Google Sheet, then automatically deleted (earlier if you ask us to).</li>
   <li>Advertising and purchase data: kept by Google according to its own retention periods; purchase records needed for tax purposes are kept for as long as the law requires.</li>
 </ul>
 
@@ -115,7 +117,7 @@
 <p>The Game is intended for players aged 12 and over and is not directed at children under 13. We do not knowingly collect personal data from children under 13. Where a user is identified as being under the age of digital consent in their country (in Poland, 16), ad requests are marked accordingly and only non-personalised ads are shown. If you believe a child has sent us personal data, please contact us and we will delete it.</p>
 
 <h2>9. Security</h2>
-<p>Data sent from the Game is transmitted over encrypted connections (HTTPS). Access to feedback data is limited to the developer.</p>
+<p>Data sent from the Game is transmitted over encrypted connections (HTTPS). Access to feedback and statistics data is limited to the developer.</p>
 
 <h2>10. Changes to this policy</h2>
 <p>We may update this policy, for example when the Game gets new features. The current version is always published at this address with its effective date. For significant changes we will also inform you in the Game.</p>
@@ -128,7 +130,7 @@
 <!-- ============================ RUSSIAN ============================ -->
 <section class="lang" id="ru" lang="ru">
 <h1>«Дело дня» — Политика конфиденциальности</h1>
-<p class="meta">Дата вступления в силу: 18 октября 2026 г.</p>
+<p class="meta">Дата вступления в силу: 25 октября 2026 г.</p>
 
 <p>Эта политика объясняет, какие данные обрабатывает мобильная игра «Дело дня» («Игра»), зачем и какой у вас есть выбор. Мы постарались написать её коротко и понятно. В Игре нет аккаунтов, входа и чата.</p>
 
@@ -140,7 +142,8 @@
   <li><strong>Прогресс игры</strong> (раскрытые дела, монеты, обстановка офиса, серия дней, настройки). Хранится только на вашем устройстве, нам не передаётся. Удаляется при удалении Игры или очистке её данных.</li>
   <li><strong>Рекламные данные</strong> (Google AdMob): рекламный идентификатор, сведения об устройстве и приложении (модель, версия ОС, язык, версия приложения), IP-адрес и определяемое по нему примерное местоположение, данные о взаимодействии с рекламой (например, что видео с наградой было просмотрено), диагностические данные.</li>
   <li><strong>Данные о покупках</strong> (Google Play Billing): оплата наборов подсказок или подписки полностью проходит через Google Play. Мы никогда не видим данные вашей карты; мы получаем только подтверждение, что покупка действительна, чтобы выдать товар в Игре.</li>
-  <li><strong>Отзывы</strong> (по желанию): если вы отправите форму обратной связи в Игре, мы получим вашу оценку, введённый вами текст, версию приложения и язык Игры. Пожалуйста, не указывайте в тексте личные данные. Ничего не отправляется, пока вы не нажмёте «Отправить».</li>
+  <li><strong>Отзывы</strong> (по желанию): если вы отправите форму обратной связи в Игре, мы получим вашу оценку, введённый вами текст, версию приложения, язык Игры и случайный идентификатор установки. Пожалуйста, не указывайте в тексте личные данные. Ничего не отправляется, пока вы не нажмёте «Отправить». Отзывы сохраняются в Google Таблице на Google Диске разработчика (через Google Apps Script).</li>
+  <li><strong>Статистика игры</strong> (только если вы нажмёте «Да, помочь» в Игре; отключить можно в любой момент в Настройках): игровые события вроде «дело открыто» или «дело раскрыто», случайный идентификатор установки (не рекламный ID), номер дня с установки, версия приложения, язык и платформа. В данных, которые мы храним, нет имени, почты, рекламного ID и IP-адреса. Мы не используем аналитический SDK: события уходят в Google Таблицу на Google Диске разработчика (через Google Apps Script). Пока вы не согласились, ничего не отправляется.</li>
   <li><strong>Уведомления</strong>: ежедневное напоминание «новое дело готово» — локальное уведомление, которое планируется на самом устройстве. Никакие данные нам при этом не передаются. Его можно отключить в Игре или в настройках телефона.</li>
   <li><strong>Веб-версия</strong> (если вы играете в браузере по нашему адресу на GitHub Pages): игра целиком работает в вашем браузере, прогресс хранится в локальном хранилище браузера на вашем устройстве. Cookie, рекламы и аналитики там нет. Как и любой сайт, GitHub (хостинг) может обрабатывать технические данные, например IP-адрес, в журналах сервера по собственному <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">положению о конфиденциальности</a>.</li>
 </ul>
@@ -150,6 +153,7 @@
   <li><strong>Работа Игры и выдача покупок</strong> — исполнение договора (ст. 6(1)(b) GDPR).</li>
   <li><strong>Персонализированная реклама</strong> — ваше согласие (ст. 6(1)(a)). Без согласия может показываться неперсонализированная реклама, которая использует ограниченные данные (ограничение частоты показов, защита от мошенничества, подсчёт показов) на основании нашего законного интереса в финансировании бесплатной игры (ст. 6(1)(f)).</li>
   <li><strong>Отзывы</strong> — чтобы прочитать отзыв, ответить на него и улучшить Игру; законный интерес (ст. 6(1)(f)), обработка начинается только после вашей отправки.</li>
+  <li><strong>Статистика игры</strong> — ваше согласие (ст. 6(1)(a)); спрашиваем один раз после первого дела, отозвать можно в любой момент в Настройках.</li>
   <li><strong>Исполнение юридических обязанностей</strong>, например налоговый и бухгалтерский учёт продаж (ст. 6(1)(c)).</li>
 </ul>
 <p>Мы не продаём ваши персональные данные и не принимаем на их основе автоматизированных решений, имеющих для вас юридические или аналогично значимые последствия.</p>
@@ -164,12 +168,12 @@
   <li><strong>Google Play / Google Play Billing</strong> — распространение и платежи.</li>
 </ul>
 <p>Политика конфиденциальности Google: <a href="https://policies.google.com/privacy?hl=ru">https://policies.google.com/privacy</a></p>
-<p>Отзывы хранятся на сервере хостинг-провайдера, который действует по нашему поручению как обработчик. Некоторые поставщики, включая Google, могут передавать данные за пределы ЕЭЗ; такая передача защищена Стандартными договорными положениями ЕС или Рамочной программой защиты данных ЕС–США.</p>
+<p>Отзывы и статистика игры хранятся в Google Таблице на Google Диске разработчика и принимаются через Google Apps Script. Google действует как наш обработчик. Некоторые поставщики, включая Google, могут передавать данные за пределы ЕЭЗ; такая передача защищена Стандартными договорными положениями ЕС или Рамочной программой защиты данных ЕС–США.</p>
 
 <h2>6. Сроки хранения</h2>
 <ul>
   <li>Прогресс игры: на вашем устройстве, пока вы его не удалите или не удалите Игру.</li>
-  <li>Отзывы: до 24 месяцев, затем удаляются (или раньше — по вашей просьбе).</li>
+  <li>Отзывы и статистика игры: до 14 месяцев в Google Таблице, затем удаляются автоматически (раньше — по вашей просьбе).</li>
   <li>Рекламные данные и данные о покупках: хранятся Google по его собственным срокам; записи о продажах для налоговых целей хранятся столько, сколько требует закон.</li>
 </ul>
 
@@ -190,7 +194,7 @@
 <p>Игра предназначена для игроков от 12 лет и не ориентирована на детей младше 13 лет. Мы сознательно не собираем персональные данные детей младше 13 лет. Если пользователь отмечен как не достигший возраста цифрового согласия в своей стране (в Польше — 16 лет), рекламные запросы помечаются соответствующим образом и показывается только неперсонализированная реклама. Если вы считаете, что ребёнок прислал нам персональные данные, свяжитесь с нами — мы их удалим.</p>
 
 <h2>9. Безопасность</h2>
-<p>Данные из Игры передаются по зашифрованным соединениям (HTTPS). Доступ к отзывам есть только у разработчика.</p>
+<p>Данные из Игры передаются по зашифрованным соединениям (HTTPS). Доступ к отзывам и статистике есть только у разработчика.</p>
 
 <h2>10. Изменения политики</h2>
 <p>Мы можем обновлять эту политику, например при появлении новых функций. Актуальная версия с датой вступления в силу всегда доступна по этому адресу. О существенных изменениях мы также сообщим в Игре.</p>
@@ -203,7 +207,7 @@
 <!-- ============================ SPANISH ============================ -->
 <section class="lang" id="es" lang="es">
 <h1>Caso del día — Política de privacidad</h1>
-<p class="meta">Fecha de entrada en vigor: 18 de octubre de 2026</p>
+<p class="meta">Fecha de entrada en vigor: 25 de octubre de 2026</p>
 
 <p>Esta política explica qué información trata el juego para móviles «Caso del día» (el «Juego»), para qué y qué opciones tienes. Hemos intentado que sea breve y clara. El Juego no tiene cuentas, ni inicio de sesión, ni chat.</p>
 
@@ -215,7 +219,8 @@
   <li><strong>Progreso del juego</strong> (casos resueltos, monedas, muebles de la oficina, racha diaria, ajustes). Se guarda solo en tu dispositivo; no lo recibimos. Se borra al desinstalar el Juego o borrar sus datos.</li>
   <li><strong>Datos publicitarios</strong> (Google AdMob): ID de publicidad, información del dispositivo y de la app (modelo, versión del sistema, idioma, versión de la app), dirección IP y la ubicación aproximada que se deduce de ella, datos de interacción con anuncios (por ejemplo, que viste un vídeo con recompensa) y datos de diagnóstico.</li>
   <li><strong>Datos de compra</strong> (Google Play Billing): si compras un paquete de pistas o una suscripción, el pago lo gestiona íntegramente Google Play. Nunca vemos los datos de tu tarjeta; solo recibimos la confirmación de que la compra es válida para poder entregarte el artículo.</li>
-  <li><strong>Comentarios</strong> (opcional): si envías el formulario de opinión del Juego, recibimos tu valoración, el texto que escribas, la versión de la app y el idioma del Juego. Por favor, no incluyas datos personales en el texto. No se envía nada hasta que pulses «Enviar».</li>
+  <li><strong>Comentarios</strong> (opcional): si envías el formulario de opinión del Juego, recibimos tu valoración, el texto que escribas, la versión de la app, el idioma del Juego y un ID de instalación aleatorio. Por favor, no incluyas datos personales en el texto. No se envía nada hasta que pulses «Enviar». Los comentarios se guardan en una hoja de cálculo de Google en el Google Drive del desarrollador (mediante Google Apps Script).</li>
+  <li><strong>Estadísticas del juego</strong> (solo si pulsas «Sí, ayudar» en el Juego; puedes desactivarlas cuando quieras en Ajustes): eventos de juego como «caso abierto» o «caso resuelto», un ID de instalación aleatorio (no tu ID de publicidad), el número de día desde la instalación, la versión de la app, el idioma y la plataforma. Los datos que guardamos no incluyen tu nombre, correo, ID de publicidad ni dirección IP. No usamos ningún SDK de analítica: los eventos se envían a una hoja de cálculo de Google en el Google Drive del desarrollador (mediante Google Apps Script). Hasta que aceptes, no se envía nada.</li>
   <li><strong>Notificaciones</strong>: el aviso diario «hay un caso nuevo» es una notificación local programada en tu dispositivo. No nos envía ningún dato. Puedes desactivarla en el Juego o en los ajustes del teléfono.</li>
   <li><strong>Versión web</strong> (si juegas en el navegador en nuestra dirección de GitHub Pages): el juego se ejecuta íntegramente en tu navegador y guarda tu progreso en el almacenamiento local del navegador de tu dispositivo. No usamos cookies, publicidad ni analítica allí. Como cualquier sitio web, GitHub (el proveedor de alojamiento) puede tratar datos técnicos, como tu dirección IP, en los registros de su servidor según su propia <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">declaración de privacidad</a>.</li>
 </ul>
@@ -225,6 +230,7 @@
   <li><strong>Hacer funcionar el Juego y entregar las compras</strong> — ejecución de un contrato (art. 6.1.b RGPD).</li>
   <li><strong>Anuncios personalizados</strong> — tu consentimiento (art. 6.1.a). Si no lo das, puedes ver anuncios no personalizados, que usan datos limitados para limitar la frecuencia, prevenir el fraude y medir resultados, sobre la base de nuestro interés legítimo en financiar un juego gratuito (art. 6.1.f).</li>
   <li><strong>Comentarios</strong> — para leerlos, responderte y mejorar el Juego; interés legítimo (art. 6.1.f), solo cuando tú decides enviarlos.</li>
+  <li><strong>Estadísticas del juego</strong> — tu consentimiento (art. 6.1.a), que pedimos una sola vez tras tu primer caso; puedes retirarlo cuando quieras en Ajustes.</li>
   <li><strong>Obligaciones legales</strong>, como los registros fiscales y contables de las ventas (art. 6.1.c).</li>
 </ul>
 <p>No vendemos tus datos personales ni los usamos para decisiones automatizadas con efectos jurídicos o igualmente significativos para ti.</p>
@@ -239,12 +245,12 @@
   <li><strong>Google Play / Google Play Billing</strong> — distribución y pagos.</li>
 </ul>
 <p>Política de privacidad de Google: <a href="https://policies.google.com/privacy?hl=es">https://policies.google.com/privacy</a></p>
-<p>Los comentarios se guardan en un servidor gestionado por un proveedor de alojamiento que actúa como nuestro encargado del tratamiento. Algunos proveedores, incluido Google, pueden transferir datos fuera del EEE; esas transferencias están protegidas por garantías como las Cláusulas Contractuales Tipo de la UE o el Marco de Privacidad de Datos UE-EE. UU.</p>
+<p>Los comentarios y las estadísticas del juego se guardan en una hoja de cálculo de Google en el Google Drive del desarrollador y se reciben con Google Apps Script. Google actúa como nuestro encargado del tratamiento. Algunos proveedores, incluido Google, pueden transferir datos fuera del EEE; esas transferencias están protegidas por garantías como las Cláusulas Contractuales Tipo de la UE o el Marco de Privacidad de Datos UE-EE. UU.</p>
 
 <h2>6. Plazos de conservación</h2>
 <ul>
   <li>Progreso del juego: en tu dispositivo hasta que lo borres o desinstales el Juego.</li>
-  <li>Comentarios: hasta 24 meses; después se eliminan (o antes, si lo pides).</li>
+  <li>Comentarios y estadísticas del juego: hasta 14 meses en la hoja de cálculo; después se eliminan automáticamente (o antes, si lo pides).</li>
   <li>Datos publicitarios y de compra: los conserva Google según sus propios plazos; los registros de ventas con fines fiscales se guardan el tiempo que exige la ley.</li>
 </ul>
 
@@ -265,7 +271,7 @@
 <p>El Juego está pensado para jugadores a partir de 12 años y no está dirigido a menores de 13 años. No recopilamos a sabiendas datos personales de menores de 13 años. Si un usuario está identificado como menor de la edad de consentimiento digital de su país, las solicitudes de anuncios se marcan en consecuencia y solo se muestran anuncios no personalizados. Si crees que un menor nos ha enviado datos personales, escríbenos y los eliminaremos.</p>
 
 <h2>9. Seguridad</h2>
-<p>Los datos que envía el Juego viajan por conexiones cifradas (HTTPS). Solo el desarrollador tiene acceso a los comentarios.</p>
+<p>Los datos que envía el Juego viajan por conexiones cifradas (HTTPS). Solo el desarrollador tiene acceso a los comentarios y a las estadísticas.</p>
 
 <h2>10. Cambios en esta política</h2>
 <p>Podemos actualizar esta política, por ejemplo cuando el Juego tenga nuevas funciones. La versión vigente, con su fecha, estará siempre en esta dirección. Si los cambios son importantes, también te avisaremos en el Juego.</p>
@@ -278,7 +284,7 @@
 <!-- ============================ GERMAN ============================ -->
 <section class="lang" id="de" lang="de">
 <h1>Fall des Tages — Datenschutzerklärung</h1>
-<p class="meta">Gültig ab: 18. Oktober 2026</p>
+<p class="meta">Gültig ab: 25. Oktober 2026</p>
 
 <p>Diese Erklärung beschreibt, welche Daten das Handyspiel „Fall des Tages“ (das „Spiel“) verarbeitet, wozu und welche Wahlmöglichkeiten du hast. Wir haben uns um kurze, verständliche Sprache bemüht. Das Spiel hat keine Konten, keine Anmeldung und keinen Chat.</p>
 
@@ -290,7 +296,8 @@
   <li><strong>Spielfortschritt</strong> (gelöste Fälle, Münzen, Büroeinrichtung, Tagesserie, Einstellungen). Wird nur lokal auf deinem Gerät gespeichert; wir erhalten ihn nicht. Er wird gelöscht, wenn du das Spiel deinstallierst oder seine Daten löschst.</li>
   <li><strong>Werbedaten</strong> (Google AdMob): Werbe-ID, Geräte- und App-Informationen (Modell, Betriebssystemversion, Sprache, App-Version), IP-Adresse und der daraus abgeleitete ungefähre Standort, Daten zur Interaktion mit Werbung (z. B. dass ein Belohnungsvideo angesehen wurde) sowie Diagnosedaten.</li>
   <li><strong>Kaufdaten</strong> (Google Play Billing): Wenn du ein Hinweispaket oder ein Abo kaufst, wickelt Google Play die Zahlung vollständig ab. Wir sehen niemals deine Karten- oder Zahlungsdaten; wir erhalten nur eine Bestätigung, dass der Kauf gültig ist, damit das Spiel den Artikel freischalten kann.</li>
-  <li><strong>Feedback</strong> (freiwillig): Wenn du das Feedback-Formular im Spiel absendest, erhalten wir deine Bewertung, den von dir eingegebenen Text, die App-Version und die Spielsprache. Bitte gib im Text keine persönlichen Angaben an. Es wird nichts gesendet, bevor du auf „Senden“ tippst.</li>
+  <li><strong>Feedback</strong> (freiwillig): Wenn du das Feedback-Formular im Spiel absendest, erhalten wir deine Bewertung, den von dir eingegebenen Text, die App-Version, die Spielsprache und eine zufällige Installations-ID. Bitte gib im Text keine persönlichen Angaben an. Es wird nichts gesendet, bevor du auf „Senden“ tippst. Das Feedback wird in einer Google-Tabelle im Google Drive des Entwicklers gespeichert (über Google Apps Script).</li>
+  <li><strong>Spielstatistik</strong> (nur wenn du im Spiel auf „Ja, helfen“ tippst; du kannst sie jederzeit in den Einstellungen ausschalten): Spielereignisse wie „Fall geöffnet“ oder „Fall gelöst“, eine zufällige Installations-ID (nicht deine Werbe-ID), die Tagesnummer seit der Installation, App-Version, Sprache und Plattform. Die von uns gespeicherten Daten enthalten weder deinen Namen noch deine E-Mail, Werbe-ID oder IP-Adresse. Wir verwenden kein Analyse-SDK: Die Ereignisse werden an eine Google-Tabelle im Google Drive des Entwicklers gesendet (über Google Apps Script). Bevor du zustimmst, wird nichts gesendet.</li>
   <li><strong>Benachrichtigungen</strong>: Die tägliche Erinnerung „Ein neuer Fall wartet“ ist eine lokale Benachrichtigung, die auf deinem Gerät geplant wird. Dabei werden keine Daten an uns gesendet. Du kannst sie im Spiel oder in den Telefoneinstellungen abschalten.</li>
   <li><strong>Webversion</strong> (wenn du im Browser über unsere GitHub-Pages-Adresse spielst): Das Spiel läuft vollständig in deinem Browser und speichert deinen Fortschritt im lokalen Speicher des Browsers auf deinem Gerät. Wir verwenden dort keine Cookies, keine Werbung und keine Analyse. Wie jede Website kann GitHub (der Hosting-Anbieter) technische Daten wie deine IP-Adresse in seinen Server-Logs nach der eigenen <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Datenschutzerklärung</a> verarbeiten.</li>
 </ul>
@@ -300,6 +307,7 @@
   <li><strong>Betrieb des Spiels und Bereitstellung von Käufen</strong> — Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO).</li>
   <li><strong>Personalisierte Werbung</strong> — deine Einwilligung (Art. 6 Abs. 1 lit. a). Ohne Einwilligung kann nicht personalisierte Werbung angezeigt werden, die nur begrenzte Daten nutzt (z. B. Frequenzbegrenzung, Betrugsprävention, Messung), gestützt auf unser berechtigtes Interesse an der Finanzierung eines kostenlosen Spiels (Art. 6 Abs. 1 lit. f).</li>
   <li><strong>Feedback</strong> — um es zu lesen, zu beantworten und das Spiel zu verbessern; berechtigtes Interesse (Art. 6 Abs. 1 lit. f), ausgelöst durch dein eigenes Absenden.</li>
+  <li><strong>Spielstatistik</strong> — deine Einwilligung (Art. 6 Abs. 1 lit. a), die wir einmal nach deinem ersten Fall einholen; du kannst sie jederzeit in den Einstellungen widerrufen.</li>
   <li><strong>Gesetzliche Pflichten</strong>, etwa steuer- und handelsrechtliche Aufzeichnungen über Verkäufe (Art. 6 Abs. 1 lit. c).</li>
 </ul>
 <p>Wir verkaufen deine personenbezogenen Daten nicht und nutzen sie nicht für automatisierte Entscheidungen mit rechtlicher oder ähnlich erheblicher Wirkung.</p>
@@ -314,12 +322,12 @@
   <li><strong>Google Play / Google Play Billing</strong> — Vertrieb und Zahlungen.</li>
 </ul>
 <p>Datenschutzerklärung von Google: <a href="https://policies.google.com/privacy?hl=de">https://policies.google.com/privacy</a></p>
-<p>Feedback wird auf einem Server eines Hosting-Anbieters gespeichert, der als unser Auftragsverarbeiter tätig ist. Einige Anbieter, darunter Google, können Daten außerhalb des EWR übermitteln; solche Übermittlungen sind durch Garantien wie die EU-Standardvertragsklauseln oder das EU-US Data Privacy Framework abgesichert.</p>
+<p>Feedback und Spielstatistik werden in einer Google-Tabelle im Google Drive des Entwicklers gespeichert und mit Google Apps Script empfangen. Google ist dabei unser Auftragsverarbeiter. Einige Anbieter, darunter Google, können Daten außerhalb des EWR übermitteln; solche Übermittlungen sind durch Garantien wie die EU-Standardvertragsklauseln oder das EU-US Data Privacy Framework abgesichert.</p>
 
 <h2>6. Speicherdauer</h2>
 <ul>
   <li>Spielfortschritt: auf deinem Gerät, bis du ihn löschst oder das Spiel deinstallierst.</li>
-  <li>Feedback: bis zu 24 Monate, danach gelöscht (auf Wunsch früher).</li>
+  <li>Feedback und Spielstatistik: bis zu 14 Monate in der Google-Tabelle, danach automatisch gelöscht (auf Wunsch früher).</li>
   <li>Werbe- und Kaufdaten: werden von Google nach eigenen Fristen gespeichert; steuerlich relevante Verkaufsunterlagen bewahren wir so lange auf, wie das Gesetz es verlangt.</li>
 </ul>
 
@@ -340,7 +348,7 @@
 <p>Das Spiel richtet sich an Spieler ab 12 Jahren und nicht an Kinder unter 13 Jahren. Wir erheben nicht wissentlich personenbezogene Daten von Kindern unter 13 Jahren. Wird ein Nutzer als unter dem Alter der digitalen Einwilligung in seinem Land eingestuft, werden Anzeigenanfragen entsprechend gekennzeichnet und nur nicht personalisierte Anzeigen ausgeliefert. Wenn du glaubst, dass uns ein Kind personenbezogene Daten geschickt hat, melde dich bitte – wir löschen sie.</p>
 
 <h2>9. Sicherheit</h2>
-<p>Daten aus dem Spiel werden über verschlüsselte Verbindungen (HTTPS) übertragen. Zugriff auf Feedback hat nur der Entwickler.</p>
+<p>Daten aus dem Spiel werden über verschlüsselte Verbindungen (HTTPS) übertragen. Zugriff auf Feedback und Statistik hat nur der Entwickler.</p>
 
 <h2>10. Änderungen</h2>
 <p>Wir können diese Erklärung aktualisieren, etwa wenn das Spiel neue Funktionen erhält. Die aktuelle Fassung mit Gültigkeitsdatum steht immer unter dieser Adresse. Über wesentliche Änderungen informieren wir zusätzlich im Spiel.</p>
@@ -353,7 +361,7 @@
 <!-- ============================ POLISH ============================ -->
 <section class="lang" id="pl" lang="pl">
 <h1>Sprawa dnia — Polityka prywatności</h1>
-<p class="meta">Data wejścia w życie: 18 października 2026 r.</p>
+<p class="meta">Data wejścia w życie: 25 października 2026 r.</p>
 
 <p>Ta polityka wyjaśnia, jakie informacje przetwarza gra mobilna „Sprawa dnia” („Gra”), w jakim celu i jakie masz możliwości wyboru. Staraliśmy się pisać krótko i zrozumiale. Gra nie ma kont, logowania ani czatu.</p>
 
@@ -365,7 +373,8 @@
   <li><strong>Postępy w grze</strong> (rozwiązane sprawy, monety, wyposażenie biura, seria dni, ustawienia). Przechowywane wyłącznie na Twoim urządzeniu; nie otrzymujemy ich. Są usuwane po odinstalowaniu Gry lub wyczyszczeniu jej danych.</li>
   <li><strong>Dane reklamowe</strong> (Google AdMob): identyfikator reklamowy, informacje o urządzeniu i aplikacji (model, wersja systemu, język, wersja aplikacji), adres IP i ustalana na jego podstawie przybliżona lokalizacja, dane o interakcjach z reklamami (np. obejrzenie filmu z nagrodą) oraz dane diagnostyczne.</li>
   <li><strong>Dane zakupów</strong> (Google Play Billing): płatność za pakiet podpowiedzi lub subskrypcję w całości obsługuje Google Play. Nigdy nie widzimy danych Twojej karty; otrzymujemy tylko potwierdzenie, że zakup jest ważny, aby Gra mogła przyznać przedmiot.</li>
-  <li><strong>Opinie</strong> (dobrowolne): jeśli wyślesz formularz opinii w Grze, otrzymamy Twoją ocenę, wpisany przez Ciebie tekst, wersję aplikacji i język Gry. Prosimy nie podawać w tekście danych osobowych. Nic nie zostanie wysłane, dopóki nie naciśniesz „Wyślij”.</li>
+  <li><strong>Opinie</strong> (dobrowolne): jeśli wyślesz formularz opinii w Grze, otrzymamy Twoją ocenę, wpisany przez Ciebie tekst, wersję aplikacji, język Gry i losowy identyfikator instalacji. Prosimy nie podawać w tekście danych osobowych. Nic nie zostanie wysłane, dopóki nie naciśniesz „Wyślij”. Opinie są zapisywane w arkuszu Google na Dysku Google twórcy (przez Google Apps Script).</li>
+  <li><strong>Statystyki gry</strong> (tylko jeśli w Grze wybierzesz „Tak, pomogę”; możesz je wyłączyć w dowolnym momencie w Ustawieniach): zdarzenia w grze, np. „otwarto sprawę” lub „rozwiązano sprawę”, losowy identyfikator instalacji (nie Twój identyfikator reklamowy), numer dnia od instalacji, wersja aplikacji, język i platforma. Dane, które przechowujemy, nie zawierają Twojego imienia, e-maila, identyfikatora reklamowego ani adresu IP. Nie używamy SDK analitycznego: zdarzenia trafiają do arkusza Google na Dysku Google twórcy (przez Google Apps Script). Dopóki się nie zgodzisz, nic nie jest wysyłane.</li>
   <li><strong>Powiadomienia</strong>: codzienne przypomnienie „nowa sprawa czeka” to powiadomienie lokalne planowane na Twoim urządzeniu. Nie przesyła nam żadnych danych. Możesz je wyłączyć w Grze lub w ustawieniach telefonu.</li>
   <li><strong>Wersja przeglądarkowa</strong> (jeśli grasz w przeglądarce pod naszym adresem GitHub Pages): gra działa w całości w Twojej przeglądarce, a postęp jest zapisywany w pamięci lokalnej przeglądarki na Twoim urządzeniu. Nie używamy tam plików cookie, reklam ani analityki. Jak każda strona, GitHub (dostawca hostingu) może przetwarzać dane techniczne, np. adres IP, w logach serwera zgodnie z własną <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">polityką prywatności</a>.</li>
 </ul>
@@ -375,6 +384,7 @@
   <li><strong>Działanie Gry i realizacja zakupów</strong> — wykonanie umowy (art. 6 ust. 1 lit. b RODO).</li>
   <li><strong>Reklamy spersonalizowane</strong> — Twoja zgoda (art. 6 ust. 1 lit. a). Bez zgody mogą być wyświetlane reklamy niespersonalizowane, które korzystają z ograniczonych danych (np. limit częstotliwości, zapobieganie oszustwom, pomiar) na podstawie naszego prawnie uzasadnionego interesu w finansowaniu darmowej gry (art. 6 ust. 1 lit. f).</li>
   <li><strong>Opinie</strong> — aby je przeczytać, odpowiedzieć i ulepszyć Grę; prawnie uzasadniony interes (art. 6 ust. 1 lit. f), wyłącznie po Twoim wysłaniu.</li>
+  <li><strong>Statystyki gry</strong> — Twoja zgoda (art. 6 ust. 1 lit. a); pytamy raz po pierwszej sprawie, możesz ją wycofać w dowolnym momencie w Ustawieniach.</li>
   <li><strong>Obowiązki prawne</strong>, np. ewidencja podatkowa i rachunkowa sprzedaży (art. 6 ust. 1 lit. c).</li>
 </ul>
 <p>Nie sprzedajemy Twoich danych osobowych i nie podejmujemy na ich podstawie zautomatyzowanych decyzji wywołujących wobec Ciebie skutki prawne lub w podobny sposób istotnie na Ciebie wpływających.</p>
@@ -389,12 +399,12 @@
   <li><strong>Google Play / Google Play Billing</strong> — dystrybucja i płatności.</li>
 </ul>
 <p>Polityka prywatności Google: <a href="https://policies.google.com/privacy?hl=pl">https://policies.google.com/privacy</a></p>
-<p>Opinie są przechowywane na serwerze dostawcy hostingu działającego w naszym imieniu jako podmiot przetwarzający. Niektórzy dostawcy, w tym Google, mogą przekazywać dane poza EOG; takie przekazanie jest zabezpieczone m.in. standardowymi klauzulami umownymi UE lub ramami ochrony danych UE–USA (Data Privacy Framework).</p>
+<p>Opinie i statystyki gry są przechowywane w arkuszu Google na Dysku Google twórcy i odbierane przez Google Apps Script. Google działa jako nasz podmiot przetwarzający. Niektórzy dostawcy, w tym Google, mogą przekazywać dane poza EOG; takie przekazanie jest zabezpieczone m.in. standardowymi klauzulami umownymi UE lub ramami ochrony danych UE–USA (Data Privacy Framework).</p>
 
 <h2>6. Okres przechowywania</h2>
 <ul>
   <li>Postępy w grze: na Twoim urządzeniu, dopóki ich nie usuniesz lub nie odinstalujesz Gry.</li>
-  <li>Opinie: do 24 miesięcy, potem są usuwane (wcześniej — na Twoją prośbę).</li>
+  <li>Opinie i statystyki gry: do 14 miesięcy w arkuszu Google, potem są usuwane automatycznie (wcześniej — na Twoją prośbę).</li>
   <li>Dane reklamowe i zakupowe: przechowywane przez Google według jego własnych zasad; dokumenty sprzedaży do celów podatkowych przechowujemy tak długo, jak wymaga tego prawo.</li>
 </ul>
 
@@ -415,7 +425,7 @@
 <p>Gra jest przeznaczona dla graczy od 12 lat i nie jest skierowana do dzieci poniżej 13 lat. Nie zbieramy świadomie danych osobowych dzieci poniżej 13 lat. Jeśli użytkownik zostanie oznaczony jako niebędący w wieku zgody cyfrowej w swoim kraju (w Polsce — 16 lat), żądania reklam są odpowiednio oznaczane i wyświetlane są wyłącznie reklamy niespersonalizowane. Jeśli uważasz, że dziecko przesłało nam dane osobowe, skontaktuj się z nami — usuniemy je.</p>
 
 <h2>9. Bezpieczeństwo</h2>
-<p>Dane wysyłane z Gry są przesyłane szyfrowanym połączeniem (HTTPS). Dostęp do opinii ma wyłącznie twórca Gry.</p>
+<p>Dane wysyłane z Gry są przesyłane szyfrowanym połączeniem (HTTPS). Dostęp do opinii i statystyk ma wyłącznie twórca Gry.</p>
 
 <h2>10. Zmiany polityki</h2>
 <p>Możemy aktualizować tę politykę, np. gdy w Grze pojawią się nowe funkcje. Aktualna wersja z datą wejścia w życie jest zawsze dostępna pod tym adresem. O istotnych zmianach poinformujemy także w Grze.</p>

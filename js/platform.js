@@ -13,8 +13,8 @@
     privacyUrl: "privacy-policy.html",
     // Google Sheet receiver (Apps Script web app, delo-dnya-app/tools/apps-script/) for feedback and game statistics.
     // Empty = nothing is sent and the feedback form is hidden. sheetKey must match SHEET_KEY in the script's properties.
-    sheetUrl: "https://script.google.com/macros/s/AKfycbyrjtePLSV-fphVeuGT4bQqvvJAwjtKCh8PJpITzVO0JQA459U7p1wtRPFYxcSs3GE/exec",
-    sheetKey: "5jat6GPVszb0YfUpeIBWnQH3",
+    sheetUrl: "",
+    sheetKey: "",
     statsTest: false, // mark every event test:1 (developer builds), reports drop them
     statsDebug: false, // log events to the console
     unlockAll: true, // closed test: every case in the archive is open

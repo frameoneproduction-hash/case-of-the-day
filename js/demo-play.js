@@ -1,9 +1,9 @@
-// Web demo only (copied by scripts/build-demo.js): "Out on Google Play" under the home menu, in the game's current language (follows <html lang>).
-// The line under the button is the launch formula word for word (studio/content/launch-formula-2026-11-14.md, localizer); button titles: localizer to check.
+// Web demo only (copied by scripts/build-demo.js): "Out now on Google Play" under the home menu, in the game's current language (follows <html lang>).
+// The line under the button is the launch formula word for word (studio/content/launch-formula-2026-11-14.md, localizer); button titles checked by the localizer (16.11).
 (function () {
   const URL = "https://play.google.com/store/apps/details?id=com.caseoftheday.mystery&referrer=utm_source%3Ddemo";
   const T = {
-    en: ["Out on Google Play", "Free. No purchases. Ads only if you choose to watch."],
+    en: ["Out now on Google Play", "Free. No purchases. Ads only if you choose to watch."],
     ru: ["Уже в Google Play", "Бесплатно. Без покупок. Реклама — только если сами захотите посмотреть."],
     es: ["Ya en Google Play", "Gratis. Sin compras. Anuncios solo si tú quieres verlos."],
     de: ["Jetzt bei Google Play", "Kostenlos. Keine Käufe. Werbung nur, wenn du sie ansehen willst."],

@@ -1,5 +1,6 @@
 // Clue mini-games: chemistry (liquid sort), clockwork (rotate gears), torn letter (drag to order).
-// Each takes a container and { onSolve, sfx } and returns { solve() } so a hint can finish it.
+// Each takes a container and { onSolve, sfx, esc, label } and returns { solve() } so a hint can finish it.
+// label(kind, n) gives the screen-reader names in the player's language ("flask", "gear"); onWrong(key) asks the game to say something.
 (function () {
   const rnd = (n) => Math.floor(Math.random() * n);
   const shuffle = (a) => { for (let i = a.length - 1; i > 0; i--) { const j = rnd(i + 1); [a[i], a[j]] = [a[j], a[i]]; } return a; };
@@ -16,7 +17,7 @@
     } while (solvedState());
     let pick = null, done = false;
     function draw() {
-      box.innerHTML = `<div class="tubes">${tubes.map((t, i) => `<button class="tube ${pick === i ? "up" : ""}" data-t="${i}" aria-label="Flask ${i + 1}">
+      box.innerHTML = `<div class="tubes n${tubes.length}">${tubes.map((t, i) => `<button class="tube ${pick === i ? "up" : ""}" data-t="${i}" aria-label="${o.esc(o.label("flask", i + 1))}">
         ${Array.from({ length: CAP }, (_, s) => `<i style="background:${t[CAP - 1 - s] != null ? LIQ[t[CAP - 1 - s]] : "transparent"}"></i>`).join("")}</button>`).join("")}</div>`;
     }
     function pour(a, b) {
@@ -96,8 +97,8 @@
     const lines = (m) => DIR.map(([, , bit], i) => (m & bit) ? `<path d="M30 30L${[30, 60, 30, 0][i]} ${[0, 30, 60, 30][i]}"/>` : "").join("");
     function draw() {
       const ok = connected();
-      box.innerHTML = `<div class="gears-wrap ${ok ? "on" : ""}"><span class="spring"></span><div class="gears" style="grid-template-columns:repeat(${N},var(--g));--g:${N > 3 ? "min(62px, 17vw)" : "min(76px, 21vw)"}">${grid.map((row, r) => row.map((m, c) =>
-        `<button class="gear" data-r="${r}" data-c="${c}" aria-label="Gear"><svg viewBox="0 0 60 60"><g class="belt">${lines(m)}</g><circle cx="30" cy="30" r="9"/><circle cx="30" cy="30" r="3" class="hub"/></svg></button>`).join("")).join("")}</div>
+      box.innerHTML = `<div class="gears-wrap ${ok ? "on" : ""}"><span class="spring"></span><div class="gears" style="grid-template-columns:repeat(${N},var(--g));--g:${N > 3 ? "min(58px, 14.5vw)" : "min(76px, 21vw)"}">${grid.map((row, r) => row.map((m, c) =>
+        `<button class="gear" data-r="${r}" data-c="${c}" aria-label="${o.esc(o.label("gear"))}"><svg viewBox="0 0 60 60"><g class="belt">${lines(m)}</g><circle cx="30" cy="30" r="9"/><circle cx="30" cy="30" r="3" class="hub"/></svg></button>`).join("")).join("")}</div>
         <svg class="dial" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><path class="hand" d="M20 20V8M20 20l7 4"/></svg></div>`;
     }
     box.onclick = (e) => {
@@ -123,11 +124,27 @@
     const lines = o.lines;
     let order;
     do { order = shuffle(lines.map((_, i) => i)); } while (order.every((v, i) => v === i));
-    let done = false;
+    let done = false, moves = 0, nudgedAt = 0, idle = null;
     function draw() {
       box.innerHTML = `<div class="strips">${order.map((li, pos) => `<div class="strip ${done ? "done" : ""}" data-pos="${pos}" style="--r:${((li * 37) % 7) - 3}deg">${o.esc(lines[li])}</div>`).join("")}</div>`;
     }
-    function check() { if (!done && order.every((v, i) => v === i)) { done = true; draw(); o.onSolve(); } }
+    function nudge() {
+      if (done || !box.offsetParent || Date.now() - nudgedAt <= 4000) return; // the puzzle screen is hidden (player went back): no sound, no shiver
+      nudgedAt = Date.now();
+      box.querySelectorAll(".strip").forEach((s) => s.classList.add("nope"));
+      setTimeout(() => box.querySelectorAll(".strip").forEach((s) => s.classList.remove("nope")), 450);
+      o.sfx("miss"); if (o.onWrong) o.onWrong("letterWrong");
+    }
+    function check() {
+      if (done) return;
+      clearTimeout(idle);
+      if (order.every((v, i) => v === i)) { done = true; draw(); o.onSolve(); return; }
+      // Still wrong after the player has moved strips twice: the strips shiver and the game says it does not add up (at most every 4 s).
+      // Any wrong order counts, also one that reads "logically" (independent run 28.10: case 001 gave no sign at all).
+      if (++moves >= 2) nudge();
+      // One move and then nothing: the player may think the text is done. Say so after 12 s (independent run 29.10).
+      idle = setTimeout(nudge, 12000);
+    }
     let drag = null;
     box.onpointerdown = (e) => {
       if (done) return;
@@ -142,7 +159,9 @@
     box.onpointermove = (e) => {
       if (!drag) return;
       const dy = e.clientY - drag.y0;
-      const target = Math.max(0, Math.min(order.length - 1, drag.from + Math.round(dy / drag.step)));
+      // The strip goes where the finger is: the slot whose middle is nearest to the pointer (the offset from the grab point put it one slot off).
+      let target = 0, best = Infinity;
+      drag.rects.forEach((r, i) => { const d = Math.abs(e.clientY - (r.top + r.height / 2)); if (d < best) { best = d; target = i; } });
       drag.el.style.transform = `translateY(${dy}px) rotate(0deg) scale(1.03)`;
       if (target !== drag.pos) {
         drag.pos = target;
@@ -158,9 +177,10 @@
     };
     box.onpointerup = box.onpointercancel = () => {
       if (!drag) return;
+      const moved = drag.pos !== drag.from; // a tap without dragging is not a move
       const [li] = order.splice(drag.from, 1);
       order.splice(drag.pos, 0, li);
-      drag = null; draw(); check();
+      drag = null; draw(); if (moved) check();
     };
     draw();
     return { solve() { order = lines.map((_, i) => i); done = true; draw(); o.onSolve(); } };

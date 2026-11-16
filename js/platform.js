@@ -1,6 +1,12 @@
 // Platform layer: real services inside the Android app (Capacitor), harmless stand-ins in a browser.
 (function () {
   const CONFIG = {
+    // Ads and purchases are switched separately. scripts/build-aab.ps1 and android/app/build.gradle read these two lines and set the manifest by them.
+    // ads true (b8, Maria's decision 10.11): AdMob with the EU consent form (UMP) and rewarded videos only when the player taps for one (×2 coins, ×2 gift).
+    // ads false (store release 0.5.0, b7): AdMob is never started, no consent form, no ad buttons.
+    ads: true,
+    // purchases false (b7, b8): the store is never started (no billing calls); no shop products, no club, no newcomer offer, no restore. The code stays for an update.
+    purchases: false,
     // Real AdMob rewarded unit "rewarded_main". Debug builds switch to Google's test unit in js/qa-debug.js (debug only).
     admobRewardedAndroid: "",
     admobTesting: false,
@@ -31,6 +37,7 @@
   const Notif = plugin("LocalNotifications");
   const App = plugin("App");
   const Share = plugin("Share");
+  const Review = plugin("InAppReview"); // Google Play In-App Review; the card shows only in builds installed from Play
 
   let adsReady = false;
   let consentCanRequest = true;
@@ -52,20 +59,48 @@
   let adFail = "";
   async function rewardedAd(webOverlay) {
     adFail = "";
+    if (!CONFIG.ads) { adFail = "off"; return false; }
     if (!AdMob) { const ok = webOverlay ? await webOverlay() : false; if (!ok) adFail = "error"; return ok; }
     try {
       if (!adsReady) await initAds();
       if (!consentCanRequest) { adFail = "no_consent"; return false; }
-      try { await AdMob.prepareRewardVideoAd({ adId: CONFIG.admobRewardedAndroid, isTesting: CONFIG.admobTesting }); }
+      // A load on a bad network answers only after the SDK's own ~60 s timeout (emulator, b8): give up after 20 s, the button frees itself.
+      try { await Promise.race([AdMob.prepareRewardVideoAd({ adId: CONFIG.admobRewardedAndroid, isTesting: CONFIG.admobTesting }),
+        new Promise((_, no) => setTimeout(() => no(new Error("load timeout")), 20000))]); }
       catch (e) { adFail = "no_fill"; console.warn("rewarded load", e); return false; }
-      const reward = await AdMob.showRewardVideoAd();
+      const reward = await showRewarded();
       if (!reward) adFail = "closed_early";
       return !!reward;
     } catch (e) { adFail = "error"; console.warn("rewarded", e); return false; }
   }
 
+  // The plugin's showRewardVideoAd() resolves only when the reward is earned: a video closed early never answers, and the game's
+  // "ad on its way" lock would stay on until a restart (qa b8 10.11). So the wait also ends on the Dismissed / FailedToShow events.
+  // Resolves the reward item, or null when the video was closed without one.
+  function showRewarded() {
+    return new Promise((resolve) => {
+      let done = false, earned = null, timer = 0;
+      const handles = [];
+      const finish = (v) => { if (done) return; done = true; clearTimeout(timer); handles.forEach((h) => { try { h.remove(); } catch (e) {} }); resolve(v || null); };
+      // Safety net (code-reviewer 10.11): if no event ever comes (Android dropped the ad window), the wait still ends:
+      // 120 s after the start, or 30 s after the player came back to the app. A reward already earned is kept.
+      // 120 s, not less: a player who went Home and came back straight into the video (no appStateChange) can still finish it (code-reviewer).
+      const arm = (ms) => { clearTimeout(timer); timer = setTimeout(() => finish(earned), ms); };
+      arm(120000);
+      const on = (ev, fn, plug) => {
+        try { Promise.resolve((plug || AdMob).addListener(ev, fn)).then((h) => { if (done) { try { h.remove(); } catch (e) {} } else handles.push(h); }).catch(() => {}); } catch (e) {}
+      };
+      if (App) on("appStateChange", (st) => { if (st && st.isActive) arm(30000); }, App);
+      on("onRewardedVideoAdReward", (r) => { earned = r || { amount: 1 }; });
+      // The reward event and the resolved call may come just after "dismissed": wait a moment before calling it "closed early".
+      on("onRewardedVideoAdDismissed", () => setTimeout(() => finish(earned), 700));
+      on("onRewardedVideoAdFailedToShow", () => finish(null));
+      AdMob.showRewardVideoAd().then((r) => finish(r || earned), () => finish(earned));
+    });
+  }
+
   async function privacyOptions() {
-    if (!AdMob) return false;
+    if (!AdMob || !CONFIG.ads) return false;
     try { await AdMob.showPrivacyOptionsForm(); return true; } catch (e) { try { await AdMob.showConsentForm(); return true; } catch (e2) { return false; } }
   }
 
@@ -97,7 +132,7 @@
   }
   function initStore() {
     const CP = window.CdvPurchase;
-    if (!isNative || !CP || store) return;
+    if (!CONFIG.purchases || !isNative || !CP || store) return;
     store = CP.store;
     store.register(Object.entries(CONFIG.products).map(([key, id]) => ({
       id, platform: CP.Platform.GOOGLE_PLAY,
@@ -257,7 +292,7 @@
     }
     // 2) app build: our own endpoint
     if (CONFIG.sheetUrl) {
-      const r = await fetch(CONFIG.sheetUrl, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(Object.assign({}, data, { type: "feedback", k: CONFIG.sheetKey, pid: pid() })) });
+      const r = await fetch(CONFIG.sheetUrl, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(Object.assign({}, data, { type: "feedback", k: CONFIG.sheetKey, pid: pid() }, CONFIG.statsTest || statsDebug() ? { test: 1 } : {})) });
       if (!r.ok || (await r.text()).trim() !== "ok") throw new Error("feedback-not-stored");
       return true;
     }
@@ -275,21 +310,25 @@
 
   window.DELO_PLATFORM = {
     CONFIG, isNative,
+    adsOn: () => !!CONFIG.ads, purchasesOn: () => !!CONFIG.purchases,
     init() {
       setTimeout(flushStats, 3000); // events left from the last session
       if (!isNative) return;
-      initAds();
+      if (CONFIG.ads) initAds(); // ads off: AdMob is never started
+      if (!CONFIG.purchases) return; // purchases off: the store is never started
       if (window.CdvPurchase) initStore();
       else document.addEventListener("deviceready", initStore, { once: true });
     },
     canBuy: (shopKey) => !!(store && offerFor(shopKey).offer), // false: the product or base plan is missing in Play Console
     requestNotif, openAppSettings, notifSupported: () => !!Notif,
+    // Asks Google Play for the rating card. Play decides itself whether to show it (and never tells us), so this resolves either way.
+    requestReview: async () => { if (!Review) return false; try { await Review.requestReview(); return true; } catch (e) { return false; } },
     notifGranted: async () => { if (!Notif) return false; try { return (await Notif.checkPermissions()).display === "granted"; } catch (e) { return false; } },
     rewardedAd, lastAdFail: () => adFail, privacyOptions, buy, price, share, restorePurchases, haptic, scheduleDaily, sendFeedback, onPause, onBack,
     onPurchase(grant, owned) { onGrant = grant; onOwned = owned; syncOwned(); },
-    adsAllowed: () => consentCanRequest,
+    adsAllowed: () => !!CONFIG.ads && consentCanRequest,
     track, flushStats, setStats, resetStatsId, statsAvailable: () => !!CONFIG.sheetUrl || statsDebug(),
     feedbackAvailable: () => !!CONFIG.sheetUrl || !!(window.claude && window.claude.use),
-    hasPrivacyOptions: () => !!AdMob,
+    hasPrivacyOptions: () => !!AdMob && !!CONFIG.ads, // the AdMob privacy form is about ads: no ads, no row in settings
   };
 })();

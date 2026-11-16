@@ -19,8 +19,8 @@ window.DELO_CASES.push({
     { id: "molly", color: "#8cc79a", look: { hair: "bob", hairColor: "#7a3b1e", outfit: "maid", outfitColor: "#2b2b33", extras: ["cap"], female: true },
       qs: [{ id: "mol1" }, { id: "mol2", voice: "intuition" }, { id: "mol3", voice: "gossip" }] },
   ],
-  objections: { pell1: { evidence: "c4" }, pell2: { evidence: "c2" } },
-  proof: ["c4", "obj:pell1", "mol3", "obj:pell2", "ash3", "c2"],
+  objections: { pell1: { evidence: ["c4", "mol3"] }, pell2: { evidence: "c2" } },
+  proof: ["c4", "obj:pell1", "mol3", "obj:pell2", "ash3", "c2", "c5"],
   text: {
     ru: {
       title: "Последний взнос",
@@ -46,13 +46,13 @@ window.DELO_CASES.push({
       },
       qs: {
         ash1: { q: "Где вы были вечером?", a: "Обедала до без четверти девять. С девяти Молли укладывала мне волосы в моём купе.", nt: "Алиби леди Эшби", nx: "С 21:00 в своём купе с Молли." },
-        ash2: { q: "Что вы думаете о мистере Вейне?", a: "Жаба в белом галстуке. Половина этого поезда ему платила, милочка." },
+        ash2: { q: "Что вы думаете о мистере Вейне?", a: "Жаба в белом галстуке — половина этого поезда ему платила, милочка." },
         ash3: { q: "Чьи это перчатки?", a: "Серые, штопаные? Их носил молодой священник. Даже суп в них ел за обедом, бедняжка.", v: "Она смеётся, но запомнила точно.", nt: "Перчатки священника", nx: "За обедом преподобный Пелл был в серых штопаных перчатках." },
         dac1: { q: "Где вы были вечером?", a: "В вагоне-ресторане с половины девятого до самой тревоги. Ни разу не вставал из-за стола. Стюард подтвердит.", nt: "Алиби капитана", nx: "С 20:30 до тревоги в ресторане, стюард подтвердит." },
         dac2: { q: "Чем Вейн держал вас?", a: "Снимки из одного карточного клуба. Я заплатил на прошлой неделе. Всё кончено.", v: "Ему стыдно. Заплатил, говорит он. А шантажисты разве отдают снимки?" },
         dac3: { q: "Это ваш портсигар?", a: "Мой! Пропал в ресторане около девяти. Священник за соседним столиком как раз спешно ушёл.", v: "Пропал около девяти. Кто сидел рядом?", nt: "Показание капитана", nx: "Портсигар пропал около 21:00, когда спешно ушёл священник." },
         pell1: { q: "Где вы были вечером?", a: "После обеда вернулся в третий класс и читал. [[Проводник третьего класса видел меня с книгой до самой тревоги.]]", nt: "Алиби Пелла", nx: "Говорит, что до тревоги читал в третьем классе, проводник видел." },
-        pell2: { q: "Вы знали мистера Вейна?", a: "Что вы! [[Впервые услышал это имя сегодня.]]" },
+        pell2: { q: "Вы знали мистера Вейна?", a: "Что вы, мисс, откуда! [[Впервые услышал это имя сегодня.]]" },
         pell3: { q: "Это ваши перчатки?", a: "Серая шерсть у многих. Свои я… потерял ещё на вокзале Виктория.", v: "На вокзале? Леди Эшби видела их на нём за обедом." },
         mol1: { q: "Где вы были вечером?", a: "С девяти причёсывала миледи. Отлучилась раз, минуты на две, около 21:10 — за горячей водой к проводнику.", nt: "Алиби Молли", nx: "С 21:00 с леди Эшби, отлучалась на две минуты около 21:10." },
         mol2: { q: "Вейн что-нибудь знал о вас?", a: "Он на меня смотрел, как на чемодан, мисс. И слава богу.", v: "Она боится. Смотрит на дверь хозяйки." },
@@ -66,7 +66,7 @@ window.DELO_CASES.push({
         ash: "Леди Эшби с девяти была в купе с Молли. А её письма так и лежат в коробке — убийца забрал бы свои.",
         dacre: "Капитан до тревоги сидел в ресторане при стюарде, а портсигар у него украли.",
         molly: "Молли отлучалась всего на две минуты, а Вейну до неё не было дела. Мотива нет.",
-        proof: "Пелл бледнеет: «Это ничего не доказывает». Нужны улики, которые приводят его в купе Вейна.",
+        proof: "Пелл бледнеет: «Это ничего не доказывает». Нужны улики, которые приводят его в купе Вейна или показывают, чем Вейн ему грозил.",
       },
       deduce: ["Чьи пачки остались в коробке? Убийца забрал бы свою.", "Портсигар подбросили. Кто сидел рядом с капитаном в ресторане?", "Кто ел суп в серых перчатках? И кто такой «Т. П.»?"],
       solution: {
@@ -101,7 +101,7 @@ window.DELO_CASES.push({
       },
       qs: {
         ash1: { q: "Where were you this evening?", a: "Dining until a quarter to nine. From nine, Molly was doing my hair in my compartment.", nt: "Lady Ashby's alibi", nx: "From 9 pm in her compartment with Molly." },
-        ash2: { q: "What did you think of Mr Vane?", a: "A toad in a white tie. Half this train was paying him, my dear." },
+        ash2: { q: "What did you think of Mr Vane?", a: "A toad in a white tie: half this train was paying him, my dear." },
         ash3: { q: "Whose gloves are these?", a: "Grey and darned? The young curate wore them. He even ate his soup in them at dinner, poor lamb.", v: "She's laughing, but she remembers exactly.", nt: "The curate's gloves", nx: "At dinner the Reverend Pell wore darned grey gloves." },
         dac1: { q: "Where were you this evening?", a: "In the dining car from half past eight until the alarm. Never once left my table. The steward will tell you.", nt: "The Captain's alibi", nx: "From 8:30 pm until the alarm in the dining car; the steward confirms." },
         dac2: { q: "What did Vane have on you?", a: "Photographs from a certain card club. I paid last week. It's over.", v: "He's ashamed. He paid, he says. But do blackmailers ever hand back photographs?" },
@@ -121,7 +121,7 @@ window.DELO_CASES.push({
         ash: "Lady Ashby was with Molly from nine. And her letters are still in the hatbox. The killer would have taken his own.",
         dacre: "The Captain sat in the dining car with the steward until the alarm, and his case was stolen.",
         molly: "Molly was gone just two minutes, and Vane had no hold on her. No motive.",
-        proof: "Pell goes pale: “That proves nothing.” You need evidence that puts him in Vane's compartment.",
+        proof: "Pell goes pale: “That proves nothing.” You need evidence that puts him in Vane's compartment, or shows what Vane held over him.",
       },
       deduce: ["Whose bundles are still in the hatbox? The killer would have taken his own.", "The cigarette case was planted. Who sat next to the Captain at dinner?", "Who ate soup in grey gloves? And who is “T. P.”?"],
       solution: {
@@ -156,7 +156,7 @@ window.DELO_CASES.push({
       },
       qs: {
         ash1: { q: "¿Dónde estuvo esta noche?", a: "Cenando hasta las nueve menos cuarto. Desde las nueve, Molly me peinaba en mi compartimento.", nt: "Coartada de lady Ashby", nx: "Desde las 21:00 en su compartimento con Molly." },
-        ash2: { q: "¿Qué opinaba del señor Vane?", a: "Un sapo con corbata blanca. Medio tren le pagaba, querida." },
+        ash2: { q: "¿Qué opinaba del señor Vane?", a: "Un sapo con corbata blanca: medio tren le pagaba, querida." },
         ash3: { q: "¿De quién son estos guantes?", a: "¿Grises y zurcidos? Los llevaba el joven coadjutor. Hasta se tomó la sopa con ellos, pobrecillo.", v: "Se ríe, pero lo recuerda con exactitud.", nt: "Los guantes del coadjutor", nx: "En la cena el reverendo Pell llevaba guantes grises zurcidos." },
         dac1: { q: "¿Dónde estuvo esta noche?", a: "En el vagón restaurante desde las ocho y media hasta la alarma. No me levanté ni una vez. El camarero lo confirmará.", nt: "Coartada del capitán", nx: "Desde las 20:30 hasta la alarma en el restaurante; lo confirma el camarero." },
         dac2: { q: "¿Qué tenía Vane contra usted?", a: "Fotos de cierto club de cartas. Pagué la semana pasada. Se acabó.", v: "Le da vergüenza. Dice que pagó. ¿Pero un chantajista devuelve alguna vez las fotos?" },
@@ -176,7 +176,7 @@ window.DELO_CASES.push({
         ash: "Lady Ashby estuvo con Molly desde las nueve. Y sus cartas siguen en la sombrerera: el asesino se habría llevado las suyas.",
         dacre: "El capitán estuvo en el restaurante con el camarero hasta la alarma, y le robaron la pitillera.",
         molly: "Molly salió solo dos minutos, y Vane no tenía nada contra ella. No hay móvil.",
-        proof: "Pell palidece: «Eso no demuestra nada». Necesitas pruebas que lo sitúen en el compartimento de Vane.",
+        proof: "Pell palidece: «Eso no demuestra nada». Necesitas pruebas que lo sitúen en el compartimento de Vane o muestren con qué lo amenazaba Vane.",
       },
       deduce: ["¿Qué fajos siguen en la sombrerera? El asesino se habría llevado el suyo.", "La pitillera la colocaron. ¿Quién se sentaba junto al capitán en la cena?", "¿Quién se tomó la sopa con guantes grises? ¿Y quién es «T. P.»?"],
       solution: {
@@ -211,7 +211,7 @@ window.DELO_CASES.push({
       },
       qs: {
         ash1: { q: "Wo waren Sie heute Abend?", a: "Beim Dinner bis Viertel vor neun. Ab neun hat Molly mich in meinem Abteil frisiert.", nt: "Alibi von Lady Ashby", nx: "Ab 21:00 mit Molly in ihrem Abteil." },
-        ash2: { q: "Was hielten Sie von Mr Vane?", a: "Eine Kröte mit weißer Fliege. Der halbe Zug hat ihm gezahlt, meine Liebe." },
+        ash2: { q: "Was hielten Sie von Mr Vane?", a: "Eine Kröte mit weißer Fliege: Der halbe Zug hat ihm gezahlt, meine Liebe." },
         ash3: { q: "Wem gehören diese Handschuhe?", a: "Grau und gestopft? Die trug der junge Pfarrer. Er hat sogar seine Suppe damit gegessen, der Ärmste.", v: "Sie lacht, aber sie erinnert sich genau.", nt: "Die Handschuhe des Pfarrers", nx: "Beim Dinner trug Reverend Pell graue, gestopfte Handschuhe." },
         dac1: { q: "Wo waren Sie heute Abend?", a: "Im Speisewagen, von halb neun bis zum Alarm. Kein einziges Mal aufgestanden. Der Steward wird es bestätigen.", nt: "Alibi des Captains", nx: "Ab 20:30 bis zum Alarm im Speisewagen; der Steward bestätigt es." },
         dac2: { q: "Womit hatte Vane Sie in der Hand?", a: "Fotos aus einem gewissen Kartenclub. Ich habe letzte Woche bezahlt. Es ist vorbei.", v: "Er schämt sich. Bezahlt, sagt er. Aber geben Erpresser je Fotos zurück?" },
@@ -231,7 +231,7 @@ window.DELO_CASES.push({
         ash: "Lady Ashby war ab neun mit Molly zusammen. Und ihre Briefe liegen noch in der Hutschachtel. Der Mörder hätte seine eigenen mitgenommen.",
         dacre: "Der Captain saß bis zum Alarm mit dem Steward im Speisewagen, und sein Etui wurde gestohlen.",
         molly: "Molly war nur zwei Minuten weg, und Vane hatte nichts gegen sie in der Hand. Kein Motiv.",
-        proof: "Pell wird blass: „Das beweist gar nichts.“ Du brauchst Beweise, die ihn in Vanes Abteil bringen.",
+        proof: "Pell wird blass: „Das beweist gar nichts.“ Du brauchst Beweise, die ihn in Vanes Abteil bringen oder zeigen, womit Vane ihm drohte.",
       },
       deduce: ["Wessen Bündel liegen noch in der Hutschachtel? Der Mörder hätte sein eigenes mitgenommen.", "Das Etui wurde platziert. Wer saß beim Dinner neben dem Captain?", "Wer aß Suppe in grauen Handschuhen? Und wer ist „T. P.“?"],
       solution: {
@@ -266,13 +266,13 @@ window.DELO_CASES.push({
       },
       qs: {
         ash1: { q: "Gdzie pani była wieczorem?", a: "Do za kwadrans dziewiąta na kolacji. Od dziewiątej Molly czesała mnie w moim przedziale.", nt: "Alibi lady Ashby", nx: "Od 21:00 w swoim przedziale z Molly." },
-        ash2: { q: "Co pani sądzi o panu Vanie?", a: "Ropucha w białym krawacie. Pół tego pociągu mu płaciło, moja droga." },
+        ash2: { q: "Co pani sądzi o panu Vanie?", a: "Ropucha w białym krawacie: pół tego pociągu mu płaciło, moja droga." },
         ash3: { q: "Czyje to rękawiczki?", a: "Szare, cerowane? Nosił je ten młody wikary. Nawet zupę w nich jadł przy kolacji, biedaczek.", v: "Śmieje się, ale pamięta dokładnie.", nt: "Rękawiczki wikarego", nx: "Przy kolacji wielebny Pell miał szare cerowane rękawiczki." },
         dac1: { q: "Gdzie pan był wieczorem?", a: "W wagonie restauracyjnym od wpół do dziewiątej aż do alarmu. Ani razu nie wstałem od stolika. Steward potwierdzi.", nt: "Alibi kapitana", nx: "Od 20:30 do alarmu w wagonie restauracyjnym; potwierdza steward." },
         dac2: { q: "Czym Vane pana trzymał?", a: "Zdjęcia z pewnego klubu karcianego. Zapłaciłem w zeszłym tygodniu. To koniec.", v: "Wstydzi się. Zapłacił, mówi. Ale czy szantażyści oddają zdjęcia?" },
         dac3: { q: "Czy to pańska papierośnica?", a: "Moja! Zniknęła w wagonie restauracyjnym koło dziewiątej. Wikary od sąsiedniego stolika akurat wyszedł w pośpiechu.", v: "Zniknęła koło dziewiątej. Kto siedział obok?", nt: "Zeznanie kapitana", nx: "Papierośnica zniknęła koło 21:00, gdy wikary pośpiesznie wyszedł." },
         pell1: { q: "Gdzie pan był wieczorem?", a: "Po kolacji wróciłem do trzeciej klasy poczytać. [[Konduktor trzeciej klasy widział mnie z książką aż do alarmu.]]", nt: "Alibi Pella", nx: "Twierdzi, że do alarmu czytał w trzeciej klasie; widział go konduktor." },
-        pell2: { q: "Czy znał pan pana Vane'a?", a: "Ależ skąd! [[Pierwszy raz usłyszałem to nazwisko dziś wieczorem.]]" },
+        pell2: { q: "Czy znał pan pana Vane'a?", a: "Ależ skąd, panienko! [[Pierwszy raz usłyszałem to nazwisko dziś wieczorem.]]" },
         pell3: { q: "Czy to pańskie rękawiczki?", a: "Wielu nosi szarą wełnę. Swoje… zgubiłem jeszcze na dworcu Victoria.", v: "Na dworcu? Lady Ashby widziała je na nim przy kolacji." },
         mol1: { q: "Gdzie pani była wieczorem?", a: "Od dziewiątej czesałam jaśnie panią. Wyszłam raz, na dwie minuty, koło 21:10, po gorącą wodę do konduktora.", nt: "Alibi Molly", nx: "Od 21:00 z lady Ashby; wyszła na dwie minuty koło 21:10." },
         mol2: { q: "Czy Vane coś o pani wiedział?", a: "Patrzył na mnie jak na walizkę, proszę pani. Dzięki Bogu.", v: "Boi się. Wciąż patrzy na drzwi swojej pani." },
@@ -286,7 +286,7 @@ window.DELO_CASES.push({
         ash: "Lady Ashby od dziewiątej była z Molly. A jej listy wciąż leżą w pudle. Morderca zabrałby swoje.",
         dacre: "Kapitan do alarmu siedział w wagonie restauracyjnym ze stewardem, a papierośnicę mu ukradziono.",
         molly: "Molly wyszła tylko na dwie minuty, a Vane nic na nią nie miał. Brak motywu.",
-        proof: "Pell blednie: „To niczego nie dowodzi”. Potrzebujesz dowodów, które umieszczą go w przedziale Vane'a.",
+        proof: "Pell blednie: „To niczego nie dowodzi”. Potrzebujesz dowodów, które umieszczą go w przedziale Vane'a albo pokażą, czym Vane mu groził.",
       },
       deduce: ["Czyje paczki zostały w pudle? Morderca zabrałby swoją.", "Papierośnicę podrzucono. Kto siedział obok kapitana przy kolacji?", "Kto jadł zupę w szarych rękawiczkach? I kim jest „T. P.”?"],
       solution: {

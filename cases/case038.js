@@ -47,7 +47,7 @@ window.DELO_CASES.push({
       qs: {
         nut1: { q: "Что вы делали сегодня вечером?", a: "В семь натёр три яблока до блеска и поставил корзину в кулису, к выходу Королевы. Там она и стояла до сцены. Потом весь вечер у стола: выдаю, принимаю." },
         nut2: { q: "Кто знал, что мистер Хаск ест яблоко?", a: "Все, мисс. Записку он сам написал. После сцены я отдаю ему самое румяное, с красным бочком, а он хрустит и считает выручку. Каждый вечер, с первого спектакля.", v: "Все знали, что яблоко достанется Хаску.", nt: "Яблоко для Хаска", nx: "Весь театр знал: после сцены настоящее яблоко из корзины Королевы съедает Хаск." },
-        nut3: { q: "Вы сами едите реквизит?", a: "Только пирог из сцены пира, мисс. Он всё равно сверху картонный, а внутри с почками.", v: "Реквизитор таскает пироги! Ну и ну!" },
+        nut3: { q: "Вы сами едите реквизит?", a: "Только пирог из сцены пира, мисс — он всё равно сверху картонный, а внутри с почками.", v: "Реквизитор таскает пироги! Ну и ну!" },
         dob1: { q: "Где вы были в антракте?", a: "Сначала у реквизиторского стола, ругался с Хаском. Потом пошёл перешнуровывать корсет Нянюшки. Это десять минут, мисс, спросите костюмершу, она тянула." },
         dob2: { q: "Это ваш парик?", a: "Мой. Снял в 20:45, пока спорил с Хаском о прибавке. Он грыз яблоко и говорил «нет» с набитым ртом. Я плюнул и ушёл к костюмерше.", v: "20:45. Хаск ест яблоко и ещё здоров.", nt: "Парик Доббина", nx: "В 20:45 Доббин спорил с Хаском, тот ел яблоко и был жив. Доббин ушёл к костюмерше." },
         dob3: { q: "Давно вы играете Нянюшку?", a: "Двадцать лет в юбках, мисс. Хаск обещал мне в этом году короля. Опять юбки.", v: "Под гримом не видно, а обида настоящая." },
@@ -57,8 +57,8 @@ window.DELO_CASES.push({
         del4: { q: "Вам страшно в хрустальном гробу?", a: "Только первые два спектакля, мисс. Теперь я там даже дремлю, пока принц поёт." },
         lor1: { q: "Где вы были в антракте?", a: "У себя, смывала грим старухи-колдуньи. Его полчаса смывать, а во втором акте я снова красавица-королева.", v: "Во втором акте Королева снова красавица. Грим меняют в антракте." },
         lor2: { q: "Мистер Хаск вас ценил?", a: "Семь лет он звал меня «моя находка». Находки, мисс, не отпускают.", v: "Голос певучий, а слова будто отрезаны." },
-        lor3: { q: "Вы трогали настоящее яблоко до сцены?", a: "[[Нет, мисс. Натт выносит корзину к самому выходу, я её до сцены и в руки не беру.]]" },
-        lor4: { q: "Вы собирались в Лондон?", a: "[[Мистер Хаск сам меня отпускал, мисс. Мы расстались друзьями.]]" },
+        lor3: { q: "Вы трогали настоящее яблоко до сцены?", a: "Нет, мисс, яблоки — забота реквизитора. [[Натт выносит корзину к самому выходу, я её до сцены и в руки не беру.]]" },
+        lor4: { q: "Вы собирались в Лондон?", a: "В Лондон, мисс? [[Мистер Хаск сам меня отпускал, мисс. Мы расстались друзьями.]]" },
       },
       objections: {
         lor3: { reply: "…Тёрла. Королева должна протягивать яблоко, от которого нельзя отвести глаз. Я всегда сама навожу блеск.", nt: "Мисс Лорример солгала", nx: "В 20:20 она в кулисе тёрла настоящее яблоко платочком, хотя уверяла, что не брала корзину в руки." },
@@ -104,7 +104,7 @@ window.DELO_CASES.push({
       qs: {
         nut1: { q: "What were you doing this evening?", a: "At seven I polished three apples till they shone and put the basket in the wings by the Queen's entrance. It stood there till the scene. Then all evening at my table, giving out and taking in." },
         nut2: { q: "Who knew Mr Hask ate the apple?", a: "Everyone, miss. He wrote that note himself. After the scene I hand him the reddest one in the basket and he crunches it while counting the takings. Every night since the first performance.", v: "Everyone knew the apple went to Hask.", nt: "The apple for Hask", nx: "The whole theatre knew: after the scene Hask eats the real apple from the Queen's basket." },
-        nut3: { q: "Do you eat the props yourself?", a: "Only the pie from the feast scene, miss. It's cardboard on top anyway, and kidney underneath.", v: "The property master pinches pies! Well, well!" },
+        nut3: { q: "Do you eat the props yourself?", a: "Only the pie from the feast scene, miss: it's cardboard on top anyway, and kidney underneath.", v: "The property master pinches pies! Well, well!" },
         dob1: { q: "Where were you in the interval?", a: "First at the prop table, rowing with Hask. Then I went to have the Nurse's corset relaced. That's ten minutes, miss; ask the wardrobe mistress, she did the pulling." },
         dob2: { q: "Is this your wig?", a: "Mine. I took it off at 8:45 while I argued with Hask about a rise. He was crunching the apple and saying no with his mouth full. I gave up and went to the wardrobe mistress.", v: "8:45. Hask is eating the apple and still well.", nt: "Dobbin's wig", nx: "At 8:45 Dobbin argued with Hask, who was eating the apple and alive. Dobbin went off to the wardrobe mistress." },
         dob3: { q: "Have you played the Nurse long?", a: "Twenty years in skirts, miss. Hask promised me the King this year. Skirts again.", v: "You can't see it under the paint, but the hurt is real." },
@@ -114,8 +114,8 @@ window.DELO_CASES.push({
         del4: { q: "Are you frightened in the glass coffin?", a: "Only the first two performances, miss. Now I even doze in it while the prince sings." },
         lor1: { q: "Where were you in the interval?", a: "In my dressing room, taking off the old witch's make-up. It takes half an hour, and in Act Two I'm the beautiful Queen again.", v: "In Act Two the Queen is beautiful again. The make-up is changed in the interval." },
         lor2: { q: "Did Mr Hask value you?", a: "For seven years he called me “my find”. One doesn't let a find go, miss.", v: "A singer's voice, but the words come out clipped." },
-        lor3: { q: "Did you touch the real apple before the scene?", a: "[[No, miss. Nutt brings the basket right to my entrance; I don't so much as touch it before the scene.]]" },
-        lor4: { q: "Were you going to London?", a: "[[Mr Hask was letting me go himself, miss. We parted friends.]]" },
+        lor3: { q: "Did you touch the real apple before the scene?", a: "No, miss, the apples are the property master's job. [[Nutt brings the basket right to my entrance; I don't so much as touch it before the scene.]]" },
+        lor4: { q: "Were you going to London?", a: "To London, miss? [[Mr Hask was letting me go himself, miss. We parted friends.]]" },
       },
       objections: {
         lor3: { reply: "…I rubbed it. The Queen must hold out an apple nobody can take their eyes off. I always do the shine myself.", nt: "Miss Lorrimer lied", nx: "At 8:20 she rubbed the real apple with a handkerchief in the wings, though she claimed she never touched the basket." },
@@ -161,7 +161,7 @@ window.DELO_CASES.push({
       qs: {
         nut1: { q: "¿Qué hizo esta noche?", a: "A las siete abrillanté tres manzanas y dejé la cesta entre bastidores, junto a la entrada de la Reina. Allí estuvo hasta la escena. Luego, toda la noche en mi mesa, dando y recogiendo." },
         nut2: { q: "¿Quién sabía que el señor Hask se comía la manzana?", a: "Todos, señorita. Esa nota la escribió él. Después de la escena le doy la más colorada de la cesta y él la muerde mientras cuenta la taquilla. Cada noche, desde el estreno.", v: "Todos sabían que la manzana era para Hask.", nt: "La manzana para Hask", nx: "Todo el teatro lo sabía: después de la escena Hask se come la manzana de verdad de la cesta de la Reina." },
-        nut3: { q: "¿Usted se come el atrezo?", a: "Solo el pastel de la escena del banquete, señorita. Por arriba es de cartón, pero por dentro es de riñones.", v: "¡El utilero se zampa los pasteles! ¡Vaya, vaya!" },
+        nut3: { q: "¿Usted se come el atrezo?", a: "Solo el pastel de la escena del banquete, señorita: por arriba es de cartón, pero por dentro es de riñones.", v: "¡El utilero se zampa los pasteles! ¡Vaya, vaya!" },
         dob1: { q: "¿Dónde estuvo en el entreacto?", a: "Primero en la mesa de atrezo, discutiendo con Hask. Luego fui a que me volvieran a atar el corsé de la Nodriza. Son diez minutos, señorita; pregunte a la vestuarista, ella tiraba." },
         dob2: { q: "¿Es suya esta peluca?", a: "Mía. Me la quité a las 20:45 mientras discutía con Hask por un aumento. Él mordía la manzana y decía que no con la boca llena. Lo dejé estar y me fui con la vestuarista.", v: "20:45. Hask se come la manzana y sigue bien.", nt: "La peluca de Dobbin", nx: "A las 20:45 Dobbin discutía con Hask, que se comía la manzana y estaba vivo. Dobbin se fue con la vestuarista." },
         dob3: { q: "¿Hace mucho que hace de Nodriza?", a: "Veinte años con faldas, señorita. Hask me prometió el Rey este año. Faldas otra vez.", v: "Bajo el maquillaje no se ve, pero la ofensa es de verdad." },
@@ -171,8 +171,8 @@ window.DELO_CASES.push({
         del4: { q: "¿Le da miedo el ataúd de cristal?", a: "Solo las dos primeras funciones, señorita. Ahora hasta me adormezco mientras canta el príncipe." },
         lor1: { q: "¿Dónde estuvo en el entreacto?", a: "En mi camerino, quitándome el maquillaje de vieja bruja. Se tarda media hora, y en el segundo acto vuelvo a ser la bella Reina.", v: "En el segundo acto la Reina vuelve a ser bella. El maquillaje se cambia en el entreacto." },
         lor2: { q: "¿El señor Hask la valoraba?", a: "Siete años llamándome «mi hallazgo». Un hallazgo no se suelta, señorita.", v: "Voz de cantante, pero las palabras salen cortadas." },
-        lor3: { q: "¿Tocó la manzana de verdad antes de la escena?", a: "[[No, señorita. Nutt me trae la cesta justo a la entrada; antes de la escena ni la toco.]]" },
-        lor4: { q: "¿Pensaba irse a Londres?", a: "[[El señor Hask me dejaba irme él mismo, señorita. Nos despedimos como amigos.]]" },
+        lor3: { q: "¿Tocó la manzana de verdad antes de la escena?", a: "No, señorita, las manzanas son cosa del utilero. [[Nutt me trae la cesta justo a la entrada; antes de la escena ni la toco.]]" },
+        lor4: { q: "¿Pensaba irse a Londres?", a: "¿A Londres, señorita? [[El señor Hask me dejaba irme él mismo, señorita. Nos despedimos como amigos.]]" },
       },
       objections: {
         lor3: { reply: "…La froté. La Reina tiene que ofrecer una manzana de la que nadie pueda apartar la vista. El brillo siempre se lo doy yo.", nt: "La señorita Lorrimer mintió", nx: "A las 20:20 frotó la manzana de verdad con un pañuelo entre bastidores, aunque decía que no tocó la cesta." },
@@ -218,7 +218,7 @@ window.DELO_CASES.push({
       qs: {
         nut1: { q: "Was haben Sie heute Abend gemacht?", a: "Um sieben habe ich drei Äpfel blank poliert und den Korb in die Gasse gestellt, an den Auftritt der Königin. Dort stand er bis zur Szene. Dann den ganzen Abend am Tisch: ausgeben, annehmen." },
         nut2: { q: "Wer wusste, dass Mr Hask den Apfel isst?", a: "Alle, Miss. Den Zettel hat er selbst geschrieben. Nach der Szene gebe ich ihm den rotbackigsten aus dem Korb, und er knabbert und zählt die Einnahmen. Jeden Abend seit der Premiere.", v: "Alle wussten, dass der Apfel an Hask ging.", nt: "Der Apfel für Hask", nx: "Das ganze Theater wusste: Nach der Szene isst Hask den echten Apfel aus dem Korb der Königin." },
-        nut3: { q: "Essen Sie selbst Requisiten?", a: "Nur die Pastete aus der Festszene, Miss. Oben ist sie sowieso aus Pappe, drinnen mit Nieren.", v: "Der Requisiteur stibitzt Pasteten! Na, so was!" },
+        nut3: { q: "Essen Sie selbst Requisiten?", a: "Nur die Pastete aus der Festszene, Miss: Oben ist sie sowieso aus Pappe, drinnen mit Nieren.", v: "Der Requisiteur stibitzt Pasteten! Na, so was!" },
         dob1: { q: "Wo waren Sie in der Pause?", a: "Erst am Requisitentisch, Streit mit Hask. Dann ließ ich mir das Korsett der Amme neu schnüren. Das dauert zehn Minuten, Miss, fragen Sie die Gewandmeisterin, sie hat gezogen." },
         dob2: { q: "Ist das Ihre Perücke?", a: "Meine. Um 20:45 abgesetzt, während ich mit Hask um eine Gage stritt. Er knabberte am Apfel und sagte mit vollem Mund nein. Ich gab auf und ging zur Gewandmeisterin.", v: "20:45. Hask isst den Apfel und ist noch wohlauf.", nt: "Dobbins Perücke", nx: "Um 20:45 stritt Dobbin mit Hask, der den Apfel aß und lebte. Dobbin ging zur Gewandmeisterin." },
         dob3: { q: "Spielen Sie die Amme schon lange?", a: "Zwanzig Jahre in Röcken, Miss. Hask hat mir dieses Jahr den König versprochen. Wieder Röcke.", v: "Unter der Schminke sieht man es nicht, aber die Kränkung ist echt." },
@@ -228,8 +228,8 @@ window.DELO_CASES.push({
         del4: { q: "Haben Sie Angst im gläsernen Sarg?", a: "Nur bei den ersten beiden Vorstellungen, Miss. Jetzt döse ich sogar darin, während der Prinz singt." },
         lor1: { q: "Wo waren Sie in der Pause?", a: "In meiner Garderobe, ich schminkte die alte Hexe ab. Das dauert eine halbe Stunde, und im zweiten Akt bin ich wieder die schöne Königin.", v: "Im zweiten Akt ist die Königin wieder schön. Die Schminke wird in der Pause gewechselt." },
         lor2: { q: "Hat Mr Hask Sie geschätzt?", a: "Sieben Jahre nannte er mich „mein Fund“. Einen Fund lässt man nicht gehen, Miss.", v: "Eine Sängerstimme, aber die Worte kommen abgehackt." },
-        lor3: { q: "Haben Sie den echten Apfel vor der Szene angefasst?", a: "[[Nein, Miss. Nutt bringt den Korb direkt an meinen Auftritt, vor der Szene nehme ich ihn nicht einmal in die Hand.]]" },
-        lor4: { q: "Wollten Sie nach London?", a: "[[Mr Hask hat mich selbst gehen lassen, Miss. Wir sind als Freunde geschieden.]]" },
+        lor3: { q: "Haben Sie den echten Apfel vor der Szene angefasst?", a: "Nein, Miss, die Äpfel sind Sache des Requisiteurs. [[Nutt bringt den Korb direkt an meinen Auftritt, vor der Szene nehme ich ihn nicht einmal in die Hand.]]" },
+        lor4: { q: "Wollten Sie nach London?", a: "Nach London, Miss? [[Mr Hask hat mich selbst gehen lassen, Miss. Wir sind als Freunde geschieden.]]" },
       },
       objections: {
         lor3: { reply: "…Ich habe ihn gerieben. Die Königin muss einen Apfel reichen, von dem niemand den Blick wenden kann. Den Glanz mache ich immer selbst.", nt: "Miss Lorrimer hat gelogen", nx: "Um 20:20 rieb sie in der Gasse den echten Apfel mit einem Taschentuch, obwohl sie behauptete, den Korb nie berührt zu haben." },
@@ -275,7 +275,7 @@ window.DELO_CASES.push({
       qs: {
         nut1: { q: "Co pan robił dziś wieczorem?", a: "O 19:00 wypolerowałem trzy jabłka i postawiłem kosz w kulisie, przy wejściu Królowej. Stał tam aż do sceny. Potem cały wieczór przy stole: wydaję, przyjmuję." },
         nut2: { q: "Kto wiedział, że pan Hask je jabłko?", a: "Wszyscy, panienko. Tę kartkę sam napisał. Po scenie oddaję mu najrumieńsze jabłko z kosza, a on chrupie i liczy utarg. Co wieczór od premiery.", v: "Wszyscy wiedzieli, że jabłko dostanie Hask.", nt: "Jabłko dla Haska", nx: "Cały teatr wiedział: po scenie prawdziwe jabłko z kosza Królowej zjada Hask." },
-        nut3: { q: "Sam pan je rekwizyty?", a: "Tylko pasztecik ze sceny uczty, panienko. Z wierzchu i tak jest tekturowy, a w środku z cynaderkami.", v: "Rekwizytor podjada pasztety! No, no!" },
+        nut3: { q: "Sam pan je rekwizyty?", a: "Tylko pasztecik ze sceny uczty, panienko: z wierzchu i tak jest tekturowy, a w środku z cynaderkami.", v: "Rekwizytor podjada pasztety! No, no!" },
         dob1: { q: "Gdzie pan był w antrakcie?", a: "Najpierw przy stole z rekwizytami, kłóciłem się z Haskiem. Potem poszedłem przesznurować gorset Niani. To dziesięć minut, panienko, niech pani spyta garderobianą, to ona ciągnęła." },
         dob2: { q: "To pana peruka?", a: "Moja. Zdjąłem ją o 20:45, kiedy kłóciłem się z Haskiem o podwyżkę. Chrupał jabłko i mówił „nie” z pełnymi ustami. Machnąłem ręką i poszedłem do garderobianej.", v: "20:45. Hask je jabłko i jeszcze ma się dobrze.", nt: "Peruka Dobbina", nx: "O 20:45 Dobbin kłócił się z Haskiem, który jadł jabłko i żył. Dobbin poszedł do garderobianej." },
         dob3: { q: "Od dawna gra pan Nianię?", a: "Dwadzieścia lat w spódnicach, panienko. Hask obiecał mi w tym roku króla. Znowu spódnice.", v: "Pod charakteryzacją nie widać, ale uraza jest prawdziwa." },
@@ -285,8 +285,8 @@ window.DELO_CASES.push({
         del4: { q: "Boi się pani w kryształowej trumnie?", a: "Tylko na dwóch pierwszych przedstawieniach, panienko. Teraz nawet drzemię, kiedy książę śpiewa." },
         lor1: { q: "Gdzie pani była w antrakcie?", a: "U siebie, zmywałam charakteryzację starej wiedźmy. Zmywa się ją pół godziny, a w drugim akcie znów jestem piękną królową.", v: "W drugim akcie Królowa znów jest piękna. Charakteryzację zmienia się w antrakcie." },
         lor2: { q: "Pan Hask panią cenił?", a: "Siedem lat nazywał mnie „moim znaleziskiem”. Znalezisk się nie wypuszcza, panienko.", v: "Śpiewny głos, a słowa jakby ucięte." },
-        lor3: { q: "Dotykała pani prawdziwego jabłka przed sceną?", a: "[[Nie, panienko. Nutt przynosi kosz pod samo moje wejście, przed sceną nawet go nie biorę do ręki.]]" },
-        lor4: { q: "Wybierała się pani do Londynu?", a: "[[Pan Hask sam mnie puszczał, panienko. Rozstaliśmy się w przyjaźni.]]" },
+        lor3: { q: "Dotykała pani prawdziwego jabłka przed sceną?", a: "Nie, panienko, jabłka to sprawa rekwizytora. [[Nutt przynosi kosz pod samo moje wejście, przed sceną nawet go nie biorę do ręki.]]" },
+        lor4: { q: "Wybierała się pani do Londynu?", a: "Do Londynu, panienko? [[Pan Hask sam mnie puszczał, panienko. Rozstaliśmy się w przyjaźni.]]" },
       },
       objections: {
         lor3: { reply: "…Pocierałam. Królowa musi podawać jabłko, od którego nie da się oderwać oczu. Połysk zawsze robię sama.", nt: "Panna Lorrimer skłamała", nx: "O 20:20 pocierała w kulisie prawdziwe jabłko chusteczką, choć zapewniała, że kosza nie dotykała." },

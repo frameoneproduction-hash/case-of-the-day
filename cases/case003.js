@@ -20,7 +20,7 @@ window.DELO_CASES.push({
       qs: [{ id: "img1" }, { id: "img2", voice: "gossip" }, { id: "img3", needs: "c2", voice: "logic" }] },
   ],
   objections: { img1: { evidence: "c4" }, img3: { evidence: "c2" } },
-  proof: ["c4", "obj:img1", "tob3", "gib3", "cel3", "obj:img3", "c2"],
+  proof: ["c4", "obj:img1", "tob3", "gib3", "cel3", "obj:img3", "c2", "c5"],
   text: {
     ru: {
       title: "Последний антракт",
@@ -36,7 +36,7 @@ window.DELO_CASES.push({
         c4: { title: "Букет фиалок", text: "Свежие фиалки! Карточка: «Лоуренсу — в наш великий вечер. И. Г.» Как трогательно!", note: "Фиалки с карточкой «И. Г.» в гримёрке." },
         c5: { title: "Флакон духов", text: "Одеколон Фэрвезера пахнет лавандой. А в воздухе тяжёлый шипр. Чужой запах, и свежий.", note: "В гримёрке недавно был кто-то, пахнущий шипром." },
       },
-      letter: ["РУКОПИСЬ НАШЛАСЬ ТЧК", "1924 ГОД ПОДПИСЬ ДЖ ПРАЙС ТЧК", "МИССИС Г СМЕНИЛА ТОЛЬКО НАЗВАНИЕ ТЧК", "ПРИВЕЗУ НА БАНКЕТ ПОСЛЕ ПРЕМЬЕРЫ ТЧК", "РОБЕРТС"],
+      letter: ["РУКОПИСЬ ПЬЕСЫ НАШЛАСЬ ТЧК", "НА ТИТУЛЕ 1924 ГОД И ИМЯ ДЖ ПРАЙС ТЧК", "ЗНАЧИТ МИССИС Г СМЕНИЛА ТОЛЬКО НАЗВАНИЕ ТЧК", "ДОКАЗАТЕЛЬСТВО ПРИВЕЗУ НА БАНКЕТ ПОСЛЕ ПРЕМЬЕРЫ ТЧК", "ВАШ РОБЕРТС"],
       decoys: { mask: "Маска для второго акта улыбается. Она знает больше, чем скажет.", dagger: "Бутафорский кинжал. Лезвие из жести. Не оружие.", poster: "Афиша «Стеклянного лебедя»: Фэрвезер огромными буквами, остальные мелко. Ох, как это злило труппу!", wig: "Парик для второго акта. Его так и не надели." },
       suspects: {
         gibbs: { name: "Миссис Гиббс", role: "Костюмерша, 61 год", intro: "Сжимает подушечку с иголками. Служит в театре сорок лет." },
@@ -47,7 +47,7 @@ window.DELO_CASES.push({
       qs: {
         gib1: { q: "Где вы были в антракте?", a: "В 21:00 налила ему бокал, он выпил залпом, как всегда, и отослал меня. Я ушла подшивать подол мисс Вэнс, заведующая костюмерной была со мной до самого крика.", nt: "Алиби миссис Гиббс", nx: "Налила один бокал в 21:00, потом в костюмерной при свидетельнице." },
         gib2: { q: "Что было на столе, когда вы уходили?", a: "Графин, пустой бокал и его гребень. Цветов не было — я бы сразу поставила их в воду.", v: "Значит, фиалки принесли уже в антракте.", nt: "Цветов не было в 21:00", nx: "В 21:00 букета в гримёрке ещё не было." },
-        gib3: { q: "Кто заходил к мисс Вэнс?", a: "В первом акте из её гримёрки выскользнула миссис Грей. Сказала, что оставила открытку на удачу.", v: "Открытку! В пустой гримёрке! Ох, дорогуша!", nt: "Миссис Грей у мисс Вэнс", nx: "В первом акте миссис Грей выходила из гримёрки мисс Вэнс." },
+        gib3: { q: "Кто заходил к мисс Вэнс?", a: "В первом акте из её гримёрки выскользнула миссис Грей — сказала, что оставила открытку на удачу.", v: "Открытку! В пустой гримёрке! Ох, дорогуша!", nt: "Миссис Грей у мисс Вэнс", nx: "В первом акте миссис Грей выходила из гримёрки мисс Вэнс." },
         tob1: { q: "Где вы были в антракте?", a: "На сцене с помощником режиссёра, переставляли мебель ко второму акту. Меня видели десять рабочих сцены.", nt: "Алиби Тоби", nx: "Весь антракт на сцене, при десятке свидетелей." },
         tob2: { q: "Вы мечтали о его роли?", a: "Какой дублёр не мечтает? Но не так. Я хотел её заслужить.", v: "Ему стыдно за свою мечту." },
         tob3: { q: "Вы видели эти фиалки раньше?", a: "В первом акте они лежали на бортике ложи миссис Грей. Я видел их из-за кулис.", v: "Фиалки из ложи автора оказались в гримёрке.", nt: "Фиалки миссис Грей", nx: "В первом акте фиалки лежали в ложе миссис Грей." },
@@ -56,7 +56,7 @@ window.DELO_CASES.push({
         cel3: { q: "Кто в труппе носит шипр?", a: "Я ношу ландыш. А миссис Грей выливает на себя полфлакона шипра — её слышно из партера.", v: "Шипр! Вот так новость, дорогуша!", nt: "Шипр миссис Грей", nx: "Шипром пахнет миссис Грей." },
         img1: { q: "Где вы были в антракте?", a: "В своей ложе, грызла ногти от волнения. [[Весь антракт просидела там, билетёрша приносила мне лимонад.]]", nt: "Алиби миссис Грей", nx: "Говорит, что весь антракт сидела в ложе." },
         img2: { q: "Как шли репетиции?", a: "Чудесно! Лоуренс обожал пьесу. Ну, хотел кое-что сократить.", v: "«Кое-что»! Да они кричали друг на друга на всю Шафтсбери-авеню, дорогуша!" },
-        img3: { q: "Вы сами написали пьесу?", a: "Разумеется. [[Каждое слово в ней моё.]]", v: "Сверьте с телеграммой." },
+        img3: { q: "Вы сами написали пьесу?", a: "Её ставят под моим именем. [[Каждое слово в ней моё.]]", v: "Сверьте с телеграммой." },
       },
       objections: {
         img1: { reply: "…Лимонад я выпила в антракте, это правда. А потом отнесла ему фиалки: хотела, чтобы он увидел их до третьего акта.", nt: "Миссис Грей солгала", nx: "В антракте она была в гримёрке: принесла фиалки." },
@@ -66,7 +66,7 @@ window.DELO_CASES.push({
         gibbs: "Миссис Гиббс налила лишь первый бокал и с 21:00 сидела в костюмерной при свидетельнице. А «миссис Г.» из телеграммы — автор пьесы.",
         toby: "Тоби весь антракт был на сцене, у всех на виду.",
         celia: "Мисс Вэнс давала интервью репортёру. А помаду у неё украли в первом акте.",
-        proof: "Миссис Грей холодно улыбается: «Это ничего не доказывает». Нужны улики, что она была в гримёрке.",
+        proof: "Миссис Грей холодно улыбается: «Это ничего не доказывает». Нужны улики, что она была в гримёрке или что пьеса не её.",
       },
       deduce: ["Когда в гримёрке появились фиалки? И кто подписывается «И. Г.»?", "Помаду подбросили. Кто выходил из гримёрки мисс Вэнс в первом акте?", "Какая «миссис Г.» могла сменить у пьесы название?"],
       solution: {
@@ -91,7 +91,7 @@ window.DELO_CASES.push({
         c4: { title: "Bunch of violets", text: "Fresh violets! The card says: “To Laurence, on our great night. I. G.” How touching!", note: "Violets with a card signed “I. G.” in the dressing room." },
         c5: { title: "Scent bottle", text: "Fairweather's cologne smells of lavender. But the air is heavy with chypre. A stranger's scent, and fresh.", note: "Someone wearing chypre was here a short while ago." },
       },
-      letter: ["MANUSCRIPT FOUND STOP", "DATED 1924 SIGNED J PRICE STOP", "MRS G CHANGED ONLY THE TITLE STOP", "BRINGING IT TO OPENING PARTY STOP", "ROBERTS"],
+      letter: ["MANUSCRIPT OF THE PLAY FOUND STOP", "TITLE PAGE SAYS 1924 AND J PRICE STOP", "SO MRS G CHANGED ONLY THE TITLE STOP", "BRINGING THE PROOF TO OPENING PARTY STOP", "YOURS ROBERTS"],
       decoys: { mask: "The act-two mask is smiling. It knows more than it will say.", dagger: "A prop dagger. Tin blade. Not a weapon.", poster: "The poster for “The Glass Swan”: Fairweather in huge letters, everyone else tiny. Oh, how that galled the company!", wig: "The act-two wig. He never put it on." },
       suspects: {
         gibbs: { name: "Mrs Gibbs", role: "His dresser, 61", intro: "Clutching her pincushion. Forty years in this theatre." },
@@ -102,7 +102,7 @@ window.DELO_CASES.push({
       qs: {
         gib1: { q: "Where were you during the interval?", a: "At 9 I poured his glass; he drank it in one go, as always, and sent me off. I went to hem Miss Vance's dress — the wardrobe mistress was with me till the scream.", nt: "Mrs Gibbs's alibi", nx: "Poured one glass at 9 pm, then in wardrobe with a witness." },
         gib2: { q: "What was on the table when you left?", a: "The decanter, his empty glass and his comb. No flowers — I'd have put them in water at once.", v: "So the violets came during the interval.", nt: "No flowers at 9 pm", nx: "At 9 pm there was no bouquet in the room." },
-        gib3: { q: "Who went into Miss Vance's room?", a: "During act one Mrs Grey slipped out of her dressing room. Said she'd left a good-luck card.", v: "A card! In an empty room! Oh, darling!", nt: "Mrs Grey in Miss Vance's room", nx: "In act one Mrs Grey came out of Miss Vance's dressing room." },
+        gib3: { q: "Who went into Miss Vance's room?", a: "During act one Mrs Grey slipped out of her dressing room: said she'd left a good-luck card.", v: "A card! In an empty room! Oh, darling!", nt: "Mrs Grey in Miss Vance's room", nx: "In act one Mrs Grey came out of Miss Vance's dressing room." },
         tob1: { q: "Where were you during the interval?", a: "On stage with the stage manager, resetting the furniture for act two. A dozen stagehands saw me.", nt: "Toby's alibi", nx: "The whole interval on stage, a dozen witnesses." },
         tob2: { q: "Did you dream of his part?", a: "What understudy doesn't? But not like this. I wanted to earn it.", v: "He's ashamed of the dream." },
         tob3: { q: "Have you seen these violets before?", a: "In act one they lay on the ledge of Mrs Grey's box. I saw them from the wings.", v: "Violets from the author's box ended up in his room.", nt: "Mrs Grey's violets", nx: "In act one the violets were in Mrs Grey's box." },
@@ -111,7 +111,7 @@ window.DELO_CASES.push({
         cel3: { q: "Who in the company wears chypre?", a: "I wear lily of the valley. Mrs Grey pours half a bottle of chypre on herself — you can smell her from the stalls.", v: "Chypre! Well, there's news, darling!", nt: "Mrs Grey's chypre", nx: "Mrs Grey is the one who wears chypre." },
         img1: { q: "Where were you during the interval?", a: "In my box, biting my nails. [[I sat there the whole interval; the usherette brought me lemonade.]]", nt: "Mrs Grey's alibi", nx: "Says she sat in her box the whole interval." },
         img2: { q: "How did rehearsals go?", a: "Wonderfully! Laurence adored the play. Well, he wanted a few cuts.", v: "“A few cuts”! They were shouting at each other the length of Shaftesbury Avenue, darling!" },
-        img3: { q: "Did you write the play yourself?", a: "Of course. [[Every word of it is mine.]]", v: "Check it against the telegram." },
+        img3: { q: "Did you write the play yourself?", a: "It's staged under my name. [[Every word of it is mine.]]", v: "Check it against the telegram." },
       },
       objections: {
         img1: { reply: "…I did drink the lemonade in the interval. And then I took him the violets: I wanted him to see them before the third act.", nt: "Mrs Grey lied", nx: "She was in the dressing room during the interval: she brought the violets." },
@@ -121,7 +121,7 @@ window.DELO_CASES.push({
         gibbs: "Mrs Gibbs poured only the first glass and from 9 pm sat in wardrobe with a witness. And the “Mrs G” in the telegram is the playwright.",
         toby: "Toby was on stage the whole interval, in full view.",
         celia: "Miss Vance was giving an interview. And her lipstick was stolen during act one.",
-        proof: "Mrs Grey smiles coldly: “That proves nothing.” You need evidence she was in the dressing room.",
+        proof: "Mrs Grey smiles coldly: “That proves nothing.” You need evidence she was in the dressing room, or that the play isn't hers.",
       },
       deduce: ["When did the violets appear in the room? And who signs as “I. G.”?", "The lipstick was planted. Who came out of Miss Vance's room in act one?", "Which “Mrs G” could have changed the title of a play?"],
       solution: {
@@ -146,7 +146,7 @@ window.DELO_CASES.push({
         c4: { title: "Ramo de violetas", text: "¡Violetas frescas! La tarjeta dice: «A Laurence, en nuestra gran noche. I. G.» ¡Qué tierno!", note: "Violetas con tarjeta firmada «I. G.» en el camerino." },
         c5: { title: "Frasco de perfume", text: "La colonia de Fairweather huele a lavanda. Pero el aire está cargado de chipre. Un olor ajeno y reciente.", note: "Alguien que usa chipre estuvo aquí hace poco." },
       },
-      letter: ["MANUSCRITO ENCONTRADO STOP", "FECHADO 1924 FIRMA J PRICE STOP", "SEÑORA G SOLO CAMBIÓ TÍTULO STOP", "LO LLEVO A LA FIESTA DEL ESTRENO STOP", "ROBERTS"],
+      letter: ["HALLADO MANUSCRITO DE LA OBRA STOP", "EN PORTADA AÑO 1924 Y NOMBRE J PRICE STOP", "ASÍ QUE SEÑORA G SOLO CAMBIÓ TÍTULO STOP", "LLEVO LA PRUEBA A LA FIESTA DEL ESTRENO STOP", "ATENTAMENTE ROBERTS"],
       decoys: { mask: "La máscara del segundo acto sonríe. Sabe más de lo que dirá.", dagger: "Un puñal de atrezo. Hoja de hojalata. No es un arma.", poster: "El cartel de «El cisne de cristal»: Fairweather en letras enormes y los demás diminutos. ¡Cómo le molestaba eso a la compañía!", wig: "La peluca del segundo acto. Nunca llegó a ponérsela." },
       suspects: {
         gibbs: { name: "Señora Gibbs", role: "Su vestuarista, 61 años", intro: "Aprieta su acerico. Cuarenta años en este teatro." },
@@ -157,7 +157,7 @@ window.DELO_CASES.push({
       qs: {
         gib1: { q: "¿Dónde estuvo en el entreacto?", a: "A las 21:00 le serví su copa, se la bebió de un trago, como siempre, y me despidió. Fui a coser el bajo de la señorita Vance; la jefa de vestuario estuvo conmigo hasta el grito.", nt: "Coartada de la señora Gibbs", nx: "Sirvió una copa a las 21:00 y luego estuvo en vestuario con testigo." },
         gib2: { q: "¿Qué había en la mesa cuando se fue?", a: "La licorera, su copa vacía y su peine. Flores no: las habría puesto en agua enseguida.", v: "Entonces las violetas llegaron en el entreacto.", nt: "Sin flores a las 21:00", nx: "A las 21:00 no había ramo en el camerino." },
-        gib3: { q: "¿Quién entró en el camerino de la señorita Vance?", a: "En el primer acto la señora Grey salió a hurtadillas de allí. Dijo que había dejado una tarjeta de buena suerte.", v: "¡Una tarjeta! ¡En un camerino vacío! ¡Ay, querida!", nt: "La señora Grey donde la señorita Vance", nx: "En el primer acto la señora Grey salió del camerino de la señorita Vance." },
+        gib3: { q: "¿Quién entró en el camerino de la señorita Vance?", a: "En el primer acto la señora Grey salió a hurtadillas de allí: dijo que había dejado una tarjeta de buena suerte.", v: "¡Una tarjeta! ¡En un camerino vacío! ¡Ay, querida!", nt: "La señora Grey donde la señorita Vance", nx: "En el primer acto la señora Grey salió del camerino de la señorita Vance." },
         tob1: { q: "¿Dónde estuvo en el entreacto?", a: "En el escenario con el regidor, moviendo los muebles para el segundo acto. Me vieron una docena de tramoyistas.", nt: "Coartada de Toby", nx: "Todo el entreacto en escena, con una docena de testigos." },
         tob2: { q: "¿Soñaba con su papel?", a: "¿Qué suplente no? Pero no así. Quería ganármelo.", v: "Le avergüenza su sueño." },
         tob3: { q: "¿Había visto antes estas violetas?", a: "En el primer acto estaban en el borde del palco de la señora Grey. Las vi desde bastidores.", v: "Las violetas del palco de la autora acabaron en el camerino.", nt: "Las violetas de la señora Grey", nx: "En el primer acto las violetas estaban en el palco de la señora Grey." },
@@ -166,7 +166,7 @@ window.DELO_CASES.push({
         cel3: { q: "¿Quién de la compañía usa chipre?", a: "Yo uso muguete. La señora Grey se echa medio frasco de chipre; se la huele desde el patio de butacas.", v: "¡Chipre! ¡Vaya noticia, querida!", nt: "El chipre de la señora Grey", nx: "La que usa chipre es la señora Grey." },
         img1: { q: "¿Dónde estuvo en el entreacto?", a: "En mi palco, comiéndome las uñas. [[Pasé allí todo el entreacto; la acomodadora me trajo limonada.]]", nt: "Coartada de la señora Grey", nx: "Dice que pasó todo el entreacto en su palco." },
         img2: { q: "¿Cómo fueron los ensayos?", a: "¡De maravilla! Laurence adoraba la obra. Bueno, quería algunos cortes.", v: "¡«Algunos cortes»! ¡Se gritaban de punta a punta de Shaftesbury Avenue, querida!" },
-        img3: { q: "¿Escribió usted la obra?", a: "Por supuesto. [[Cada palabra es mía.]]", v: "Compáralo con el telegrama." },
+        img3: { q: "¿Escribió usted la obra?", a: "Se estrena con mi nombre. [[Cada palabra es mía.]]", v: "Compáralo con el telegrama." },
       },
       objections: {
         img1: { reply: "…La limonada me la bebí en el entreacto, es verdad. Y luego le llevé las violetas: quería que las viera antes del tercer acto.", nt: "La señora Grey mintió", nx: "Estuvo en el camerino durante el entreacto: llevó las violetas." },
@@ -176,7 +176,7 @@ window.DELO_CASES.push({
         gibbs: "La señora Gibbs solo sirvió la primera copa y desde las 21:00 estuvo en vestuario con testigo. Y la «señora G» del telegrama es la autora.",
         toby: "Toby estuvo en el escenario todo el entreacto, a la vista de todos.",
         celia: "La señorita Vance daba una entrevista. Y su barra de labios se la robaron en el primer acto.",
-        proof: "La señora Grey sonríe con frialdad: «Eso no demuestra nada». Necesitas pruebas de que estuvo en el camerino.",
+        proof: "La señora Grey sonríe con frialdad: «Eso no demuestra nada». Necesitas pruebas de que estuvo en el camerino o de que la obra no es suya.",
       },
       deduce: ["¿Cuándo aparecieron las violetas en el camerino? ¿Y quién firma «I. G.»?", "El carmín lo colocaron. ¿Quién salió del camerino de la señorita Vance en el primer acto?", "¿Qué «señora G» podía cambiarle el título a una obra?"],
       solution: {
@@ -201,7 +201,7 @@ window.DELO_CASES.push({
         c4: { title: "Veilchenstrauß", text: "Frische Veilchen! Auf der Karte: „Für Laurence, an unserem großen Abend. I. G.“ Wie rührend!", note: "Veilchen mit einer Karte „I. G.“ in der Garderobe." },
         c5: { title: "Parfumflakon", text: "Fairweathers Kölnisch Wasser riecht nach Lavendel. Doch in der Luft hängt schweres Chypre. Ein fremder Duft, und frisch.", note: "Eben war jemand mit Chypre-Duft hier." },
       },
-      letter: ["MANUSKRIPT GEFUNDEN STOP", "DATIERT 1924 GEZEICHNET J PRICE STOP", "MRS G ÄNDERTE NUR DEN TITEL STOP", "BRINGE ES ZUR PREMIERENFEIER STOP", "ROBERTS"],
+      letter: ["MANUSKRIPT DES STÜCKS GEFUNDEN STOP", "AUF TITELBLATT 1924 UND NAME J PRICE STOP", "ALSO ÄNDERTE MRS G NUR DEN TITEL STOP", "BRINGE DEN BEWEIS ZUR PREMIERENFEIER STOP", "IHR ROBERTS"],
       decoys: { mask: "Die Maske für den zweiten Akt lächelt. Sie weiß mehr, als sie sagt.", dagger: "Ein Theaterdolch. Klinge aus Blech. Keine Waffe.", poster: "Das Plakat zu „Der gläserne Schwan“: Fairweather riesig, alle anderen winzig. Oh, wie das die Truppe ärgerte!", wig: "Die Perücke für den zweiten Akt. Er hat sie nie aufgesetzt." },
       suspects: {
         gibbs: { name: "Mrs Gibbs", role: "Seine Garderobiere, 61", intro: "Umklammert ihr Nadelkissen. Seit vierzig Jahren an diesem Theater." },
@@ -212,7 +212,7 @@ window.DELO_CASES.push({
       qs: {
         gib1: { q: "Wo waren Sie in der Pause?", a: "Um 21:00 schenkte ich ihm ein, er trank in einem Zug, wie immer, und schickte mich weg. Ich säumte Miss Vances Kleid, die Gewandmeisterin war bis zum Schrei bei mir.", nt: "Alibi von Mrs Gibbs", nx: "Schenkte um 21:00 ein Glas ein, danach mit Zeugin im Fundus." },
         gib2: { q: "Was stand auf dem Tisch, als Sie gingen?", a: "Die Karaffe, sein leeres Glas und sein Kamm. Keine Blumen — die hätte ich sofort ins Wasser gestellt.", v: "Die Veilchen kamen also in der Pause.", nt: "Keine Blumen um 21:00", nx: "Um 21:00 war noch kein Strauß in der Garderobe." },
-        gib3: { q: "Wer war in Miss Vances Garderobe?", a: "Im ersten Akt huschte Mrs Grey aus ihrer Garderobe. Sie sagte, sie habe eine Glückwunschkarte hingelegt.", v: "Eine Karte! In einer leeren Garderobe! Ach, Schätzchen!", nt: "Mrs Grey bei Miss Vance", nx: "Im ersten Akt kam Mrs Grey aus Miss Vances Garderobe." },
+        gib3: { q: "Wer war in Miss Vances Garderobe?", a: "Im ersten Akt huschte Mrs Grey aus ihrer Garderobe: Sie sagte, sie habe eine Glückwunschkarte hingelegt.", v: "Eine Karte! In einer leeren Garderobe! Ach, Schätzchen!", nt: "Mrs Grey bei Miss Vance", nx: "Im ersten Akt kam Mrs Grey aus Miss Vances Garderobe." },
         tob1: { q: "Wo waren Sie in der Pause?", a: "Auf der Bühne mit dem Inspizienten, Möbel für den zweiten Akt umstellen. Ein Dutzend Bühnenarbeiter hat mich gesehen.", nt: "Tobys Alibi", nx: "Die ganze Pause auf der Bühne, ein Dutzend Zeugen." },
         tob2: { q: "Träumten Sie von seiner Rolle?", a: "Welche Zweitbesetzung tut das nicht? Aber nicht so. Ich wollte sie mir verdienen.", v: "Er schämt sich für seinen Traum." },
         tob3: { q: "Haben Sie diese Veilchen schon gesehen?", a: "Im ersten Akt lagen sie auf der Brüstung von Mrs Greys Loge. Ich sah sie aus der Kulisse.", v: "Veilchen aus der Loge der Autorin landeten in seiner Garderobe.", nt: "Mrs Greys Veilchen", nx: "Im ersten Akt lagen die Veilchen in Mrs Greys Loge." },
@@ -221,7 +221,7 @@ window.DELO_CASES.push({
         cel3: { q: "Wer in der Truppe trägt Chypre?", a: "Ich trage Maiglöckchen. Mrs Grey kippt sich eine halbe Flasche Chypre über — man riecht sie bis ins Parkett.", v: "Chypre! Na, das ist ja was, Schätzchen!", nt: "Mrs Greys Chypre", nx: "Chypre trägt Mrs Grey." },
         img1: { q: "Wo waren Sie in der Pause?", a: "In meiner Loge, nägelkauend. [[Dort saß ich die ganze Pause, die Platzanweiserin brachte mir Limonade.]]", nt: "Alibi von Mrs Grey", nx: "Sagt, sie saß die ganze Pause in ihrer Loge." },
         img2: { q: "Wie liefen die Proben?", a: "Wunderbar! Laurence liebte das Stück. Nun, er wollte ein paar Kürzungen.", v: "„Ein paar Kürzungen“! Die haben sich quer über die Shaftesbury Avenue angeschrien, Schätzchen!" },
-        img3: { q: "Haben Sie das Stück selbst geschrieben?", a: "Selbstverständlich. [[Jedes Wort darin ist von mir.]]", v: "Vergleiche es mit dem Telegramm." },
+        img3: { q: "Haben Sie das Stück selbst geschrieben?", a: "Es wird unter meinem Namen gespielt. [[Jedes Wort darin ist von mir.]]", v: "Vergleiche es mit dem Telegramm." },
       },
       objections: {
         img1: { reply: "…Die Limonade habe ich in der Pause getrunken, das stimmt. Und dann brachte ich ihm die Veilchen: Er sollte sie vor dem dritten Akt sehen.", nt: "Mrs Grey hat gelogen", nx: "Sie war in der Pause in der Garderobe: Sie brachte die Veilchen." },
@@ -231,7 +231,7 @@ window.DELO_CASES.push({
         gibbs: "Mrs Gibbs schenkte nur das erste Glas ein und war ab 21:00 mit Zeugin im Fundus. Und die „Mrs G“ im Telegramm ist die Autorin.",
         toby: "Toby war die ganze Pause auf der Bühne, vor aller Augen.",
         celia: "Miss Vance gab ein Interview. Und ihr Lippenstift wurde im ersten Akt gestohlen.",
-        proof: "Mrs Grey lächelt kühl: „Das beweist gar nichts.“ Du brauchst Beweise, dass sie in der Garderobe war.",
+        proof: "Mrs Grey lächelt kühl: „Das beweist gar nichts.“ Du brauchst Beweise, dass sie in der Garderobe war oder dass das Stück nicht von ihr ist.",
       },
       deduce: ["Wann tauchten die Veilchen in der Garderobe auf? Und wer unterschreibt mit „I. G.“?", "Der Lippenstift wurde untergeschoben. Wer kam im ersten Akt aus Miss Vances Garderobe?", "Welche „Mrs G“ konnte einem Stück den Titel ändern?"],
       solution: {
@@ -256,7 +256,7 @@ window.DELO_CASES.push({
         c4: { title: "Bukiet fiołków", text: "Świeże fiołki! Na bileciku: „Dla Laurence'a, w nasz wielki wieczór. I. G.” Jakie wzruszające!", note: "Fiołki z bilecikiem „I. G.” w garderobie." },
         c5: { title: "Flakon perfum", text: "Woda kolońska Fairweathera pachnie lawendą. A w powietrzu wisi ciężki szypr. Obcy zapach, i świeży.", note: "Ktoś pachnący szyprem był tu niedawno." },
       },
-      letter: ["RĘKOPIS ODNALEZIONY STOP", "DATA 1924 PODPIS J PRICE STOP", "PANI G ZMIENIŁA TYLKO TYTUŁ STOP", "PRZYWIOZĘ NA BANKIET PO PREMIERZE STOP", "ROBERTS"],
+      letter: ["RĘKOPIS SZTUKI ODNALEZIONY STOP", "NA STRONIE TYTUŁOWEJ 1924 I NAZWISKO J PRICE STOP", "WIĘC PANI G ZMIENIŁA TYLKO TYTUŁ STOP", "PRZYWIOZĘ DOWÓD NA BANKIET PO PREMIERZE STOP", "Z WYRAZAMI SZACUNKU ROBERTS"],
       decoys: { mask: "Maska do drugiego aktu się uśmiecha. Wie więcej, niż powie.", dagger: "Rekwizytowy sztylet. Ostrze z blachy. To nie broń.", poster: "Afisz „Szklanego łabędzia”: Fairweather wielkimi literami, reszta malutko. Ach, jak to złościło zespół!", wig: "Peruka do drugiego aktu. Nigdy jej nie założył." },
       suspects: {
         gibbs: { name: "Pani Gibbs", role: "Garderobiana, 61 lat", intro: "Ściska poduszeczkę na igły. Od czterdziestu lat w tym teatrze." },
@@ -267,7 +267,7 @@ window.DELO_CASES.push({
       qs: {
         gib1: { q: "Gdzie pani była w antrakcie?", a: "O 21:00 nalałam mu kieliszek, wypił duszkiem, jak zawsze, i mnie odesłał. Poszłam podszyć suknię panny Vance, kierowniczka garderoby była ze mną aż do krzyku.", nt: "Alibi pani Gibbs", nx: "Nalała jeden kieliszek o 21:00, potem w pracowni ze świadkiem." },
         gib2: { q: "Co było na stole, gdy pani wychodziła?", a: "Karafka, jego pusty kieliszek i grzebień. Kwiatów nie było — od razu wstawiłabym je do wody.", v: "Czyli fiołki przyniesiono w antrakcie.", nt: "Bez kwiatów o 21:00", nx: "O 21:00 bukietu w garderobie jeszcze nie było." },
-        gib3: { q: "Kto wchodził do garderoby panny Vance?", a: "W pierwszym akcie wymknęła się stamtąd pani Grey. Powiedziała, że zostawiła kartkę na szczęście.", v: "Kartkę! W pustej garderobie! Ach, kochana!", nt: "Pani Grey u panny Vance", nx: "W pierwszym akcie pani Grey wychodziła z garderoby panny Vance." },
+        gib3: { q: "Kto wchodził do garderoby panny Vance?", a: "W pierwszym akcie wymknęła się stamtąd pani Grey: powiedziała, że zostawiła kartkę na szczęście.", v: "Kartkę! W pustej garderobie! Ach, kochana!", nt: "Pani Grey u panny Vance", nx: "W pierwszym akcie pani Grey wychodziła z garderoby panny Vance." },
         tob1: { q: "Gdzie pan był w antrakcie?", a: "Na scenie z inspicjentem, przestawialiśmy meble do drugiego aktu. Widziało mnie kilkunastu maszynistów.", nt: "Alibi Toby'ego", nx: "Cały antrakt na scenie, kilkunastu świadków." },
         tob2: { q: "Marzył pan o jego roli?", a: "Który dubler nie marzy? Ale nie tak. Chciałem na nią zasłużyć.", v: "Wstydzi się swojego marzenia." },
         tob3: { q: "Widział pan wcześniej te fiołki?", a: "W pierwszym akcie leżały na krawędzi loży pani Grey. Widziałem je zza kulis.", v: "Fiołki z loży autorki trafiły do garderoby.", nt: "Fiołki pani Grey", nx: "W pierwszym akcie fiołki leżały w loży pani Grey." },
@@ -276,7 +276,7 @@ window.DELO_CASES.push({
         cel3: { q: "Kto w zespole używa szypru?", a: "Ja używam konwalii. Pani Grey wylewa na siebie pół flakonu szypru — czuć ją z parteru.", v: "Szypr! A to nowina, kochana!", nt: "Szypr pani Grey", nx: "Szyprem pachnie pani Grey." },
         img1: { q: "Gdzie pani była w antrakcie?", a: "W swojej loży, obgryzałam paznokcie. [[Siedziałam tam cały antrakt, bileterka przyniosła mi lemoniadę.]]", nt: "Alibi pani Grey", nx: "Twierdzi, że cały antrakt siedziała w loży." },
         img2: { q: "Jak szły próby?", a: "Cudownie! Laurence uwielbiał sztukę. No, chciał kilku skrótów.", v: "„Kilku skrótów”! Krzyczeli na siebie na całą Shaftesbury Avenue, kochana!" },
-        img3: { q: "Czy sama pani napisała sztukę?", a: "Oczywiście. [[Każde słowo jest moje.]]", v: "Porównaj z telegramem." },
+        img3: { q: "Czy sama pani napisała sztukę?", a: "Wystawiają ją pod moim nazwiskiem. [[Każde słowo jest moje.]]", v: "Porównaj z telegramem." },
       },
       objections: {
         img1: { reply: "…Lemoniadę wypiłam w antrakcie, to prawda. A potem zaniosłam mu fiołki: chciałam, żeby je zobaczył przed trzecim aktem.", nt: "Pani Grey skłamała", nx: "W antrakcie była w garderobie: przyniosła fiołki." },
@@ -286,7 +286,7 @@ window.DELO_CASES.push({
         gibbs: "Pani Gibbs nalała tylko pierwszy kieliszek, a od 21:00 była w pracowni ze świadkiem. A „pani G” z telegramu to autorka sztuki.",
         toby: "Toby cały antrakt był na scenie, na oczach wszystkich.",
         celia: "Panna Vance udzielała wywiadu. A szminkę ukradziono jej w pierwszym akcie.",
-        proof: "Pani Grey uśmiecha się chłodno: „To niczego nie dowodzi”. Potrzebujesz dowodów, że była w garderobie.",
+        proof: "Pani Grey uśmiecha się chłodno: „To niczego nie dowodzi”. Potrzebujesz dowodów, że była w garderobie albo że sztuka nie jest jej.",
       },
       deduce: ["Kiedy w garderobie pojawiły się fiołki? I kto podpisuje się „I. G.”?", "Szminkę podrzucono. Kto wychodził z garderoby panny Vance w pierwszym akcie?", "Która „pani G” mogła zmienić sztuce tytuł?"],
       solution: {

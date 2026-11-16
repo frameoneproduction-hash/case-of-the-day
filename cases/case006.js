@@ -20,7 +20,7 @@ window.DELO_CASES.push({
       qs: [{ id: "rook1", voice: "intuition" }, { id: "rook2" }, { id: "rook3", needs: "c4", voice: "logic" }, { id: "rook4" }] },
   ],
   objections: { rook4: { evidence: "c4" }, rook2: { evidence: "c2" } },
-  proof: ["c4", "obj:rook4", "rook3", "obj:rook2", "c5", "c2"],
+  proof: ["c4", "obj:rook4", "rook3", "obj:rook2", "c5", "c2", "peg2"],
   text: {
     ru: {
       title: "Последний акт",
@@ -58,7 +58,7 @@ window.DELO_CASES.push({
         rook1: { q: "Где вы были после репетиции?", a: "Наверху, в костюмерной, разбирала костюмы. Работы до полуночи: три акта, сорок костюмов, а помощницу отпустили.", v: "Сорок костюмов за вечер. Руки у неё и сейчас в работе." },
         rook4: { q: "Когда вы в последний раз видели мистера Торна?", a: "На репетиции, в девять. [[Потом поднялась к себе и до полуночи распарывала старые кринолины.]]", nt: "Алиби миссис Рук", nx: "Говорит, что после девяти распарывала кринолины у себя наверху." },
         rook2: { q: "Давно вы знаете мистера Торна?", a: "Тридцать лет, из театра в театр. [[Мне в моём прошлом стыдиться нечего.]]" },
-        rook3: { q: "Кто шьёт в этом театре?", a: "Только я, милая. К моим иголкам никто не смеет прикасаться.", v: "Иголка в подоле и иголки в подушечке. Сравните.", nt: "Иголки миссис Рук", nx: "В театре шьёт только миссис Рук." },
+        rook3: { q: "Кто шьёт в этом театре?", a: "Только я, милая. К моим иголкам никто не смеет прикасаться.", v: "Иголка в подоле, иголки в подушечке.", nt: "Иголки миссис Рук", nx: "В театре шьёт только миссис Рук." },
       },
       objections: {
         rook4: { reply: "…Кринолины можно распарывать и внизу. Свет там лучше, а иголка, как видите, у меня всегда при себе.", nt: "Миссис Рук солгала", nx: "Она зашивала подол в гримёрке после 21:50, хотя уверяла, что сидела наверху." },
@@ -68,7 +68,7 @@ window.DELO_CASES.push({
         isadora: "Изадора с десяти до 22:45 была на сцене с фотографом и режиссёром.",
         peggy: "Пегги снимала грим с тремя хористками, а пудреницу оставила в костюмерной ещё в девять.",
         fenn: "Фенн до самой тревоги звонил у служебного входа, привратник стоял рядом.",
-        proof: "Миссис Рук качает головой: «Это ничего не доказывает, милая». Нужны улики, которые приводят её в гримёрку.",
+        proof: "Миссис Рук качает головой: «Это ничего не доказывает, милая». Нужны улики, которые приводят её в гримёрку или показывают, что Торн знал о её прошлом.",
       },
       deduce: ["Подол порвался без десяти десять. Кто зашивал его здесь после?", "Пудреницу подбросили. Где Пегги оставила её в девять?", "Кто в театре шьёт? И кто такая «наша швея»?"],
       solution: {
@@ -115,7 +115,7 @@ window.DELO_CASES.push({
         rook1: { q: "Where were you after the rehearsal?", a: "Upstairs in the wardrobe room, sorting costumes. Work till midnight: three acts, forty costumes, and my assistant let go.", v: "Forty costumes in an evening. Even now her hands are busy." },
         rook4: { q: "When did you last see Mr Thorne?", a: "At rehearsal, at nine. [[Then I went up to my room and unpicked old crinolines till midnight.]]", nt: "Mrs Rook's alibi", nx: "Says that after nine she was upstairs unpicking crinolines." },
         rook2: { q: "How long have you known Mr Thorne?", a: "Thirty years, theatre to theatre. [[I've nothing in my past to be ashamed of.]]" },
-        rook3: { q: "Who sews in this theatre?", a: "Only me, dearie. Nobody dares touch my needles.", v: "The needle in the hem and the needles in the cushion. Compare them.", nt: "Mrs Rook's needles", nx: "Only Mrs Rook sews in this theatre." },
+        rook3: { q: "Who sews in this theatre?", a: "Only me, dearie. Nobody dares touch my needles.", v: "A needle in the hem, needles in the cushion.", nt: "Mrs Rook's needles", nx: "Only Mrs Rook sews in this theatre." },
       },
       objections: {
         rook4: { reply: "…Crinolines can be unpicked downstairs too. The light's better there, and as you see, I always have a needle on me.", nt: "Mrs Rook lied", nx: "She mended the hem in the dressing room after 9:50 pm, though she claimed to be upstairs." },
@@ -125,7 +125,7 @@ window.DELO_CASES.push({
         isadora: "Isadora was on stage with the photographer and the director from ten until 10:45.",
         peggy: "Peggy was taking off her make-up with three chorus girls, and she'd left her compact in the wardrobe room at nine.",
         fenn: "Fenn was on the telephone at the stage door until the alarm, with the doorman beside him.",
-        proof: "Mrs Rook shakes her head: “That proves nothing, dearie.” You need evidence that puts her in the dressing room.",
+        proof: "Mrs Rook shakes her head: “That proves nothing, dearie.” You need evidence that puts her in the dressing room, or shows what Thorne knew about her past.",
       },
       deduce: ["The hem tore at ten to ten. Who mended it here afterwards?", "The compact was planted. Where did Peggy leave it at nine?", "Who sews in this theatre? And who is “our seamstress”?"],
       solution: {
@@ -172,7 +172,7 @@ window.DELO_CASES.push({
         rook1: { q: "¿Dónde estuvo después del ensayo?", a: "Arriba, en el vestuario, ordenando trajes. Trabajo hasta medianoche: tres actos, cuarenta trajes y sin ayudante.", v: "Cuarenta trajes en una noche. Aun ahora tiene las manos ocupadas." },
         rook4: { q: "¿Cuándo vio por última vez al señor Thorne?", a: "En el ensayo, a las nueve. [[Luego subí a mi cuarto y estuve descosiendo miriñaques viejos hasta medianoche.]]", nt: "Coartada de la señora Rook", nx: "Dice que después de las nueve descosía miriñaques arriba." },
         rook2: { q: "¿Desde cuándo conoce al señor Thorne?", a: "Treinta años, de teatro en teatro. [[No tengo nada en mi pasado de lo que avergonzarme.]]" },
-        rook3: { q: "¿Quién cose en este teatro?", a: "Solo yo, querida. Nadie se atreve a tocar mis agujas.", v: "La aguja del bajo y las del acerico. Compáralas.", nt: "Las agujas de la señora Rook", nx: "En este teatro solo cose la señora Rook." },
+        rook3: { q: "¿Quién cose en este teatro?", a: "Solo yo, querida. Nadie se atreve a tocar mis agujas.", v: "Una aguja en el bajo, agujas en el acerico.", nt: "Las agujas de la señora Rook", nx: "En este teatro solo cose la señora Rook." },
       },
       objections: {
         rook4: { reply: "…Los miriñaques también se descosen abajo. Allí hay mejor luz, y, como ve, siempre llevo una aguja encima.", nt: "La señora Rook mintió", nx: "Cosió el bajo en el camerino después de las 21:50, aunque aseguró que estaba arriba." },
@@ -182,7 +182,7 @@ window.DELO_CASES.push({
         isadora: "Isadora estuvo en escena con el fotógrafo y el director de las diez a las 22:45.",
         peggy: "Peggy se desmaquillaba con tres coristas, y había dejado la polvera en vestuario a las nueve.",
         fenn: "Fenn telefoneaba en la entrada de artistas hasta la alarma, con el portero al lado.",
-        proof: "La señora Rook niega con la cabeza: «Eso no demuestra nada, querida». Necesitas pruebas que la sitúen en el camerino.",
+        proof: "La señora Rook niega con la cabeza: «Eso no demuestra nada, querida». Necesitas pruebas que la sitúen en el camerino o muestren qué sabía Thorne de su pasado.",
       },
       deduce: ["El bajo se rompió a las diez menos diez. ¿Quién lo cosió aquí después?", "La polvera la colocaron. ¿Dónde la dejó Peggy a las nueve?", "¿Quién cose en este teatro? ¿Y quién es «nuestra costurera»?"],
       solution: {
@@ -229,7 +229,7 @@ window.DELO_CASES.push({
         rook1: { q: "Wo waren Sie nach der Probe?", a: "Oben in der Schneiderei, Kostüme sortieren. Arbeit bis Mitternacht: drei Akte, vierzig Kostüme, und die Gehilfin entlassen.", v: "Vierzig Kostüme an einem Abend. Selbst jetzt sind ihre Hände beschäftigt." },
         rook4: { q: "Wann haben Sie Mr Thorne zuletzt gesehen?", a: "Bei der Probe, um neun. [[Dann ging ich hinauf und trennte bis Mitternacht alte Krinolinen auf.]]", nt: "Alibi von Mrs Rook", nx: "Sagt, sie habe nach neun oben alte Krinolinen aufgetrennt." },
         rook2: { q: "Wie lange kennen Sie Mr Thorne?", a: "Dreißig Jahre, von Theater zu Theater. [[In meiner Vergangenheit gibt es nichts, wofür ich mich schämen müsste.]]" },
-        rook3: { q: "Wer näht in diesem Theater?", a: "Nur ich, Liebes. Niemand wagt es, meine Nadeln anzurühren.", v: "Die Nadel im Saum und die im Kissen. Vergleiche.", nt: "Die Nadeln von Mrs Rook", nx: "In diesem Theater näht nur Mrs Rook." },
+        rook3: { q: "Wer näht in diesem Theater?", a: "Nur ich, Liebes. Niemand wagt es, meine Nadeln anzurühren.", v: "Eine Nadel im Saum, Nadeln im Kissen.", nt: "Die Nadeln von Mrs Rook", nx: "In diesem Theater näht nur Mrs Rook." },
       },
       objections: {
         rook4: { reply: "…Krinolinen kann man auch unten auftrennen. Das Licht ist dort besser, und eine Nadel habe ich, wie Sie sehen, immer bei mir.", nt: "Mrs Rook hat gelogen", nx: "Sie nähte den Saum nach 21:50 in der Garderobe, obwohl sie behauptete, oben gewesen zu sein." },
@@ -239,7 +239,7 @@ window.DELO_CASES.push({
         isadora: "Isadora stand von zehn bis 22:45 mit dem Fotografen und dem Regisseur auf der Bühne.",
         peggy: "Peggy schminkte sich mit drei Chormädchen ab, und ihre Puderdose lag seit neun in der Schneiderei.",
         fenn: "Fenn telefonierte bis zum Alarm am Bühneneingang, der Pförtner stand neben ihm.",
-        proof: "Mrs Rook schüttelt den Kopf: „Das beweist gar nichts, Liebes.“ Du brauchst Beweise, die sie in die Garderobe bringen.",
+        proof: "Mrs Rook schüttelt den Kopf: „Das beweist gar nichts, Liebes.“ Du brauchst Beweise, die sie in die Garderobe bringen oder zeigen, was Thorne über ihre Vergangenheit wusste.",
       },
       deduce: ["Der Saum riss um zehn vor zehn. Wer hat ihn danach hier genäht?", "Die Puderdose wurde platziert. Wo ließ Peggy sie um neun?", "Wer näht in diesem Theater? Und wer ist „unsere Schneiderin“?"],
       solution: {
@@ -286,7 +286,7 @@ window.DELO_CASES.push({
         rook1: { q: "Gdzie pani była po próbie?", a: "Na górze, w pracowni, porządkowałam kostiumy. Roboty do północy: trzy akty, czterdzieści kostiumów, a pomocnicę zwolniono.", v: "Czterdzieści kostiumów jednego wieczoru. Nawet teraz ręce ma zajęte." },
         rook4: { q: "Kiedy ostatnio widziała pani pana Thorne'a?", a: "Na próbie, o dziewiątej. [[Potem poszłam na górę i do północy prułam stare krynoliny.]]", nt: "Alibi pani Rook", nx: "Twierdzi, że po 21:00 pruła krynoliny na górze." },
         rook2: { q: "Od dawna zna pani pana Thorne'a?", a: "Trzydzieści lat, z teatru do teatru. [[W mojej przeszłości nie ma niczego, czego musiałabym się wstydzić.]]" },
-        rook3: { q: "Kto szyje w tym teatrze?", a: "Tylko ja, złociutka. Nikt nie śmie dotykać moich igieł.", v: "Igła w rąbku i igły w poduszeczce. Proszę porównać.", nt: "Igły pani Rook", nx: "W tym teatrze szyje tylko pani Rook." },
+        rook3: { q: "Kto szyje w tym teatrze?", a: "Tylko ja, złociutka. Nikt nie śmie dotykać moich igieł.", v: "Igła w rąbku, igły w poduszeczce.", nt: "Igły pani Rook", nx: "W tym teatrze szyje tylko pani Rook." },
       },
       objections: {
         rook4: { reply: "…Krynoliny można pruć i na dole. Światło tam lepsze, a igłę, jak pani widzi, zawsze mam przy sobie.", nt: "Pani Rook skłamała", nx: "Zszywała rąbek w garderobie po 21:50, choć zapewniała, że była na górze." },
@@ -296,7 +296,7 @@ window.DELO_CASES.push({
         isadora: "Isadora od dziesiątej do 22:45 była na scenie z fotografem i reżyserem.",
         peggy: "Peggy zmywała charakteryzację z trzema chórzystkami, a puderniczkę zostawiła w pracowni już o dziewiątej.",
         fenn: "Fenn do samego alarmu dzwonił przy wejściu dla aktorów, portier stał obok.",
-        proof: "Pani Rook kręci głową: „To niczego nie dowodzi, złociutka”. Potrzebujesz dowodów, które umieszczą ją w garderobie.",
+        proof: "Pani Rook kręci głową: „To niczego nie dowodzi, złociutka”. Potrzebujesz dowodów, które umieszczą ją w garderobie albo pokażą, co Thorne wiedział o jej przeszłości.",
       },
       deduce: ["Rąbek rozdarł się za dziesięć dziesiąta. Kto go tu potem zszywał?", "Puderniczkę podrzucono. Gdzie Peggy zostawiła ją o dziewiątej?", "Kto szyje w tym teatrze? I kim jest „nasza krawcowa”?"],
       solution: {

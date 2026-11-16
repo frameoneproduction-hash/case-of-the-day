@@ -19,8 +19,8 @@ window.DELO_CASES.push({
     { id: "lady", color: "#e0956a", look: { hair: "bun", hairColor: "#a89f94", outfit: "dress", outfitColor: "#1f3b3a", extras: ["hat", "earrings", "stern"], female: true, lips: "#8a3a4a" },
       qs: [{ id: "lad1" }, { id: "lad2" }, { id: "lad3", voice: "gossip" }] },
   ],
-  objections: { lad1: { evidence: "ber2" }, lad2: { evidence: "c2" } },
-  proof: ["obj:lad1", "obj:lad2", "c3", "c4"],
+  objections: { lad1: { evidence: "ber2" }, lad2: { evidence: ["c2", "c3"] } },
+  proof: ["obj:lad1", "obj:lad2", "c3", "c4", "rub3"],
   text: {
     ru: {
       title: "Исчезнувший жемчуг",
@@ -46,7 +46,7 @@ window.DELO_CASES.push({
       },
       qs: {
         sil1: { q: "Где вы были в антракте?", a: "С 19:30 в кабинете директора с констеблем, объяснял про жемчуг. Мы вышли, только когда закричала Руби.", nt: "Алиби Сильвано", nx: "С 19:30 у директора с констеблем." },
-        sil2: { q: "Как устроен фокус с жемчугом?", a: "Лотти прячет ожерелье в ладони и кладёт в запечатанный конверт. Сегодня конверт оказался пуст.", v: "Значит, жемчуг исчез в руках Лотти.", nt: "Секрет фокуса", nx: "После «исчезновения» жемчуг был только у Лотти." },
+        sil2: { q: "Как устроен фокус с жемчугом?", a: "Лотти прячет ожерелье в ладони и кладёт в запечатанный конверт — сегодня конверт оказался пуст.", v: "Значит, жемчуг исчез в руках Лотти.", nt: "Секрет фокуса", nx: "После «исчезновения» жемчуг был только у Лотти." },
         sil3: { q: "Это вы прислали карточку?", a: "Я никогда не подписываюсь «С.». Только «Сильвано», с росчерком. Тщеславие, мисс Лэнгтон.", v: "Тщеславен. А росчерк фокуснику подделать нетрудно." },
         rub1: { q: "Где вы были в антракте?", a: "Сразу после занавеса, с 19:30 до 20:10, репетировала на сцене с пианистом. В 20:15 пошла к Лотти за пудрой и учуяла газ.", nt: "Алиби Руби", nx: "19:30–20:10 на сцене с пианистом." },
         rub2: { q: "Вы ладили с Лотти?", a: "Она заняла моё место в номере. Я её не любила. Но это не преступление." },
@@ -55,7 +55,7 @@ window.DELO_CASES.push({
         ber2: { q: "Кто входил в антракте?", a: "Только её милость, в 19:40. Расписалась в книге, сказала, что ищет мистера Сильвано. Ушла ровно в восемь.", v: "Но Сильвано всё это время сидел с констеблем.", nt: "Книга у служебного входа", nx: "Леди Фезерстоун вошла в 19:40, ушла в 20:00." },
         ber3: { q: "Кто принёс этот букет?", a: "Паренёк из оркестра, в семь. На карточке было «Ни пуха, Лотти!». Не эта!", v: "Карточку подменили! Ох!", nt: "Букет", nx: "В 19:00 на карточке было «Ни пуха, Лотти!». Её подменили." },
         lad1: { q: "Где вы были в антракте?", a: "У себя в ложе Б, оплакивала мой бедный жемчуг. [[За кулисы я сегодня не ходила.]]", nt: "Алиби леди Фезерстоун", nx: "Говорит, что весь антракт сидела в ложе Б." },
-        lad2: { q: "Жемчуг был дорогой?", a: "Бесценный! [[Настоящий бирманский жемчуг, застрахован на десять тысяч фунтов.]]" },
+        lad2: { q: "Жемчуг был дорогой?", a: "Вы спрашиваете о моём жемчуге? Бесценный! [[Настоящий бирманский жемчуг, застрахован на десять тысяч фунтов.]]" },
         lad3: { q: "Вы знали Лотти?", a: "Эту девицу? Мы и словом не обмолвились. Я не вожу дружбу с хористками.", v: "Ложа и хористки! Ох, дорогуша, разные миры!" },
       },
       objections: {
@@ -101,7 +101,7 @@ window.DELO_CASES.push({
       },
       qs: {
         sil1: { q: "Where were you in the interval?", a: "From 7:30 in the manager's office with a constable, explaining about the pearls. We only came out when Ruby screamed.", nt: "Silvano's alibi", nx: "From 7:30 pm with the manager and a constable." },
-        sil2: { q: "How does the pearl trick work?", a: "Lottie palms the necklace and slips it into a sealed envelope. Tonight the envelope was empty.", v: "So the pearls vanished in Lottie's hands.", nt: "The secret of the trick", nx: "After the “vanish”, only Lottie had the pearls." },
+        sil2: { q: "How does the pearl trick work?", a: "Lottie palms the necklace and slips it into a sealed envelope: tonight the envelope was empty.", v: "So the pearls vanished in Lottie's hands.", nt: "The secret of the trick", nx: "After the “vanish”, only Lottie had the pearls." },
         sil3: { q: "Did you send this card?", a: "I never sign “S.” Always “Silvano”, with a flourish. Vanity, Miss Langton.", v: "Vain. And a flourish is easy to fake for a magician." },
         rub1: { q: "Where were you in the interval?", a: "Straight after the curtain, from 7:30 to 8:10, I rehearsed on stage with the pianist. At 8:15 I went up for Lottie's powder and smelled gas.", nt: "Ruby's alibi", nx: "7:30–8:10 pm on stage with the pianist." },
         rub2: { q: "Did you get on with Lottie?", a: "She took my place in the act. I didn't like her. That's no crime." },
@@ -110,7 +110,7 @@ window.DELO_CASES.push({
         ber2: { q: "Who came in during the interval?", a: "Only her ladyship, at 7:40. Signed my book, said she wanted Mr Silvano. Left at eight sharp.", v: "But Silvano was with the constable the whole time.", nt: "The stage-door book", nx: "Lady Featherstone came in at 7:40, left at 8:00 pm." },
         ber3: { q: "Who brought these flowers?", a: "A lad from the band, at seven. The card said “Break a leg, Lottie!” Not this one!", v: "Someone swapped the card! Ooh!", nt: "The bouquet", nx: "At 7 pm the card said “Break a leg, Lottie!” It was swapped." },
         lad1: { q: "Where were you in the interval?", a: "In my box, Box B, weeping over my poor pearls. [[I never went backstage tonight.]]", nt: "Lady Featherstone's alibi", nx: "Says she spent the whole interval in Box B." },
-        lad2: { q: "Were the pearls valuable?", a: "Priceless! [[Genuine Burmese pearls, insured for ten thousand pounds.]]" },
+        lad2: { q: "Were the pearls valuable?", a: "You're asking about my pearls? Priceless! [[Genuine Burmese pearls, insured for ten thousand pounds.]]" },
         lad3: { q: "Did you know Lottie?", a: "That girl? We never exchanged a word. I don't mix with chorus girls.", v: "A box and the chorus line! Oh darling, worlds apart!" },
       },
       objections: {
@@ -156,7 +156,7 @@ window.DELO_CASES.push({
       },
       qs: {
         sil1: { q: "¿Dónde estuvo en el entreacto?", a: "Desde las 19:30 en el despacho del director con un agente, explicando lo de las perlas. Salimos solo cuando Ruby gritó.", nt: "Coartada de Silvano", nx: "Desde las 19:30 con el director y un agente." },
-        sil2: { q: "¿Cómo funciona el truco de las perlas?", a: "Lottie esconde el collar en la mano y lo mete en un sobre sellado. Esta noche el sobre estaba vacío.", v: "Entonces las perlas desaparecieron en manos de Lottie.", nt: "El secreto del truco", nx: "Tras la «desaparición», solo Lottie tenía las perlas." },
+        sil2: { q: "¿Cómo funciona el truco de las perlas?", a: "Lottie esconde el collar en la mano y lo mete en un sobre sellado: esta noche el sobre estaba vacío.", v: "Entonces las perlas desaparecieron en manos de Lottie.", nt: "El secreto del truco", nx: "Tras la «desaparición», solo Lottie tenía las perlas." },
         sil3: { q: "¿Envió usted esta tarjeta?", a: "Jamás firmo «S.». Siempre «Silvano», con rúbrica. Vanidad, señorita Langton.", v: "Vanidoso. Y a un mago no le cuesta falsificar una rúbrica." },
         rub1: { q: "¿Dónde estuvo en el entreacto?", a: "Nada más bajar el telón, de 19:30 a 20:10, ensayé en el escenario con el pianista. A las 20:15 subí a por polvos y olí el gas.", nt: "Coartada de Ruby", nx: "De 19:30 a 20:10 en el escenario con el pianista." },
         rub2: { q: "¿Se llevaba bien con Lottie?", a: "Me quitó el puesto en el número. No me caía bien. Eso no es un delito." },
@@ -165,7 +165,7 @@ window.DELO_CASES.push({
         ber2: { q: "¿Quién entró en el entreacto?", a: "Solo su señoría, a las 19:40. Firmó en mi libro, dijo que buscaba al señor Silvano. Salió a las ocho en punto.", v: "Pero Silvano estuvo todo ese rato con el agente.", nt: "El libro de la entrada", nx: "Lady Featherstone entró a las 19:40 y salió a las 20:00." },
         ber3: { q: "¿Quién trajo estas flores?", a: "Un chico de la orquesta, a las siete. La tarjeta decía «¡Mucha mierda, Lottie!». ¡Esta no!", v: "¡Cambiaron la tarjeta! ¡Ay!", nt: "El ramo", nx: "A las 19:00 la tarjeta decía «¡Mucha mierda, Lottie!». La cambiaron." },
         lad1: { q: "¿Dónde estuvo en el entreacto?", a: "En mi palco, el B, llorando por mis pobres perlas. [[Esta noche no he pisado los camerinos.]]", nt: "Coartada de lady Featherstone", nx: "Dice que pasó todo el entreacto en el palco B." },
-        lad2: { q: "¿Eran valiosas las perlas?", a: "¡Inestimables! [[Perlas birmanas auténticas, aseguradas en diez mil libras.]]" },
+        lad2: { q: "¿Eran valiosas las perlas?", a: "¿Me pregunta por mis perlas? ¡Inestimables! [[Perlas birmanas auténticas, aseguradas en diez mil libras.]]" },
         lad3: { q: "¿Conocía a Lottie?", a: "¿A esa chica? Jamás cruzamos una palabra. No me trato con coristas.", v: "¡Un palco y las coristas! ¡Ay, querida, mundos distintos!" },
       },
       objections: {
@@ -211,7 +211,7 @@ window.DELO_CASES.push({
       },
       qs: {
         sil1: { q: "Wo waren Sie in der Pause?", a: "Ab 19:30 im Büro des Direktors mit einem Constable, wegen der Perlen. Wir kamen erst heraus, als Ruby schrie.", nt: "Silvanos Alibi", nx: "Ab 19:30 beim Direktor und einem Constable." },
-        sil2: { q: "Wie funktioniert der Perlentrick?", a: "Lottie verbirgt die Kette in der Hand und steckt sie in einen versiegelten Umschlag. Heute war der Umschlag leer.", v: "Die Perlen verschwanden also in Lotties Händen.", nt: "Das Geheimnis des Tricks", nx: "Nach dem „Verschwinden“ hatte nur Lottie die Perlen." },
+        sil2: { q: "Wie funktioniert der Perlentrick?", a: "Lottie verbirgt die Kette in der Hand und steckt sie in einen versiegelten Umschlag: Heute war der Umschlag leer.", v: "Die Perlen verschwanden also in Lotties Händen.", nt: "Das Geheimnis des Tricks", nx: "Nach dem „Verschwinden“ hatte nur Lottie die Perlen." },
         sil3: { q: "Haben Sie diese Karte geschickt?", a: "Ich unterschreibe nie mit „S.“. Immer „Silvano“, mit Schnörkel. Eitelkeit, Miss Langton.", v: "Eitel. Und einen Schnörkel fälscht ein Zauberer leicht." },
         rub1: { q: "Wo waren Sie in der Pause?", a: "Gleich nach dem Vorhang, von 19:30 bis 20:10, probte ich mit dem Pianisten auf der Bühne. Um 20:15 ging ich hoch zu Lottie, roch das Gas.", nt: "Rubys Alibi", nx: "19:30–20:10 auf der Bühne mit dem Pianisten." },
         rub2: { q: "Kamen Sie mit Lottie aus?", a: "Sie hat mir meinen Platz in der Nummer genommen. Ich mochte sie nicht. Das ist kein Verbrechen." },
@@ -220,7 +220,7 @@ window.DELO_CASES.push({
         ber2: { q: "Wer kam in der Pause herein?", a: "Nur Ihre Ladyschaft, um 19:40. Trug sich ins Buch ein, wollte zu Mr. Silvano. Ging Punkt acht.", v: "Aber Silvano saß die ganze Zeit beim Constable.", nt: "Das Pförtnerbuch", nx: "Lady Featherstone kam um 19:40, ging um 20:00." },
         ber3: { q: "Wer brachte diese Blumen?", a: "Ein Junge aus dem Orchester, um sieben. Auf der Karte stand „Hals- und Beinbruch, Lottie!“ Nicht diese!", v: "Die Karte wurde vertauscht! Oh!", nt: "Der Strauß", nx: "Um 19:00 stand auf der Karte „Hals- und Beinbruch“. Sie wurde vertauscht." },
         lad1: { q: "Wo waren Sie in der Pause?", a: "In meiner Loge, Loge B, und weinte um meine armen Perlen. [[Hinter die Bühne bin ich heute nicht gegangen.]]", nt: "Alibi von Lady Featherstone", nx: "Sagt, sie war die ganze Pause in Loge B." },
-        lad2: { q: "Waren die Perlen wertvoll?", a: "Unbezahlbar! [[Echte Burma-Perlen, versichert für zehntausend Pfund.]]" },
+        lad2: { q: "Waren die Perlen wertvoll?", a: "Sie fragen nach meinen Perlen? Unbezahlbar! [[Echte Burma-Perlen, versichert für zehntausend Pfund.]]" },
         lad3: { q: "Kannten Sie Lottie?", a: "Dieses Mädchen? Wir haben kein Wort gewechselt. Ich verkehre nicht mit Chormädchen.", v: "Loge und Revuetänzerinnen! Ach, Schätzchen, zwei verschiedene Welten!" },
       },
       objections: {
@@ -266,7 +266,7 @@ window.DELO_CASES.push({
       },
       qs: {
         sil1: { q: "Gdzie pan był w przerwie?", a: "Od 19:30 w gabinecie dyrektora z posterunkowym, tłumaczyłem się z pereł. Wyszliśmy dopiero, gdy Ruby krzyknęła.", nt: "Alibi Silvana", nx: "Od 19:30 u dyrektora z posterunkowym." },
-        sil2: { q: "Na czym polega sztuczka z perłami?", a: "Lottie chowa naszyjnik w dłoni i wkłada do zapieczętowanej koperty. Dziś koperta była pusta.", v: "Czyli perły zniknęły w rękach Lottie.", nt: "Sekret sztuczki", nx: "Po „zniknięciu” perły miała tylko Lottie." },
+        sil2: { q: "Na czym polega sztuczka z perłami?", a: "Lottie chowa naszyjnik w dłoni i wkłada do zapieczętowanej koperty: dziś koperta była pusta.", v: "Czyli perły zniknęły w rękach Lottie.", nt: "Sekret sztuczki", nx: "Po „zniknięciu” perły miała tylko Lottie." },
         sil3: { q: "Czy to pan przysłał ten bilecik?", a: "Nigdy nie podpisuję się „S.”. Zawsze „Silvano”, z zawijasem. Próżność, panno Langton.", v: "Próżny. A iluzjoniście łatwo podrobić zamaszysty podpis." },
         rub1: { q: "Gdzie pani była w przerwie?", a: "Zaraz po kurtynie, od 19:30 do 20:10, ćwiczyłam na scenie z pianistą. O 20:15 poszłam do Lottie po puder i poczułam gaz.", nt: "Alibi Ruby", nx: "19:30–20:10 na scenie z pianistą." },
         rub2: { q: "Lubiła pani Lottie?", a: "Zabrała mi miejsce w numerze. Nie lubiłam jej. To nie zbrodnia." },
@@ -275,7 +275,7 @@ window.DELO_CASES.push({
         ber2: { q: "Kto wchodził w przerwie?", a: "Tylko jaśnie pani, o 19:40. Wpisała się do księgi, szukała pana Silvana. Wyszła punkt ósma.", v: "Ale Silvano cały ten czas siedział z posterunkowym.", nt: "Księga portiera", nx: "Lady Featherstone weszła o 19:40, wyszła o 20:00." },
         ber3: { q: "Kto przyniósł te kwiaty?", a: "Chłopak z orkiestry, o siódmej. Na bileciku było „Połamania nóg, Lottie!”. Nie ten!", v: "Ktoś podmienił bilecik! Ach!", nt: "Bukiet", nx: "O 19:00 bilecik brzmiał „Połamania nóg, Lottie!”. Podmieniono go." },
         lad1: { q: "Gdzie pani była w przerwie?", a: "W mojej loży, loży B, opłakiwałam moje biedne perły. [[Za kulisy dziś w ogóle nie chodziłam.]]", nt: "Alibi lady Featherstone", nx: "Mówi, że całą przerwę była w loży B." },
-        lad2: { q: "Czy perły były cenne?", a: "Bezcenne! [[Prawdziwe birmańskie perły, ubezpieczone na dziesięć tysięcy funtów.]]" },
+        lad2: { q: "Czy perły były cenne?", a: "Pyta pani o moje perły? Bezcenne! [[Prawdziwe birmańskie perły, ubezpieczone na dziesięć tysięcy funtów.]]" },
         lad3: { q: "Znała pani Lottie?", a: "Tę dziewczynę? Nie zamieniłyśmy słowa. Nie zadaję się z chórzystkami.", v: "Loża i chórzystki! Och, kochana, dwa różne światy!" },
       },
       objections: {

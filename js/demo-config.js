@@ -4,6 +4,7 @@
   C.unlockAll = false; // the demo follows the calendar: today's case plus the past ones (for keys), like the released game
   C.privacyUrl = "privacy-policy.html"; // lives next to the game
   C.launchDate = "2026-10-14"; // the demo keeps its own calendar (published with it); the app's launchDate is the closed-test start
+  C.ads = false; // no ads in the browser demo (b8 app: rewarded ads on the player's tap; the browser would only show a stand-in)
   // feedback and statistics: off in the demo (sheetUrl/sheetKey are blanked in platform.js below), closed-test data stays apart
   C.shareUrl = "https://frameoneproduction-hash.github.io/case-of-the-day/"; // "Share" ends with the demo link
 })();

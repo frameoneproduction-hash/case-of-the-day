@@ -58,7 +58,7 @@ window.DELO_CASES.push({
         bra3: { q: "Кто подписал векселя?", a: "Стояло «Б. Крофт». Но Крофт клялся, что подпись не его. Сказал, что «разберётся дома».", v: "Дома у Крофта только жена.", nt: "Векселя", nx: "Крофт отрёкся от подписи и собирался «разобраться дома»." },
         win1: { q: "Где вы были во время номера?", a: "В кассе, считала выручку. Шестьсот мест, и каждый шиллинг надо сверить с корешками билетов.", v: "Касса, шестьсот мест, корешки билетов." },
         win4: { q: "Вы заходили к мужу во время номера?", a: "Зачем? Выручку я отдаю ему после спектакля. [[Сегодняшняя выручка так и лежит у меня в кассе, пересчитанная до пенни.]]", nt: "Алиби миссис Крофт", nx: "Говорит, что сегодняшняя выручка и подсчёт у неё в кассе." },
-        win2: { q: "Вы знаете мистера Брэка?", a: "Только понаслышке. [[Я в жизни не брала в долг ни пенни.]]" },
+        win2: { q: "Вы знаете мистера Брэка?", a: "Понаслышке. [[Я в жизни не брала в долг ни пенни.]]" },
         win3: { q: "Ваш муж был счастлив?", a: "Барнаби? Он жил театром. Хотя театр, кажется, жил на мои деньги.", v: "Театр на деньги жены! Ох, дорогуша, вот это новость!" },
       },
       objections: {
@@ -116,7 +116,7 @@ window.DELO_CASES.push({
         bra3: { q: "Who signed the bills?", a: "They said “B. Croft”. But Croft swore the signature wasn't his. Said he'd “settle it at home”.", v: "The only one at home with Croft is his wife.", nt: "The bills", nx: "Croft disowned the signature and meant to “settle it at home”." },
         win1: { q: "Where were you during the act?", a: "In the box office, counting the takings. Six hundred seats, and every shilling checked against the stubs.", v: "The box office, six hundred seats, ticket stubs." },
         win4: { q: "Did you go to your husband during the act?", a: "Why would I? I give him the takings after the show. [[Tonight's takings are still in my box office, counted to the penny.]]", nt: "Mrs Croft's alibi", nx: "Says tonight's takings and tally are still in her box office." },
-        win2: { q: "Do you know Mr Brack?", a: "Only by name. [[I've never borrowed a penny in my life.]]" },
+        win2: { q: "Do you know Mr Brack?", a: "By name. [[I've never borrowed a penny in my life.]]" },
         win3: { q: "Was your husband happy?", a: "Barnaby? He lived for the theatre. Though the theatre, it seems, lived on my money.", v: "A theatre run on the wife's money! Oh, darling, what news!" },
       },
       objections: {
@@ -174,7 +174,7 @@ window.DELO_CASES.push({
         bra3: { q: "¿Quién firmó las letras?", a: "Ponía «B. Croft». Pero Croft juró que la firma no era suya. Dijo que lo «arreglaría en casa».", v: "En casa de Croft solo está su esposa.", nt: "Las letras", nx: "Croft negó la firma e iba a «arreglarlo en casa»." },
         win1: { q: "¿Dónde estaba durante el número?", a: "En la taquilla, contando la recaudación. Seiscientas butacas, y cada chelín hay que cuadrarlo con las matrices.", v: "La taquilla, seiscientas localidades, matrices de entradas." },
         win4: { q: "¿Fue a ver a su marido durante el número?", a: "¿Para qué? La recaudación se la doy después de la función. [[La recaudación de hoy sigue en mi taquilla, contada hasta el último penique.]]", nt: "Coartada de la señora Croft", nx: "Dice que la recaudación de hoy y sus cuentas siguen en la taquilla." },
-        win2: { q: "¿Conoce al señor Brack?", a: "Solo de oídas. [[Jamás he pedido prestado un penique.]]" },
+        win2: { q: "¿Conoce al señor Brack?", a: "De oídas. [[Jamás he pedido prestado un penique.]]" },
         win3: { q: "¿Era feliz su marido?", a: "¿Barnaby? Vivía para el teatro. Aunque el teatro, por lo visto, vivía de mi dinero.", v: "¡Un teatro con el dinero de la esposa! ¡Ay, querida, qué noticia!" },
       },
       objections: {
@@ -232,7 +232,7 @@ window.DELO_CASES.push({
         bra3: { q: "Wer hat die Wechsel unterschrieben?", a: "Da stand „B. Croft“. Aber Croft schwor, die Unterschrift sei nicht seine. Er wolle das „zu Hause klären“.", v: "Zu Hause ist bei Croft nur seine Frau.", nt: "Die Wechsel", nx: "Croft bestritt die Unterschrift und wollte es „zu Hause klären“." },
         win1: { q: "Wo waren Sie während der Nummer?", a: "An der Kasse, ich zählte die Einnahmen. Sechshundert Plätze, und jeder Schilling muss mit den Abrissen stimmen.", v: "Die Kasse, sechshundert Plätze, Kartenabschnitte." },
         win4: { q: "Waren Sie während der Nummer bei Ihrem Mann?", a: "Wozu? Die Einnahmen gebe ich ihm nach der Vorstellung. [[Die Einnahmen von heute liegen noch an meiner Kasse, auf den Penny gezählt.]]", nt: "Alibi von Mrs Croft", nx: "Sagt, die heutigen Einnahmen und ihre Abrechnung lägen noch an der Kasse." },
-        win2: { q: "Kennen Sie Mr Brack?", a: "Nur vom Hörensagen. [[Ich habe mir im Leben keinen Penny geliehen.]]" },
+        win2: { q: "Kennen Sie Mr Brack?", a: "Vom Hörensagen. [[Ich habe mir im Leben keinen Penny geliehen.]]" },
         win3: { q: "War Ihr Mann glücklich?", a: "Barnaby? Er lebte für das Theater. Nur lebte das Theater offenbar von meinem Geld.", v: "Ein Theater vom Geld der Gattin! Ach, Schätzchen, was für eine Neuigkeit!" },
       },
       objections: {
@@ -290,7 +290,7 @@ window.DELO_CASES.push({
         bra3: { q: "Kto podpisał weksle?", a: "Widniało „B. Croft”. Ale Croft przysięgał, że to nie jego podpis. Powiedział, że „załatwi to w domu”.", v: "W domu Crofta jest tylko jego żona.", nt: "Weksle", nx: "Croft wyparł się podpisu i chciał to „załatwić w domu”." },
         win1: { q: "Gdzie pani była podczas numeru?", a: "W kasie, liczyłam utarg. Sześćset miejsc i każdy szyling trzeba sprawdzić z odcinkami biletów.", v: "Kasa, sześćset miejsc, odcinki biletów." },
         win4: { q: "Czy zachodziła pani do męża podczas numeru?", a: "Po co? Utarg oddaję mu po przedstawieniu. [[Dzisiejszy utarg wciąż leży u mnie w kasie, przeliczony co do pensa.]]", nt: "Alibi pani Croft", nx: "Twierdzi, że dzisiejszy utarg i rachunek wciąż są w kasie." },
-        win2: { q: "Czy zna pani pana Bracka?", a: "Tylko ze słyszenia. [[Nigdy w życiu nie pożyczyłam ani pensa.]]" },
+        win2: { q: "Czy zna pani pana Bracka?", a: "Ze słyszenia. [[Nigdy w życiu nie pożyczyłam ani pensa.]]" },
         win3: { q: "Czy pani mąż był szczęśliwy?", a: "Barnaby? Żył teatrem. Choć teatr, jak się zdaje, żył z moich pieniędzy.", v: "Teatr za pieniądze żony! Och, kochana, a to nowina!" },
       },
       objections: {

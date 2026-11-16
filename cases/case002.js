@@ -19,8 +19,8 @@ window.DELO_CASES.push({
     { id: "kell", color: "#8cc79a", look: { hair: "grey-short", hairColor: "#d8d4cc", outfit: "coat", outfitColor: "#6b5b3e", extras: ["glasses", "beard"] },
       qs: [{ id: "kel1" }, { id: "kel2", voice: "gossip" }, { id: "kel3", needs: "c2", voice: "logic" }] },
   ],
-  objections: { kel1: { evidence: "c3" }, kel3: { evidence: "c2" } },
-  proof: ["c3", "obj:kel1", "dob3", "c5", "obj:kel3", "rup3", "c2"],
+  objections: { kel1: { evidence: "c3" }, kel3: { evidence: ["c2", "rup3"] } },
+  proof: ["c3", "obj:kel1", "dob3", "c5", "obj:kel3", "rup3", "c2", "kel2", "del2"],
   text: {
     ru: {
       title: "Синяя цапля",
@@ -46,7 +46,7 @@ window.DELO_CASES.push({
       },
       qs: {
         dob1: { q: "Где вы были ночью?", a: "На посту в конце коридора, пил чай с кондуктором. В 00:15 отнёс мистеру Квиллу молоко, он запер за мной дверь на задвижку.", nt: "Квилл жив в 00:15", nx: "В 00:15 Квилл был жив и запер дверь изнутри." },
-        dob2: { q: "Кто-нибудь проходил по коридору?", a: "Ни души с 00:15 до 01:30, пока не постучал племянник. Дверь мы потом ломали вдвоём.", v: "Значит, убийца пришёл не из коридора.", nt: "Коридор пуст", nx: "С 00:15 до 01:30 по коридору никто не проходил." },
+        dob2: { q: "Кто-нибудь проходил по коридору?", a: "Ни души с 00:15 до 01:30, пока не постучал племянник, а потом мы вдвоём ломали дверь.", v: "Значит, убийца пришёл не из коридора.", nt: "Коридор пуст", nx: "С 00:15 до 01:30 по коридору никто не проходил." },
         dob3: { q: "Чей это билет?", a: "Место № 8, профессора Келла. Я прокомпостировал его в 22:45 и отдал ему в руки.", v: "Билет профессора у мёртвого ювелира! Ах, дорогуша!", nt: "Билет профессора", nx: "В 22:45 Доббс отдал билет № 8 профессору в руки." },
         rup1: { q: "Где вы были ночью?", a: "С полуночи до половины второго играл в карты с миссис Эшби в курительном вагоне. Потом постучал к дяде — тишина.", nt: "Алиби Руперта", nx: "00:00–01:30 в карты с миссис Эшби." },
         rup2: { q: "Вы ладили с дядей?", a: "Он платил мне как мальчику на побегушках. Да, лавка теперь моя. Но я был за картами.", v: "Мальчик на побегушках, а теперь хозяин лавки." },
@@ -66,7 +66,7 @@ window.DELO_CASES.push({
         dobbs: "Дверь в коридор была на задвижке изнутри, ключ Доббса её не открыл бы. А всю ночь он пил чай с кондуктором.",
         rupert: "Руперт с полуночи до 01:30 играл в карты с миссис Эшби. Алиби подтверждено.",
         delphine: "Миссис Эшби всю ночь была в курительном вагоне с Рупертом. А перчатки она забыла в ресторане.",
-        proof: "Профессор благодушно улыбается: «Это ничего не доказывает». Нужны улики, которые приводят его в купе № 7.",
+        proof: "Профессор благодушно улыбается: «Это ничего не доказывает». Нужны улики, которые приводят его в купе № 7, связывают с хлороформом или показывают, кого узнал в нём Квилл.",
       },
       deduce: ["Коридор был пуст. Через какую дверь ещё можно попасть в купе № 7?", "Перчатки подбросили. Кто сидел рядом с миссис Эшби за ужином?", "Кого Квилл назвал «проф. К.»? И чей билет лежит под сиденьем?"],
       solution: {
@@ -101,7 +101,7 @@ window.DELO_CASES.push({
       },
       qs: {
         dob1: { q: "Where were you tonight?", a: "At my post at the end of the corridor, having tea with the guard. At 12:15 am I took Mr Quill his milk; he bolted the door after me.", nt: "Quill alive at 12:15", nx: "At 12:15 am Quill was alive and bolted the door from inside." },
-        dob2: { q: "Did anyone pass along the corridor?", a: "Not a soul from 12:15 till 1:30, when the nephew knocked. We had to break the door down together.", v: "So the killer didn't come in from the corridor.", nt: "Empty corridor", nx: "No one used the corridor from 12:15 to 1:30 am." },
+        dob2: { q: "Did anyone pass along the corridor?", a: "Not a soul from 12:15 till 1:30, when the nephew knocked, and then we had to break the door down together.", v: "So the killer didn't come in from the corridor.", nt: "Empty corridor", nx: "No one used the corridor from 12:15 to 1:30 am." },
         dob3: { q: "Whose ticket is this?", a: "Berth 8, Professor Kell's. I punched it at 10:45 pm and handed it back to him myself.", v: "The professor's ticket by the dead jeweller! Oh, darling!", nt: "The professor's ticket", nx: "At 10:45 pm Dobbs handed ticket no. 8 to the professor himself." },
         rup1: { q: "Where were you tonight?", a: "Playing cards with Mrs Ashby in the smoking car from midnight to half past one. Then I knocked on Uncle's door — silence.", nt: "Rupert's alibi", nx: "Midnight–1:30 am, cards with Mrs Ashby." },
         rup2: { q: "Did you get on with your uncle?", a: "He paid me like an errand boy. Yes, the shop is mine now. But I was at the card table.", v: "An errand boy yesterday, and now he owns the shop." },
@@ -121,7 +121,7 @@ window.DELO_CASES.push({
         dobbs: "The corridor door was bolted from inside; Dobbs's key couldn't open it. And all night he was having tea with the guard.",
         rupert: "Rupert played cards with Mrs Ashby from midnight to 1:30 am. Alibi confirmed.",
         delphine: "Mrs Ashby spent the night in the smoking car with Rupert. And she left her gloves in the dining car.",
-        proof: "The professor smiles kindly: “That proves nothing.” You need evidence that puts him in compartment 7.",
+        proof: "The professor smiles kindly: “That proves nothing.” You need evidence that puts him in compartment 7, links him to the chloroform, or shows who Quill recognised in him.",
       },
       deduce: ["The corridor was empty. What other door leads into compartment 7?", "The gloves were planted. Who sat next to Mrs Ashby at dinner?", "Who did Quill call “Prof. K.”? And whose ticket is under the seat?"],
       solution: {
@@ -156,7 +156,7 @@ window.DELO_CASES.push({
       },
       qs: {
         dob1: { q: "¿Dónde estuvo esta noche?", a: "En mi puesto al final del pasillo, tomando té con el jefe de tren. A las 00:15 llevé leche al señor Quill y echó el pestillo tras de mí.", nt: "Quill vivo a las 00:15", nx: "A las 00:15 Quill vivía y cerró por dentro." },
-        dob2: { q: "¿Pasó alguien por el pasillo?", a: "Ni un alma desde las 00:15 hasta la 01:30, cuando llamó el sobrino. Tuvimos que forzar la puerta entre los dos.", v: "Entonces el asesino no entró por el pasillo.", nt: "Pasillo vacío", nx: "Nadie pasó por el pasillo de 00:15 a 01:30." },
+        dob2: { q: "¿Pasó alguien por el pasillo?", a: "Ni un alma desde las 00:15 hasta la 01:30, cuando llamó el sobrino, y luego tuvimos que forzar la puerta entre los dos.", v: "Entonces el asesino no entró por el pasillo.", nt: "Pasillo vacío", nx: "Nadie pasó por el pasillo de 00:15 a 01:30." },
         dob3: { q: "¿De quién es este billete?", a: "Litera 8, del profesor Kell. Lo piqué a las 22:45 y se lo devolví en mano.", v: "¡El billete del profesor junto al joyero muerto! ¡Ay, querida!", nt: "El billete del profesor", nx: "A las 22:45 Dobbs entregó el billete n.º 8 al profesor en mano." },
         rup1: { q: "¿Dónde estuvo esta noche?", a: "Jugando a las cartas con la señora Ashby en el vagón de fumadores, de medianoche a la una y media. Luego llamé a mi tío: silencio.", nt: "Coartada de Rupert", nx: "De 00:00 a 01:30, cartas con la señora Ashby." },
         rup2: { q: "¿Se llevaba bien con su tío?", a: "Me pagaba como a un recadero. Sí, la tienda ahora es mía. Pero yo estaba jugando a las cartas.", v: "Ayer chico de los recados, y ahora dueño de la tienda." },
@@ -176,7 +176,7 @@ window.DELO_CASES.push({
         dobbs: "La puerta del pasillo tenía el pestillo por dentro; la llave de Dobbs no servía. Y toda la noche tomó té con el jefe de tren.",
         rupert: "Rupert jugó a las cartas con la señora Ashby de medianoche a la 01:30. Coartada confirmada.",
         delphine: "La señora Ashby pasó la noche en el vagón de fumadores con Rupert. Y olvidó los guantes en el restaurante.",
-        proof: "El profesor sonríe con bondad: «Eso no demuestra nada». Necesitas pruebas que lo sitúen en el compartimento 7.",
+        proof: "El profesor sonríe con bondad: «Eso no demuestra nada». Necesitas pruebas que lo sitúen en el compartimento 7, lo unan al cloroformo o muestren a quién reconoció Quill en él.",
       },
       deduce: ["El pasillo estaba vacío. ¿Qué otra puerta da al compartimento 7?", "Los guantes los colocaron. ¿Quién se sentó junto a la señora Ashby en la cena?", "¿A quién llamó Quill «prof. K.»? ¿Y de quién es el billete bajo el asiento?"],
       solution: {
@@ -211,7 +211,7 @@ window.DELO_CASES.push({
       },
       qs: {
         dob1: { q: "Wo waren Sie heute Nacht?", a: "Auf meinem Posten am Gangende, beim Tee mit dem Zugführer. Um 00:15 brachte ich Mr Quill Milch, er verriegelte hinter mir.", nt: "Quill lebte um 00:15", nx: "Um 00:15 lebte Quill und verriegelte von innen." },
-        dob2: { q: "Ist jemand über den Gang gegangen?", a: "Keine Seele von 00:15 bis 01:30, als der Neffe klopfte. Die Tür mussten wir zu zweit aufbrechen.", v: "Der Mörder kam also nicht über den Gang.", nt: "Leerer Gang", nx: "Von 00:15 bis 01:30 ging niemand über den Gang." },
+        dob2: { q: "Ist jemand über den Gang gegangen?", a: "Keine Seele von 00:15 bis 01:30, als der Neffe klopfte, und dann mussten wir die Tür zu zweit aufbrechen.", v: "Der Mörder kam also nicht über den Gang.", nt: "Leerer Gang", nx: "Von 00:15 bis 01:30 ging niemand über den Gang." },
         dob3: { q: "Wem gehört diese Fahrkarte?", a: "Bett 8, Professor Kell. Ich habe sie um 22:45 gelocht und ihm selbst zurückgegeben.", v: "Die Karte des Professors beim toten Juwelier! Ach, Schätzchen!", nt: "Die Karte des Professors", nx: "Um 22:45 gab Dobbs die Karte Nr. 8 dem Professor persönlich." },
         rup1: { q: "Wo waren Sie heute Nacht?", a: "Von Mitternacht bis halb zwei beim Kartenspiel mit Mrs Ashby im Raucherwagen. Dann klopfte ich bei Onkel — Stille.", nt: "Ruperts Alibi", nx: "00:00–01:30 Karten mit Mrs Ashby." },
         rup2: { q: "Kamen Sie mit Ihrem Onkel aus?", a: "Er bezahlte mich wie einen Laufburschen. Ja, das Geschäft gehört jetzt mir. Aber ich saß beim Kartenspiel.", v: "Gestern Laufbursche, heute Ladenbesitzer." },
@@ -231,7 +231,7 @@ window.DELO_CASES.push({
         dobbs: "Die Gangtür war von innen verriegelt, Dobbs' Schlüssel half da nicht. Und die ganze Nacht trank er Tee mit dem Zugführer.",
         rupert: "Rupert spielte von Mitternacht bis 01:30 Karten mit Mrs Ashby. Alibi bestätigt.",
         delphine: "Mrs Ashby war die ganze Nacht mit Rupert im Raucherwagen. Und ihre Handschuhe vergaß sie im Speisewagen.",
-        proof: "Der Professor lächelt gütig: „Das beweist gar nichts.“ Du brauchst Beweise, die ihn in Abteil 7 bringen.",
+        proof: "Der Professor lächelt gütig: „Das beweist gar nichts.“ Du brauchst Beweise, die ihn in Abteil 7 bringen, mit dem Chloroform verbinden oder zeigen, wen Quill in ihm erkannte.",
       },
       deduce: ["Der Gang war leer. Welche andere Tür führt in Abteil 7?", "Die Handschuhe wurden untergeschoben. Wer saß beim Dinner neben Mrs Ashby?", "Wen nannte Quill „Prof. K.“? Und wessen Karte liegt unter dem Sitz?"],
       solution: {
@@ -266,7 +266,7 @@ window.DELO_CASES.push({
       },
       qs: {
         dob1: { q: "Gdzie pan był w nocy?", a: "Na posterunku na końcu korytarza, przy herbacie z kierownikiem pociągu. O 00:15 zaniosłem panu Quillowi mleko, zaryglował za mną drzwi.", nt: "Quill żył o 00:15", nx: "O 00:15 Quill żył i zaryglował się od środka." },
-        dob2: { q: "Czy ktoś szedł korytarzem?", a: "Żywej duszy od 00:15 do 01:30, gdy zapukał bratanek. Drzwi musieliśmy wyważyć we dwóch.", v: "Czyli morderca nie przyszedł z korytarza.", nt: "Pusty korytarz", nx: "Od 00:15 do 01:30 nikt nie szedł korytarzem." },
+        dob2: { q: "Czy ktoś szedł korytarzem?", a: "Żywej duszy od 00:15 do 01:30, gdy zapukał bratanek, a potem we dwóch wyważyliśmy drzwi.", v: "Czyli morderca nie przyszedł z korytarza.", nt: "Pusty korytarz", nx: "Od 00:15 do 01:30 nikt nie szedł korytarzem." },
         dob3: { q: "Czyj to bilet?", a: "Miejsce 8, profesora Kella. Skasowałem go o 22:45 i oddałem mu do ręki.", v: "Bilet profesora przy martwym jubilerze! Ach, kochana!", nt: "Bilet profesora", nx: "O 22:45 Dobbs oddał bilet nr 8 profesorowi do ręki." },
         rup1: { q: "Gdzie pan był w nocy?", a: "Od północy do wpół do drugiej grałem w karty z panią Ashby w wagonie dla palących. Potem zapukałem do stryja — cisza.", nt: "Alibi Ruperta", nx: "00:00–01:30 karty z panią Ashby." },
         rup2: { q: "Dobrze żył pan ze stryjem?", a: "Płacił mi jak chłopcu na posyłki. Tak, sklep jest teraz mój. Ale ja siedziałem przy kartach.", v: "Wczoraj chłopiec na posyłki, a dziś właściciel sklepu." },
@@ -286,7 +286,7 @@ window.DELO_CASES.push({
         dobbs: "Drzwi na korytarz były zaryglowane od środka, klucz Dobbsa nic by nie dał. A całą noc pił herbatę z kierownikiem pociągu.",
         rupert: "Rupert od północy do 01:30 grał w karty z panią Ashby. Alibi potwierdzone.",
         delphine: "Pani Ashby całą noc była z Rupertem w wagonie dla palących. A rękawiczki zostawiła w restauracji.",
-        proof: "Profesor uśmiecha się dobrodusznie: „To niczego nie dowodzi”. Potrzebujesz dowodów, że był w przedziale 7.",
+        proof: "Profesor uśmiecha się dobrodusznie: „To niczego nie dowodzi”. Potrzebujesz dowodów, że był w przedziale 7, że miał coś wspólnego z chloroformem albo kogo w nim rozpoznał Quill.",
       },
       deduce: ["Korytarz był pusty. Jakie inne drzwi prowadzą do przedziału 7?", "Rękawiczki podrzucono. Kto siedział obok pani Ashby przy kolacji?", "Kogo Quill nazwał „prof. K.”? I czyj bilet leży pod siedzeniem?"],
       solution: {
